@@ -10,6 +10,7 @@ export default function App() {
       <GlobalStyles /> {/* Styles Globais usando styled-components */}
       <RouterProvider router={paginas} />{" "}
       {/* Renderizar a lista de Paginas = SPA */}
+      
     </>
   );
 }
