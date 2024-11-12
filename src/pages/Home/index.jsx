@@ -28,10 +28,12 @@ import Facebook from "../../assets/facebook.svg"
 import Instagram from "../../assets/instagram.svg"
 import Linkedin from "../../assets/linkedin.svg"
 
-const LandingPage = () => {
+import * as S from "./style"
+
+export function Home (){
   return (
+    <S.Container>
     <div className="landing-page">
-      <header className="header">
         <nav className="navbar">
           <div className="logo">
             <img src={Logonavbar} alt="Logo Pronto Recife" />
@@ -67,7 +69,6 @@ const LandingPage = () => {
             </button>
           </div>
         </nav>
-      </header>
 
       <section className="intro">
         <div className="intro-text">
@@ -292,7 +293,8 @@ const LandingPage = () => {
         </div>
       </footer>
     </div>
+
+    </S.Container>
+    
   );
 };
-
-export default LandingPage;
