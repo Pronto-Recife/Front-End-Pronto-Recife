@@ -4,10 +4,16 @@ import Facebook from "../../assets/Facebook.svg";
 import Twitter from "../../assets/Twitter.svg";
 import Mail from "../../assets/Mail.svg";
 import Input from "../../components/Input";
+<<<<<<< HEAD
 import * as S from "./styles";
 import Not from "../../assets/not.svg"
+=======
+
+import * as S from "./styles.js";
+>>>>>>> a26b5564ade56627a75c54e803585e7ec1ae664f
 
 export default function Login() {
+
   return (
     <>
       <S.Conteiner>
@@ -15,6 +21,7 @@ export default function Login() {
           <img className="logo" src={LogoNome} alt="Logo" />
 
           <h5> Ainda não tem uma conta?</h5>
+
 
           <button className="buttoncad"> Cadastre-se </button>
 
@@ -26,6 +33,21 @@ export default function Login() {
             <img src={Facebook} alt="" />
             <img src={Twitter} alt="" />
           </ul>
+
+
+
+            <div class="textos">
+                <h1>Acesse a sua conta</h1>
+            </div>
+
+            <Input titulo='CPF' subtitulo='Digite seu C' type='email' />
+            <Input titulo='Senha' subtitulo='Digite sua Senha' type='password'/>
+            <p>Esqueceu sua senha?</p>
+            <button><a href="#"><p>Entrar</p></a></button>
+            
+            <div className="Senha">
+
+            </div>
 
         </div>
 
@@ -41,7 +63,7 @@ export default function Login() {
 
           <button className="buttonlog"> Entrar </button>
           <img src={Not} alt="" />
-          
+
         </div>
       </S.Conteiner>
     </>

@@ -7,4 +7,9 @@ export default createGlobalStyle`
         box-sizing: border-box;
  
     }
+
+    body {
+        font-family: "Poppins", serif;
+    }
 `
+

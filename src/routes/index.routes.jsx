@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import Home from "../pages/Home/index";
-import Login from "../pages/Login/index";
-import Cadastro from "../pages/Cadastro/index";
+import Login from "../pages/Login";
+import Cadastro from "../pages/Cadastro";
+import { Home } from "../pages/Home";
 
 export const paginas = createBrowserRouter([
   {
@@ -10,15 +10,7 @@ export const paginas = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/login",
-    element: <Login />,
-  },
-  {
     path: "/cadastro",
     element: <Cadastro />,
   },
 ]);
-
-// [] Lista
-
-// {} Objeto
