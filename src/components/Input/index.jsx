@@ -1,4 +1,4 @@
-export function Input({  titulo, subtitulo, type, ...re }) {
+export default function Input({  titulo, subtitulo, type, ...re }) {
     return(
         <div className="E-mail">
                 <label>{titulo}</label>
