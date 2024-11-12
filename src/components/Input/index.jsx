@@ -1,8 +1,10 @@
-export default function Input({  titulo, subtitulo, type, ...re }) {
+import * as S from './style';
+
+export  default function Input({  titulo, subtitulo, type, ...re }) {
     return(
-        <div className="E-mail">
+        <S.Container>
                 <label>{titulo}</label>
                 <input type={type} placeholder={subtitulo}/>
-        </div>
+        </S.Container>
     )
 }

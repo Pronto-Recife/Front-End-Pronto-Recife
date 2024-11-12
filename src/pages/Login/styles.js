@@ -1,32 +1,94 @@
 import styled from "styled-components";
-import Login from "../../assets/login.svg";
-import Fundo from "../../assets/Fundo.svg"
-
-
 
 export const Conteiner = styled.div`
-   width: 100vw;
-   min-height: 100vh;
-   align-items: center;
-   display: flex;
-   justify-content: center;
-   background: linear-gradient(50deg, #161B68 26%, #5F68F1 69%, #676FDE 88%);
-   
-  &&.ContainerCadastro {
-   margin: 20px;
-    align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  display: flex;  
+  justify-content: center;
+  background: linear-gradient(50deg, #161b68 26%, #5f68f1 69%, #676fde 88%);
+  background-size: cover;
+  
+
+  && .ContainerCadastro {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background-image: url({Fundo}); 
-    background-size: cover;
-    background-position: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 20px 0 0 20px;
+   
+
   }
 
-  &&.ContainerLogin{
-   margin: 20px;
+  && .ContainerCadastro .logo {
+    width: 80%;
+    margin-bottom: 20px;
+
+  }
+
+  && .ContainerCadastro  h5 {
+   font-size: 1.8 rem;
+   color: #2B318A;
+  }
+
+  && .ContainerCadastro .buttoncad {
+    width: 50%;
+    background-color: #6af670;
+    border-radius: 30px;
+  }
+
+  && .ContainerCadastro h4 {
+    color: #2B318A;
 
 
+  }
+
+  && .ContainerCadastro .icons {
+    display: flex;
+    gap:15px;
+    margin-top: 15px;
+    
+    
+  }
+
+
+
+//
+
+
+
+  && .ContainerLogin {
+    
+    height:23rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(241, 241, 241, 0.4);
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+  }
+
+  && .ContainerLogin h1 {
+    color: #2B318A;
+
+
+  }
+  && .ContainerLogin input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+
+  }
+
+
+  && .ContainerLogin .buttonlog {
+    width: 50%;
+    background-color: #6af670;
+    border-radius: 30px;
   }
 `;
