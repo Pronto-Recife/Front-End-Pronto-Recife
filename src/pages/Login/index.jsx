@@ -5,9 +5,6 @@ import { Input } from "../../components/Input"
 export default function Login() {
     return (
         <>
-         {/* Tags sem fechamento
-        <input type="text" />
-        <img src="" alt="" /> */}
 
         <div className="Container">
             <div className="ImagemLogo"> 
