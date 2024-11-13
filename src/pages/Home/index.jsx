@@ -15,10 +15,7 @@ import Gh from "../../assets/gh.svg";
 import Link from "../../assets/link.svg";
 
 import Mapa from "../../assets/mapa.png";
-import Myller from "../../assets/myller.png";
-import Sena from "../../assets/sena.png";
-import Juvenildo from "../../assets/juvenildo.png";
-import Joana from "../../assets/joana.png";
+
 import Logofooter from "../../assets/logofooter.svg";
 
 import Phone from "../../assets/phone.svg";
@@ -29,6 +26,7 @@ import Instagram from "../../assets/instagram.svg"
 import Linkedin from "../../assets/linkedin.svg"
 
 import * as S from "./style"
+import { Card } from "../../components/cards/card";
 
 export function Home (){
   return (
@@ -72,28 +70,21 @@ export function Home (){
 
       <section className="intro">
         <div className="intro-text">
-          <h1>Você no controle da sua saúde</h1>
+          <h1>Você no controle <br /> da sua saúde</h1>
           <p>
-            Agora, monitorar sua saúde de forma unificada nunca foi tão fácil e
+            Monitorar sua saúde de forma unificada <br /> nunca foi tão fácil e
             seguro.
           </p>
           <div className="intro-buttons">
             <button>
-              <a href="#cadastro" className="button green">
-                Cadastre-se{" "}
-              </a>{" "}
+              Cadastre-se
             </button>
             <button>
-              <a href="#saiba-mais" className="button blue">
-                {" "}
-                Saiba Mais
-              </a>{" "}
+              Saiba Mais
             </button>
           </div>
         </div>
-        <div className="intro-image">
-          <img src={Fundoimg} alt="Profissionais de Saúde" />
-        </div>
+        
       </section>
 
       <section className="services">
@@ -182,92 +173,28 @@ export function Home (){
         <h2>Nossa Equipe</h2>
 
         <div className="team-members">
-          <div className="team-member">
-            <img src={Myller} alt="Myller Cardoso" />
-            <h3>Myller Cardoso</h3>
-            <p>Representante Geral e Líder Criativo</p>
-            <div className="social-icons">
-              <a href="https://www.instagram.com/myllermil/">
-                <img src={Ig} alt="" />
-              </a>
-
-              <a href="https://github.com/myllercardoso">
-                <img src={Gh} alt="github" />
-              </a>
-
-              <a href="https://www.linkedin.com/in/myller-cardoso-245560213/">
-                <img src={Link} alt="linkedin" />
-              </a>
-            </div>
-          </div>
-
-          <div className="team-member">
-            <img src={Sena} alt="" />
-            <h3>Alice Sena</h3>
-            <p>Representante Geral e Líder Técnica</p>
-            <div className="social-icons">
-              <a href="https://www.instagram.com/alicesnpereira/">
-                <img src={Ig} alt="" />
-              </a>
-              <a href="https://github.com/alicessena">
-                <img src={Gh} alt="github" />
-              </a>
-              <a href="https://www.linkedin.com/in/alicessenapereira/">
-                <img src={Link} alt="linkedin" />
-              </a>
-            </div>
-          </div>
-
-          <div className="team-member">
-            <img src={Juvenildo} alt="" />
-            <h3>Juvenildo Farias</h3>
-            <p>Piloto de Relações</p>
-            <div className="social-icons">
-              <a href="https://www.instagram.com/ojuvenildofarias/">
-                <img src={Ig} alt="" />
-              </a>
-              <a href="https://github.com/Jott47">
-                <img src={Gh} alt="github" />
-              </a>
-              <a href="https://www.linkedin.com/in/juvenildo-cavalcanti-205468320/">
-                <img src={Link} alt="linkedin" />
-              </a>
-            </div>
-          </div>
-
-          <div className="team-member">
-            <img src={Joana} alt="" />
-            <h3>Joana Cosmo</h3>
-            <p>Líder de Design</p>
-            <div className="social-icons">
-              <a href="https://www.instagram.com/vampirleo_/">
-                <img src={Ig} alt="" />
-              </a>
-
-              <a href="https://github.com/DALIZZA">
-                <img src={Gh} alt="github" />
-              </a>
-              <a href="https://www.linkedin.com/in/cosmodalizza/">
-                <img src={Link} alt="linkedin" />
-              </a>
-            </div>
-          </div>
+          <Card />
+          
+          
         </div>
       </section>
 
       <footer className="footer">
         <div className="footer-content">
+        <div className="footerleft">
           <div className="footer-logo">
             <img src={Logofooter} alt="Pronto Recife Logo" />
           </div>
 
           <div className="footer-info">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed finibus purus. Duis mollis iaculis est.</p>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit odio eligendi, dolore neque cumque, voluptatem corporis magnam tempora excepturi cum tenetur quas, ducimus suscipit earum minus mollitia atque! Iure, similique.</p>
             <p> <img src={Phone} alt="phone" /> contato@prontorecife.com</p>
             <p> <img src={Mail} alt="mail" /> (81) 1234-6789</p>
           </div>
-
+          </div>
+          
           <div className="footer-links">
+            <h1>Links</h1>
             <a href="#faq">FAQ</a>
             <a href="#support">Ajuda e Suporte</a>
             <a href="#terms">Termos & Condições</a>
@@ -275,6 +202,7 @@ export function Home (){
           </div>
 
           <div className="footer-navegacao">
+            <h1> Navegação</h1>
             <a href="#inicio">Inicio</a>
             <a href="#sobre">Sobre</a>
             <a href="#contato">Contato</a>
@@ -285,12 +213,13 @@ export function Home (){
 
         <div className="copy">
         <p>Copyright ProntoRecife©2024 All rights reserved | Rede Cidadã - Start III </p>
+          <div className="footer-social-icons">
+            <a href="#facebook"><img src={Facebook} alt="facebook" /></a>
+            <a href="#instagram"><img src={Instagram} alt="instagram" /></a>
+            <a href="#linkedin"><img src={Linkedin} alt="linkedin" /></a>
+          </div>
         </div>
-        <div className="footer-social-icons">
-          <a href="#facebook"><img src={Facebook} alt="facebook" /></a>
-          <a href="#instagram"><img src={Instagram} alt="instagram" /></a>
-          <a href="#linkedin"><img src={Linkedin} alt="linkedin" /></a>
-        </div>
+        
       </footer>
     </div>
 
