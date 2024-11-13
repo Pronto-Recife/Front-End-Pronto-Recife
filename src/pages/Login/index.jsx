@@ -1,8 +1,8 @@
-import LogoNome from "../../assets/LogoNome.svg";
-import Instagram from "../../assets/Instagram.svg";
-import Facebook from "../../assets/Facebook.svg";
-import Twitter from "../../assets/Twitter.svg";
-import Mail from "../../assets/Mail.svg";
+import LogoNome from "../../assets/logonome.svg";
+import Instagram from "../../assets/instagram.svg";
+import Facebook from "../../assets/facebook.svg";
+import Twitter from "../../assets/twitter.svg";
+import Mail from "../../assets/mail.svg";
 import Input from "../../components/Input";
 
 import * as S from "./styles";

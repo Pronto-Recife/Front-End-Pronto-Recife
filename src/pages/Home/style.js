@@ -130,7 +130,9 @@ export const Container = styled.div`
       max-width: 15%;
       text-align: center;
       background-color: #f1f1f1;
-      border-radius: 20px;
+      border-radius: 20px; 
+      padding: 20px 15px;
+
 
       img {
         width: 6.25rem;

@@ -5,13 +5,6 @@ export default function Cadastro() {
 
       <>
 
-      <S.Container>
-
-
-        <h1>Cadastro</h1>
-
-
-      </S.Container>
       </>
     );
   }

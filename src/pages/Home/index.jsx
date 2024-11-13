@@ -1,5 +1,5 @@
 import React from "react";
-import Logonavbar from "../../assets/Logonavbar.svg";
+import Logonavbar from "../../assets/logonavbar.svg";
 import Icon1 from "../../assets/icon1.svg";
 import Icon2 from "../../assets/icon2.svg";
 import Icon3 from "../../assets/icon3.svg";
@@ -18,12 +18,12 @@ import Mapa from "../../assets/mapa.png";
 
 import Logofooter from "../../assets/logofooter.svg";
 
-import Phone from "../../assets/phone.svg";
+import Phone from "../../assets/Phone.svg";
 import Mail from "../../assets/mail.svg";
 
 import Facebook from "../../assets/facebook.svg"
 import Instagram from "../../assets/instagram.svg"
-import Linkedin from "../../assets/linkedin.svg"
+import Linkedin from "../../assets/Linkedin.svg"
 
 import * as S from "./style"
 import { Card } from "../../components/cards/card";
