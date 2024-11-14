@@ -1,6 +1,4 @@
-import React from "react";
-
-import Logonavbar from "../../assets/logonavbar.svg";
+import React, { useState } from "react";
 import Icon1 from "../../assets/icon1.svg";
 import Icon2 from "../../assets/icon2.svg";
 import Icon3 from "../../assets/icon3.svg";
@@ -13,56 +11,31 @@ import Img5 from "../../assets/img5.png";
 import Medimg from "../../assets/medimg.png";
 import Lupa from "../../assets/lupa.svg";
 import Procura from "../../assets/procura.svg";
-
 import Ig from "../../assets/ig.svg";
 import Gh from "../../assets/gh.svg";
 import Link from "../../assets/link.svg";
-
 import Mapa from "../../assets/mapa.png";
-
 import Logofooter from "../../assets/logofooter.svg";
-
 import Phone from "../../assets/Phone.svg";
 import Mail from "../../assets/mail.svg";
-
 import Facebook from "../../assets/facebook.svg";
 import Instagram from "../../assets/instagram.svg";
 import Linkedin from "../../assets/Linkedin.svg";
-
 import * as S from "./style";
 import { Card } from "../../components/cards/card";
+import Navbar from "../../components/navbar/navbar";
+import Button from "../../components/button/button";
 
 export function Home() {
+  const [navbarIsvisible, setNavbarIsVisible] = useState(true);
+
   return (
     <S.Container>
       <div className="landing-page">
-        <nav className="navbar">
-          <div className="logo">
-            <img src={Logonavbar} alt="Logo Pronto Recife" />
-          </div>
-
-          <ul className="nav-links">
-            <li>
-              <a href="#inicio">Início</a>
-            </li>
-            <li>
-              <a href="#sobre">Sobre</a>
-            </li>
-            <li>
-              <a href="#servicos">Serviços</a>
-            </li>
-            <li>
-              <a href="#contato">Contato</a>
-            </li>
-            <li>
-              <a href="#equipe">Equipe</a>
-            </li>
-          </ul>
-
-          <div className="auth-buttons">
-            <button>Login | Cadastro</button>
-          </div>
-        </nav>
+        <Navbar 
+        navbarIsvisible={navbarIsvisible}
+        setNavbarIsVisible={setNavbarIsVisible}
+        />
 
         <section className="intro">
           <div className="intro-text">
@@ -73,10 +46,7 @@ export function Home() {
               Monitorar sua saúde de forma unificada <br /> nunca foi tão fácil
               e seguro.
             </p>
-            <div className="btn">
-              <button>Cadastre-se</button>
-              <button>Saiba Mais</button>
-            </div>
+            <Button />
           </div>
         </section>
 
@@ -122,10 +92,7 @@ export function Home() {
               sit, amet consectetur adipisicing elit.
             </p>
 
-            <div className="btn">
-              <button>Cadastre-se </button>
-              <button>Saiba Mais</button>
-            </div>
+            <Button />
           </div>
 
           <div className="info-image">
@@ -135,7 +102,7 @@ export function Home() {
 
         <section className="clinics">
           <div className="clinics-left">
-            <h2>Conheça Nossas Clínicas</h2>
+            <h2>Conheça o nosso Projeto</h2>
             <div className="clinic-list">
               <img src={Img1} alt="Clínica 1" />
               <img src={Img2} alt="Clínica 2" />
@@ -143,7 +110,17 @@ export function Home() {
               <img src={Img4} alt="Clínica 4" />
             </div>
           </div>
-          <img className="clinics-video" src={Img5} alt="Clínica 5" />
+          <iframe
+            className="clinics-video"
+            width="100%"
+            height="420"
+            src="https://www.youtube.com/embed/9lfY_nQriJ4?si=zcpsCtFsuZFcZVZp"
+            title="YouTube video player"
+            frameborder="0 "
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </section>
 
         <section className="map">
@@ -158,6 +135,7 @@ export function Home() {
                 <input type="text" placeholder="Digite sua localização..." />
               </div>
             </div>
+
             <img src={Mapa} alt="Mapa de Clínicas" />
           </div>
         </section>
@@ -220,6 +198,7 @@ export function Home() {
               Copyright ProntoRecife©2024 All rights reserved | Rede Cidadã -
               Start III{" "}
             </p>
+
             <div className="footer-social-icons">
               <a href="#facebook">
                 <img src={Facebook} alt="facebook" />

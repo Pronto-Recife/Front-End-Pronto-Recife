@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const CardsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 1rem;
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -39,4 +47,57 @@ export const Container = styled.div`
     font-size: 1rem;
     text-align: center;
   }
-`;
+
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    > div {
+      flex: 1 1 calc(50% - 20px);
+    }
+    width: 12rem;
+    height: 20rem;
+
+    && .team-name {
+      font-size: 1.1rem;
+    }
+
+    && .team-dev {
+      font-size: 1rem;
+    }
+
+    && .team-cargo {
+      font-size: 0.9rem;
+    }
+
+    > img {
+      width: 80%;
+    }
+
+    && .social-icons {
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    > div {
+      flex: 1 1 100%; 
+    width: 12rem;
+    height: 18rem;
+
+    && .team-name {
+      font-size: 1.1rem;
+    }
+
+    && .team-cargo {
+      font-size: 0.8rem;
+    }
+
+    > img {
+      width: 60%;
+    }
+  }
+  }
+  `; 

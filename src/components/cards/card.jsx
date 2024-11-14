@@ -8,11 +8,47 @@ import { Navigation } from "swiper/modules";
 import Ig from "../../assets/ig.svg";
 import Gh from "../../assets/gh.svg";
 import Link from "../../assets/link.svg";
+import { useEffect, useState } from "react";
 
 export function Card() {
+  const [slidePerView, setSlidePerView] = useState(4);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 490) {
+        setSlidePerView(1);
+      } else {
+        if (window.innerWidth < 676) {
+          setSlidePerView(2);
+        } else {
+          if (window.innerWidth < 906) {
+            setSlidePerView(3);
+          } else {
+            if (window.innerWidth < 1135) {
+              setSlidePerView(4);
+            } else {
+              if (window.innerWidth <= 1920) {
+                setSlidePerView(4);
+              } else {
+                setSlidePerView(4);
+              }
+            }
+          }
+        }
+      }
+    }
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
-      <Swiper modules={[Navigation]} slidesPerView={4} navigation>
+      <Swiper modules={[Navigation]} slidesPerView={slidePerView} navigation>
         {teams.map((item) => (
           <SwiperSlide key={item.id}>
             <S.Container>

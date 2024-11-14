@@ -2,64 +2,6 @@ import styled from "styled-components";
 import Fundoimg from "../../assets/fundoimg.png";
 
 export const Container = styled.div`
-  /* Navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background: linear-gradient(50deg, #161b68 26%, #5f68f1 69%, #676fde 88%);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    .logo img {
-      width: 15rem;
-      margin: 0 5rem;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      font-size: 1rem;
-      gap: 40px;
-
-      li {
-        margin: 0 1rem;
-
-        a {
-          text-decoration: none;
-          color: #fff;
-          font-weight: bold;
-          transition: color 0.3s;
-
-          &:hover {
-            color: #6af670;
-          }
-        }
-      }
-    }
-
-    .auth-buttons {
-      button {
-        color: #2b318a;
-        border: none;
-        border-radius: 50px; /* Padronizei o border-radius */
-        width: 14rem;
-        height: 50px;
-        margin-right: 2rem;
-        background: #6af670;
-        font-size: 1.5rem;
-        cursor: pointer;
-        font-weight: bold;
-        transition: background-color 0.3s ease-out, color 0.3s ease-out; /* Adicionei animação suave */
-
-        &:hover {
-          background-color: #2b318a;
-          color: #fff;
-        }
-      }
-    }
-  }
-  /* Intro (Hero) */
   .intro {
     display: flex;
     justify-content: space-between;
@@ -98,31 +40,6 @@ export const Container = styled.div`
     margin-bottom: 1rem;
   }
 
-  .btn {
-    display: flex;
-    gap: 10px;
-  }
-
-  .btn button {
-    text-decoration: none;
-    color: #2b318a;
-    font-weight: 700;
-    border: none;
-    border-radius: 50px;
-    width: 14rem;
-    height: 50px;
-    background-color: #6af670;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease-out, color 0.3s ease-out;
-
-    &:hover {
-      background-color: #2b318a;
-      color: #fff;
-    }
-  }
-
-  /* Services Section */
   .services {
     display: flex;
     justify-content: center;
@@ -154,8 +71,8 @@ export const Container = styled.div`
         font-weight: 700;
         border: none;
         border-radius: 50px;
-        width: 14rem; /* Padronizei a largura */
-        height: 50px; /* Padronizei a altura */
+        width: 14rem;
+        height: 50px;
         background-color: #6af670;
         font-size: 1.5rem;
         cursor: pointer;
@@ -169,7 +86,6 @@ export const Container = styled.div`
     }
   }
 
-  /* Info Section */
   .info {
     display: flex;
     flex-wrap: wrap;
@@ -214,10 +130,14 @@ export const Container = styled.div`
       width: 100%;
       max-width: 30rem;
       margin-top: 2rem;
+      transition: transform 0.3s ease-out;
     }
+
+    .info-image img:hover {
+  transform: scale(1.1);
+}
   }
 
-  /* Section de clinicas */
   .clinics {
     display: flex;
     justify-content: space-between;
@@ -225,24 +145,25 @@ export const Container = styled.div`
     padding: 3rem 2rem;
     background: linear-gradient(50deg, #161b68 26%, #5f68f1 69%, #676fde 88%);
     color: #f1f1f1;
-    gap: 10px;
+    gap: 15px;
+  }
 
-    .clinic-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
+  .clinic-list img {
+    transition: transform 0.3s ease-out;
+  }
 
-    .clinics-left h2 {
-      margin-bottom: 1.5rem;
-      font-size: 2rem;
-    }
+  .clinic-list img:hover {
+    transform: scale(1.1);
+  }
+  .clinic-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
 
-    .clinic-video img {
-      width: 100%;
-      border-radius: 10px;
-      position: relative;
-    }
+  .clinics-left h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
   }
 
   .map {
@@ -262,7 +183,6 @@ export const Container = styled.div`
     align-items: center;
     background-color: #ccc;
     border-radius: 20px;
-    padding-left: 10px;
   }
 
   .map-card img {
@@ -271,7 +191,7 @@ export const Container = styled.div`
   }
 
   .input {
-    max-width: 50%;
+    max-width: 80%;
     font-size: 1.25rem;
     color: #2b318a;
   }
@@ -313,7 +233,7 @@ export const Container = styled.div`
   }
 
   .procura input {
-    background-color: #f1f1f1;
+    background-color: transparent;
     border: none;
     font-size: 20px;
   }
@@ -335,12 +255,10 @@ export const Container = styled.div`
 
   .team h2 {
     font-weight: 800;
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      color: #161b68;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #161b68;
   }
-
-  
 
   /* Footer */
   .footer {
@@ -399,35 +317,35 @@ export const Container = styled.div`
     height: 4rem;
   }
 
-  .copy-text {
-
+  .footer-social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
   }
 
   .footer-social-icons img {
     width: 30px;
   }
 
-  /* Responsive Styles */
   @media (max-width: 768px) {
-    .navbar {
+    .intro {
       flex-direction: column;
-
-      .nav-links {
-        font-size: 1rem;
-        gap: 10px;
-      }
-    }
-
-    .intro-text {
-      max-width: 100%;
+      align-items: center;
       text-align: center;
+      padding: 2rem;
 
-      h1 {
-        font-size: 2rem;
-      }
+      .intro-text {
+        max-width: 100%;
+        margin: 0;
 
-      p {
-        font-size: 1rem;
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
       }
     }
 
@@ -436,32 +354,119 @@ export const Container = styled.div`
 
       .service-item {
         width: 100%;
+        margin-bottom: 1rem;
       }
     }
 
     .info {
       flex-direction: column;
-      text-align: center;
+      text-align: start;
+
+      .info-text {
+        max-width: 100%;
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+
+      .info-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+      }
 
       .info-image img {
-        max-width: 100%;
+        width: 100%;
       }
-    }
-
-    .footer-content {
-      flex-direction: column;
     }
 
     .clinics {
       flex-direction: column;
+      gap: 1rem;
+
+      .clinics-left {
+        flex-direction: column;
+      }
+
+      .clinics-video {
+      }
     }
 
-    .clinics-video  {
-      width: 100%;
-  }
+    .map {
+      flex-direction: column;
+      height: auto;
 
-  .clinics-left  {
-      width: 100%;
+      .map-card {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+      }
+
+      .map-card img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .map-text {
+      margin-top: 10px;
+    }
+
+    .team h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      text-align: start;
+    }
+
+    .footer-info {
+      margin-bottom: 10px;
+    }
+
+    .footer-info p {
+      margin-bottom: 10px;
+    }
+
+    .footer-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-links h1 {
+      font-size: 1.5rem;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+    }
+
+    .footer-logo img {
+      margin-bottom: 1rem;
+    }
+
+    .footer-social-icons {
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .copy-text {
+      margin: 0 2rem;
+      font-size: 0.8rem;
+    }
+
+    .footer-social-icons {
+      margin: 0 2rem;
+    }
   }
-}
 `;
