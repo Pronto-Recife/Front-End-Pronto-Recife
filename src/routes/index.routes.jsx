@@ -13,4 +13,8 @@ export const paginas = createBrowserRouter([
     path: "/cadastro",
     element: <Cadastro />,
   },
+  {
+    path: "/login",
+    element:<Login />
+  }
 ]);
