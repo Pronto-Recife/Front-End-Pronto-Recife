@@ -3,6 +3,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Login from "../pages/Login";
 import Cadastro from "../pages/Cadastro";
 import { Home } from "../pages/Home";
+import Esquecisenha from "../pages/Esquecisenha";
+import Inserircodigo from "../pages/Esquecisenha/Inserircodigo";
+import Novasenha from "../pages/Esquecisenha/Novasenha";
+import Sucesso from "../pages/Esquecisenha/Sucesso";
+
 
 export const paginas = createBrowserRouter([
   {
@@ -16,5 +21,25 @@ export const paginas = createBrowserRouter([
   {
     path: "/login",
     element:<Login />
+  },
+  {
+    path: "/esquecisenha",
+    element:<Esquecisenha />
+  },
+
+  {
+    path: "/inserircodigo",
+    element:<Inserircodigo />
+  },
+
+  {
+    path: "/novasenha",
+    element: <Novasenha />
+  },
+
+  {
+    path: "/sucesso",
+    element: <Sucesso />
   }
+
 ]);
