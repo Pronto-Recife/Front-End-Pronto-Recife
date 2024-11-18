@@ -1,13 +1,8 @@
 import React from "react";
 import * as S from './style'
 
-export default function Button() {
+export default function Button({ title, size }) {
     return (
-        <S.Container>
-            <div className="btn">
-              <button>Cadastre-se</button>
-              <button>Saiba Mais</button>
-            </div>
-        </S.Container>
+        <S.Container size={size}> {title}</S.Container>
     )
 }

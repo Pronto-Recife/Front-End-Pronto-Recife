@@ -9,7 +9,34 @@ export const Container = styled.div`
     background: linear-gradient(50deg, #161b68 26%, #5f68f1 69%, #676fde 88%);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    font-family: 'Poppins', sans-serif;
   }
+
+  a {
+  box-shadow: inset 0 0 0 0 #6af670;
+  color: #fff;
+  padding: 0 .25rem;
+  margin: 0 -.25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  text-decoration: none;
+}
+  a:hover {
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 #54b3d6;;
+  }
+
+body {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+
+body {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
 
   .logo img {
     width: 15rem;
@@ -19,10 +46,12 @@ export const Container = styled.div`
   .nav-links {
     display: flex;
     list-style: none;
-    font-size: 1rem;
+    
     gap: 40px;
   }
+
   .links {
+    font-size: 16px;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -43,7 +72,7 @@ export const Container = styled.div`
     height: 50px;
     margin-right: 2rem;
     background: #6af670;
-    font-size: 1.5rem;
+    font-size: 20px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease-out, color 0.3s ease-out;

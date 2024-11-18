@@ -21,22 +21,17 @@ export default function Navbar({ navbarIsVisible, setNavbarIsVisible }) {
         )}
       </div>
 
-      {/* Menu que será mostrado ou escondido */}
       <nav className={`navbar ${isMenuOpen ? "active" : ""}`}>
         <div className="logo">
           <img src={Logonavbar} alt="Logo Pronto Recife" />
         </div>
 
         <ul className="nav-links">
-          <button className="links">Início</button>
-
-          <button className="links">Sobre</button>
-
-          <button className="links">Serviços</button>
-
-          <button className="links">Contato</button>
-
-          <button className="links">Equipe</button>
+          <a className="links"href="#">Início</a>
+          <a className="links"href="#">Sobre</a>
+          <a className="links"href="#">Serviços</a>
+          <a className="links"href="#">Contato</a>
+          <a className="links"href="#">Equipe</a>
         </ul>
 
         <div className="auth-buttons">

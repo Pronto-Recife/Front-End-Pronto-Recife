@@ -46,7 +46,12 @@ export function Home() {
               Monitorar sua saúde de forma unificada <br /> nunca foi tão fácil
               e seguro.
             </p>
-            <Button />
+
+            <div className="intro-buttons">
+            <Button size='home' title='Cadastre-se'/>
+            <Button size='home' title='Saiba Mais'/>
+            </div>
+
           </div>
         </section>
 
@@ -58,7 +63,7 @@ export function Home() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam
             </p>
-            <button>Saiba mais</button>
+            <Button size='home' title='Saiba Mais'/>
           </div>
           <div className="service-item">
             <img src={Icon2} alt="" />
@@ -67,7 +72,7 @@ export function Home() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam
             </p>
-            <button>Saiba mais</button>
+            <Button size='home' title='Saiba Mais'/>
           </div>
           <div className="service-item">
             <img src={Icon3} alt="" />
@@ -76,7 +81,7 @@ export function Home() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam
             </p>
-            <button>Saiba mais</button>
+            <Button size='home' title='Saiba Mais'/>
           </div>
         </section>
 
@@ -92,7 +97,10 @@ export function Home() {
               sit, amet consectetur adipisicing elit.
             </p>
 
-            <Button />
+            <div className="info-buttons"> 
+            <Button size='home' title='Cadastre-se'/>
+            <Button size='home' title='Saiba Mais'/>
+            </div>
           </div>
 
           <div className="info-image">

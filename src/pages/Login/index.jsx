@@ -3,56 +3,57 @@ import Instagram from "../../assets/Login/instagram (1).svg";
 import Facebook from "../../assets/Login/facebook (1).svg";
 import Twitter from "../../assets/Login/twitter.svg";
 import Email from "../../assets/Login/email.svg";
-import Input from "../../components/Input";
 
 import * as S from "./styles";
 
-
 export default function Login() {
   return (
-    <>
-      <S.Conteiner>
+    <S.Container>
+      <div className="container-cadastro">
+        <img className="logo" src={LogoNome} alt="Logo Pronto Recife" />
+        <h5>Ainda não tem uma conta?</h5>
+        <button className="button-cadastro">Cadastre-se</button>
 
-        <div className="ContainerCadastro">
-          <img className="logo" src={LogoNome} alt="Logo" />
-
-          <h5> Ainda não tem uma conta?</h5>
-
-          <button className="buttoncad"> Cadastre-se </button>
-
-          <h4>Visite as nossas redes!</h4>
-
-          <ul className="icons">
-            <img src={Instagram} alt="" />
-            <img src={Email} alt="" />
-            <img src={Facebook} alt="" />
-            <img src={Twitter} alt="" />
-          </ul>
+        <div className="visiteno">
+        <h5>Visite as nossas redes!</h5>
+        <div className="icons">
+          <img src={Instagram} alt="Instagram" />
+          <img src={Email} alt="Email" />
+          <img src={Facebook} alt="Facebook" />
+          <img src={Twitter} alt="Twitter" />
+        </div>
         </div>
 
-        <div className="ContainerLogin">
+      </div>
 
-          <h1>Acesse a sua conta</h1>
+      <div className="container-login">
+        <h1>Acesse a sua conta</h1>
 
-           <h4>CPF</h4>
-           <input className="inputCpf" type="text" />
-           <h4>Senha</h4>
-           <input className ="inputSenha" type="password" placeholder="Digite sua senha"/>
-       
-        
+        <label htmlFor="cpf">CPF</label>
+        <input
+          id="cpf"
+          className="input"
+          type="text"
+          placeholder="Digite seu CPF"
+        />
 
-
-          <div className="esqueciSenha">
-          <p>Esqueceu sua senha?</p>
-          </div>
-      
-
-          <button className="buttonlog">Entrar</button>
-          
-     
+        <label htmlFor="senha">Senha</label>
+        <div className="password-container">
+          <input
+            id="senha"
+            className="input senha"
+            type="password"
+            placeholder="Digite sua senha"
+          />
+          <span className="eye-icon"></span>
         </div>
-       
-      </S.Conteiner>
-    </>
+
+        <a href="/" className="forgot-password">
+          Esqueceu sua senha?
+        </a>
+
+        <button className="button-login">Entrar</button>
+      </div>
+    </S.Container>
   );
 }

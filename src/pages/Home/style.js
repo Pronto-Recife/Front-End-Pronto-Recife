@@ -32,6 +32,13 @@ export const Container = styled.div`
     }
   }
 
+  .intro-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
   .line {
     background-color: #6af670;
     width: 160px;
@@ -65,23 +72,7 @@ export const Container = styled.div`
         margin-bottom: 1.5rem;
       }
 
-      button {
-        text-decoration: none;
-        color: #2b318a;
-        font-weight: 700;
-        border: none;
-        border-radius: 50px;
-        width: 14rem;
-        height: 50px;
-        background-color: #6af670;
-        font-size: 1.5rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease-out, color 0.3s ease-out;
-
-        &:hover {
-          background-color: #0056b3;
-          color: #fff;
-        }
+      
       }
     }
   }
@@ -103,27 +94,19 @@ export const Container = styled.div`
       color: #161b68;
     }
 
+    .info-buttons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    }
+
     .info-text p {
       color: #2b318a;
       margin-bottom: 1.5rem;
       font-size: 1.5rem;
     }
 
-    button {
-      text-decoration: none;
-      width: 14rem;
-      height: 50px;
-      border: none;
-      border-radius: 50px;
-      background-color: #6af670;
-      font-size: 1.5rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease-out, color 0.3s ease-out;
-
-      &:hover {
-        background-color: #0056b3;
-        color: #fff;
-      }
     }
 
     .info-image img {
@@ -136,7 +119,7 @@ export const Container = styled.div`
     .info-image img:hover {
   transform: scale(1.1);
 }
-  }
+
 
   .clinics {
     display: flex;
@@ -330,10 +313,12 @@ export const Container = styled.div`
 
   @media (max-width: 768px) {
     .intro {
+      display: flex;
+      justify-content: center;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 2rem;
+      
 
       .intro-text {
         max-width: 100%;
@@ -348,6 +333,15 @@ export const Container = styled.div`
         }
       }
     }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    
+  }
 
     .services {
       flex-direction: column;
