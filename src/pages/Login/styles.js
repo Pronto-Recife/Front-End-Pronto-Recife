@@ -18,7 +18,6 @@ export const Container = styled.div`
     padding: 3rem;
     background-color: #CED0E7;
     border-radius: 1.25rem 0 0 1.25rem;
-    
 
     .logo {
       width: 70%;
@@ -30,33 +29,12 @@ export const Container = styled.div`
       margin-top: 15px;
     }
 
-    
-
-    .button-cadastro {
-      width: 80%;
-      padding: 0.625rem;
-      background-color: #6af670;
-      border: none;
-      border-radius: 1.875rem;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .button-cadastro:hover {
-      background-color: #2b318a;
-      color: #fff;
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-out;
-    }
-
     .visiteno {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
     }
 
     .icons {
@@ -88,10 +66,10 @@ export const Container = styled.div`
     }
 
     label {
-      align-self: flex-start;
+
       font-size: 0.9rem;
       margin-bottom: 5px;
-      color: #2b318a;
+      color: #fff;
     }
 
     .input {
@@ -102,29 +80,26 @@ export const Container = styled.div`
       border-radius: 5px;
       font-size: 1rem;
       color: #333;
+      box-sizing: border-box;
     }
 
     .password-container {
-      display: flex;
-      align-items: center;
       width: 100%;
+      display: flex;
+      flex-direction: column;
       position: relative;
-
-      .input.senha {
-        width: 100%;
-        padding-right: 40px; /* espaço para o ícone */
-      }
 
       .eye-icon {
         position: absolute;
         right: 10px;
+        top: 10px;
         cursor: pointer;
         color: #333;
       }
     }
 
     .forgot-password {
-      align-self: flex-end;
+      align-self: flex-start;
       font-size: 0.8rem;
       color: #2b318a;
       margin-bottom: 20px;
@@ -134,22 +109,6 @@ export const Container = styled.div`
 
     .forgot-password:hover {
       text-decoration: underline;
-    }
-
-    .button-login {
-      width: 60%;
-      padding: 10px;
-      background-color: #6af670;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .button-login:hover {
-      background-color: #2b318a;
-      color: #fff;
     }
   }
 
@@ -208,7 +167,7 @@ export const Container = styled.div`
 
       .input {
         font-size: 0.9rem;
-        padding: 8px;
+        padding: 10px;
       }
 
       .button-login {

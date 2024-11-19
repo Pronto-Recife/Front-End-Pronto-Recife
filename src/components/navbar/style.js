@@ -124,7 +124,7 @@ body {
     }
 
     .auth-buttons button {
-      width: 10rem;
+      width: 12rem;
     }
 
     .menu-icon {

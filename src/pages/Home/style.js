@@ -340,17 +340,17 @@ export const Container = styled.div`
       flex-direction: column;
       align-items: center;
       text-align: center;
-    
-  }
+    }
 
     .services {
       flex-direction: column;
-
-      .service-item {
-        width: 100%;
-        margin-bottom: 1rem;
-      }
     }
+    
+    .service-item {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
 
     .info {
       flex-direction: column;
