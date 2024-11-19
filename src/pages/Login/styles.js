@@ -66,10 +66,9 @@ export const Container = styled.div`
     }
 
     label {
-
       font-size: 0.9rem;
       margin-bottom: 5px;
-      color: #fff;
+      color: #2b318a;
     }
 
     .input {
