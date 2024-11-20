@@ -16,7 +16,7 @@ export const Container = styled.div`
     width: 18.75rem;
     height: 28.125rem;
     padding: 3rem;
-    background-color: #CED0E7;
+    background-color: #ced0e7;
     border-radius: 1.25rem 0 0 1.25rem;
 
     .logo {
@@ -71,7 +71,7 @@ export const Container = styled.div`
       color: #2b318a;
     }
 
-    .input {
+    .password-container input {
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
@@ -86,15 +86,13 @@ export const Container = styled.div`
       width: 100%;
       display: flex;
       flex-direction: column;
-      position: relative;
+    }
 
-      .eye-icon {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        cursor: pointer;
-        color: #333;
-      }
+    .eye-icon {
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      color: #333;
     }
 
     .forgot-password {

@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
+
+
 export const Container = styled.div` 
  display: flex;
- justify-content: center;
- align-items: center;
+ justify-content: start;
+ align-items: start;
  flex-direction: column;
  row-gap: 5px;
  width: 100%;
-
+ && label {
+        color: #fff;
+    }
 `
 export const Input = styled.input` 
     height: 39px;
@@ -19,5 +23,6 @@ export const Input = styled.input`
     margin-top: -9px;
     align-items:center;
 
+    
  `;
    

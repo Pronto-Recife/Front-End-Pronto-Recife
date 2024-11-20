@@ -1,10 +1,19 @@
 import * as S from './style';
 
-export  default function Input({  titulo, subtitulo, type, ...re }) {
+export function Input({ titulo, subtitulo, type, pass }) {
     return(
-        <S.Container>
+        <>
+        {pass === true ? (
+            <S.Container>
+                <label>{titulo}</label>
+                <S.Input type='password' placeholder={subtitulo}/>
+        </S.Container>
+        ) : (
+            <S.Container>
                 <label>{titulo}</label>
                 <S.Input type={type} placeholder={subtitulo}/>
         </S.Container>
+        )}
+        </>
     )
 }

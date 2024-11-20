@@ -23,8 +23,8 @@ import Instagram from "../../assets/instagram.svg";
 import Linkedin from "../../assets/Linkedin.svg";
 import * as S from "./style";
 import { Card } from "../../components/cards/card";
-import Navbar from "../../components/navbar/navbar";
 import Button from "../../components/button/button";
+import { Navbar } from "../../components/navbar/navbar";
 
 export function Home() {
   const [navbarIsvisible, setNavbarIsVisible] = useState(true);

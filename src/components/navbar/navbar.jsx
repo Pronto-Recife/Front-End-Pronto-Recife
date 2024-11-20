@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Logonavbar from "../../assets/logonavbar.svg";
 import * as S from "./style";
-import { IoClose, IoMenu } from "react-icons/io5";
+
 import { useNavigate } from "react-router-dom";
-export default function Navbar({ navbarIsVisible, setNavbarIsVisible }) {
+import { Menu, X } from "lucide";
+export  function Navbar({ navbarIsVisible, setNavbarIsVisible }) {
   const navigation = useNavigate();
 
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -15,9 +16,9 @@ export default function Navbar({ navbarIsVisible, setNavbarIsVisible }) {
     <S.Container>
       <div className="menu-icon" onClick={toggleMenu}>
         {isMenuOpen ? (
-          <IoClose size={45} color="#6af670" />
+          <X  />
         ) : (
-          <IoMenu size={45} color="#6af670" />
+          <Menu  />
         )}
       </div>
 

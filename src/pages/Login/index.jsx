@@ -4,11 +4,14 @@ import Facebook from "../../assets/Login/facebook (1).svg";
 import Twitter from "../../assets/Login/twitter.svg";
 import Email from "../../assets/Login/email.svg";
 import Button from "../../components/button/button";
+
 import * as S from "./styles";
+import { Input } from "../../components/Input";
 
 export default function Login() {
   return (
     <S.Container>
+      
       <div className="container-cadastro">
         <img className="logo" src={LogoNome} alt="Logo Pronto Recife" />
         <h5>Ainda não tem uma conta?</h5>
@@ -30,23 +33,10 @@ export default function Login() {
         <h1>Acesse a sua conta</h1>
 
         <div className="password-container">
-          <label htmlFor="cpf">CPF</label>
-          <input
-            id="cpf"
-            className="input"
-            type="text"
-            placeholder="Digite seu CPF"
-          />
           
-          <label htmlFor="senha">Senha</label>
-
-            <input
-              id="senha"
-              className="input senha"
-              type="password"
-              placeholder="Digite sua senha"
-            />
-            <span className="eye-icon"></span>
+          <Input type='text' titulo='CPF' subtitulo='Digite seu CPF' />
+          
+          <Input type='password' titulo='Senha' subtitulo='Digite sua senha' />
         </div>
 
         <a href="/" className="forgot-password">
