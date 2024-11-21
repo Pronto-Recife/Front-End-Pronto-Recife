@@ -3,7 +3,7 @@ import Logonavbar from "../../assets/logonavbar.svg";
 import * as S from "./style";
 
 import { useNavigate } from "react-router-dom";
-import { Menu, X } from "lucide";
+import { Menu, X } from "lucide-react";
 export  function Navbar({ navbarIsVisible, setNavbarIsVisible }) {
   const navigation = useNavigate();
 
