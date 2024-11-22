@@ -9,6 +9,7 @@ import Novasenha from "../pages/Esquecisenha/Novasenha";
 import Sucesso from "../pages/Esquecisenha/Sucesso";
 
 
+
 export const paginas = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +41,6 @@ export const paginas = createBrowserRouter([
   {
     path: "/sucesso",
     element: <Sucesso />
-  }
+  },
 
 ]);
