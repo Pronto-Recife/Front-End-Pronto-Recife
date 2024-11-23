@@ -9,6 +9,7 @@ import Novasenha from "../pages/Esquecisenha/Novasenha";
 import Sucesso from "../pages/Esquecisenha/Sucesso";
 import CadastroPaciente from "../pages/Cadastro/CadastroPaciente";
 import CadastroPsaude from "../pages/Cadastro/CadastroPsaude";
+import CadastroMedico from "../pages/Cadastro/CadastroMedico";
 
 
 
@@ -24,6 +25,10 @@ export const paginas = createBrowserRouter([
   {
     path: "/login",
     element:<Login />
+  },
+  {
+    path: "/cadastromedico",
+    element:<CadastroMedico />
   },
   {
     path: "/cadastropsaude",
