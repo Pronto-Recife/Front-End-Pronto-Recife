@@ -33,13 +33,21 @@ export default function Login() {
         <h1>Acesse a sua conta</h1>
 
         <div className="password-container">
+
+          <label for="tipoConta">Tipo de documento</label>
+          <select className="documento" name="documento" id="documento">
+            <option className="option" value="">Selecione o tipo do documento</option>
+            <option className="option" value="CPF">CPF</option>
+            <option className="option" value="CRM">CRM</option>
+            <option className="option" value="COREN">COREN</option>
+          </select>
           
-          <Input type='text' titulo='CPF' subtitulo='Digite seu CPF' />
+          <Input type='text' titulo='Documento' subtitulo='Digite seu documento' />
           
           <Input type='password' titulo='Senha' subtitulo='Digite sua senha' />
         </div>
 
-        <a href="/" className="forgot-password">
+        <a href="/Esquecisenha" className="forgot-password">
           Esqueceu sua senha?
         </a>
 

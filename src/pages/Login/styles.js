@@ -7,7 +7,7 @@ export const Container = styled.div`
   min-height: 100vh;
   background: linear-gradient(135deg, #161b68, #5f68f1);
   font-family: "Poppins", sans-serif;
-
+  
   .container-cadastro {
     display: flex;
     flex-direction: column;
@@ -19,8 +19,28 @@ export const Container = styled.div`
     background-color: #ced0e7;
     border-radius: 1.25rem 0 0 1.25rem;
 
-    .logo {
+
+    
+  }
+
+  .logo {
       width: 70%;
+    }
+
+    .documento {
+      height: 39px;
+      margin: 15px 0;
+      padding: 10px;
+      width: 90%; 
+      font-size: 16px;
+      border-radius: 8px  ;
+      margin-top: -9px;
+      align-items:center;
+      background-color: #DEE0FB;
+      border: none;
+      border-bottom: 5px solid #161B68;
+      color: #161B68;
+      margin-top: 1px;
     }
 
     h5 {
@@ -46,8 +66,6 @@ export const Container = styled.div`
         cursor: pointer;
       }
     }
-  }
-
   .container-login {
     display: flex;
     flex-direction: column;
@@ -68,18 +86,19 @@ export const Container = styled.div`
     label {
       font-size: 0.9rem;
       margin-bottom: 5px;
-      color: #2b318a;
+      color: #fff;
+      font-weight: 700;
     }
 
     .password-container input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-      color: #333;
-      box-sizing: border-box;
+      height: 39px;
+    margin: 15px 0;
+    padding: 10px;
+    width: 90%; 
+    font-size: 16px;
+    border-radius: 8px  ;
+    margin-top: -9px;
+    align-items:center;
     }
 
     .password-container {
@@ -99,6 +118,7 @@ export const Container = styled.div`
       align-self: flex-start;
       font-size: 0.8rem;
       color: #2b318a;
+      font-weight: bold;
       margin-bottom: 20px;
       cursor: pointer;
       text-decoration: none;
