@@ -7,7 +7,7 @@ export const Container = styled.div`
  justify-content: start;
  align-items: start;
  flex-direction: column;
- row-gap: 5px;
+ row-gap: 10px;
  width: 100%;
  && label {
         color: #fff;
@@ -22,7 +22,5 @@ export const Input = styled.input`
     border-radius: 8px  ;
     margin-top: -9px;
     align-items:center;
-
-    
  `;
    

@@ -20,12 +20,32 @@ export const FormSection = styled.div `
     background-color: rgba(241, 241, 241, 0.3);
     padding: 30px 80px;
     row-gap: 5.0px;
-    text-align: center;
     border-radius: 20px 0px 0px 20px;
     overflow: hidden;
     color: white;
     font-weight: bold;
-    
+
+    .documentocontainer{
+        width: 100%;
+    }
+    .documento {
+      height: 39px;
+      width: 90%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px  ;
+      background-color: #DEE0FB;
+      border: none;
+      border-bottom: 5px solid #161B68;
+      color: #161B68;
+      margin-bottom: 10px;
+    }
+
+    .containercheckbox{
+        display: flex;
+        gap: 5px;
+        font-size: 12px;
+    }
 
 `
 export const InfoSection = styled.div `
@@ -39,6 +59,10 @@ export const InfoSection = styled.div `
     text-align: center;
     border-radius: 0px 20px 20px 0px;
     overflow: hidden;
-    height: 34.7rem;
+    height: 34rem;
 
+    .letra {
+        color: #2B318A;
+        font-weight: 700;
+    }
 `
