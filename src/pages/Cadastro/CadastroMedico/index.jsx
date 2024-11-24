@@ -37,7 +37,7 @@ export default function CadastroMedico() {
                 <img src={LogoCadastroDois} alt="logonome" />
 
                 <p className="letra">Já tem uma conta ?</p>
-                <Button title="Entrar" size="" type="button" secondary/>
+                <a href="/login"><Button title="Entrar" size="" type="button" secondary/></a>
                 
                 <p className="letra">Visite as nossas redes!</p>
                 

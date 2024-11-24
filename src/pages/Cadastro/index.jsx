@@ -21,12 +21,12 @@ export function Cadastro() {
         
       <div className="opcao" onClick={() => handleCadastro('paciente')}>
           <img src= {ImgPaciente} alt="paciente" class="imgpac"/>
-          <Button title="Paciente" size="entrar" />
+          <a href="/cadastropaciente"><Button title="Paciente" size="entrar" /></a>
         </div>
 
         <div className="opcao" onClick={() => handleCadastro('profissional')}>
           <img src= {Imgmedico} alt="profissional da saúde" class="imgpac"/>
-          <Button title="Profissional" size="entrar" />
+          <a href="/cadastromedico"><Button title="Profissional" size="entrar" /></a>
         </div>
         
        
