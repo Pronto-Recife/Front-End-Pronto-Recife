@@ -8,7 +8,7 @@ export default function Default(){
         <>
         <S.Container>
 
-         <div className='menssagem'>
+         <div className='mensagem'>
             <div>
             <img src={Logo} alt="" />
             <h1> 404:( </h1>

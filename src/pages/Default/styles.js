@@ -13,7 +13,7 @@ export const Container = styled.div`
 
 
 
-&& .menssagem{
+&& .mensagem{
  width: 35rem; 
  height: 25rem ;
  display: flex;
@@ -24,42 +24,21 @@ export const Container = styled.div`
  padding: 30px 10px;
  border-radius: 5px;
  border: 1 solid black ;
- box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 
 }
 
-&& .menssagem h1{
+&& .mensagem h1{
     font-size: 2.5rem;
     color: #2B318A ;
     margin: 10px 0 ;
 
 }
-&& .menssagem p {
+&& .mensagem p {
     font-size: 1rem;
     color: #2B318A ;
     margin-bottom: 20px;
 
 }
-&& .menssagem button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color:#2B318A;
-    background-color: #6AF670 ;
-    border: none;
-    border-radius: 20px;
-    box-shadow:0 4px 6px rgba(0, 0, 0, 0.1);
-
-}
-&& .menssagem button:hover {
-
-}
-
-
-
-
-
-
-
-
 
 `

@@ -11,6 +11,8 @@ import CadastroPaciente from "../pages/Cadastro/CadastroPaciente";
 import CadastroPsaude from "../pages/Cadastro/CadastroPsaude";
 import CadastroMedico from "../pages/Cadastro/CadastroMedico";
 import Default from "../pages/Default";
+import Ops from "../pages/Ops";
+import OPS from "../pages/Ops";
 
 
 
@@ -62,6 +64,9 @@ export const paginas = createBrowserRouter([
     path: "/default",
     element: <Default />
   },
-
+  {
+    path: "/ops",
+    element: <OPS />
+  },
   
 ]);
