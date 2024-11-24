@@ -10,6 +10,7 @@ import Sucesso from "../pages/Esquecisenha/Sucesso";
 import CadastroPaciente from "../pages/Cadastro/CadastroPaciente";
 import CadastroPsaude from "../pages/Cadastro/CadastroPsaude";
 import CadastroMedico from "../pages/Cadastro/CadastroMedico";
+import Default from "../pages/Default";
 
 
 
@@ -57,5 +58,10 @@ export const paginas = createBrowserRouter([
     path: "/sucesso",
     element: <Sucesso />
   },
+  {
+    path: "/default",
+    element: <Default />
+  },
 
+  
 ]);
