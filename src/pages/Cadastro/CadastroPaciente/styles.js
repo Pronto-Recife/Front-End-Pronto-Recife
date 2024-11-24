@@ -26,7 +26,11 @@ export const FormSection = styled.div `
     color: white;
     font-weight: bold;
     
-
+    .containercheckbox{
+        display: flex;
+        gap: 5px;
+        font-size: 12px;
+    }
 `
 export const InfoSection = styled.div `
     display: flex;
@@ -39,6 +43,10 @@ export const InfoSection = styled.div `
     text-align: center;
     border-radius: 0px 20px 20px 0px;
     overflow: hidden;
-    height: 34.7rem;
+    height: 34.4rem;
 
+    .letra {
+        color: #2B318A;
+        font-weight: 700;
+    }
 `

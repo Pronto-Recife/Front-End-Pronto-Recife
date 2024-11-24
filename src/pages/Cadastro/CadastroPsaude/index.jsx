@@ -21,9 +21,9 @@ export default function CadastroPsaude() {
                     <label for="tipoConta">Profissão</label>
                     <select className="documento" name="documento" id="documento">
                         <option className="option" value="profissao">Profissão</option>
-                        <option className="option" value="medico">Médico</option>
-                        <option className="option" value="enfermeiro">Enfermeiro</option>
-                        <option className="option" value="agente de saúde">Agente de saúde</option>
+                        <option className="option" value="crm">CRM</option>
+                        <option className="option" value="coren">COREN</option>
+                        <option className="option" value="cpf">CPF (AGENTE DE SAÚDE)</option>
                     </select>
                     </div>
                     
@@ -38,14 +38,14 @@ export default function CadastroPsaude() {
                 <input type="checkbox" id="terms" />
                 <p>Eu aceito os termos de uso e as Políticas de Privacidade</p>
                 </div>
-                <Button title="Cadastrar" size="" type="submit">Cadastrar</Button>
+                <Button title="Cadastrar" size="" type="submit"/>
             </FormSection>
                
                <InfoSection>
                 <img src={LogoCadastroDois} alt="logonome" />
 
-                <p className="letra">Ainda não tem uma conta?</p>
-                <Button title="Cadastre-se" size="" type="button" secondary>Cadastre-se</Button>
+                <p className="letra">Já tem uma conta ?</p>
+                <Button title="Entrar" size="" type="button" secondary/>
                 
                 <p className="letra">Visite as nossas redes!</p>
                 

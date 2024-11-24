@@ -26,20 +26,20 @@ export default function CadastroPaciente() {
                     
                     <Input titulo="Confirmar Senha" pass subtitulo="Confirmar Senha"/>
                     
-                <div>
+                <div className="containercheckbox">
                 <input type="checkbox" id="terms" />
                 <label htmlFor="terms">Eu aceito os termos de uso e as Políticas de Privacidade</label>
                 </div>
-                <Button title="Cadastrar" size="" type="submit">Cadastrar</Button>
+                <Button title="Cadastrar" size="" type="submit"/>
             </FormSection>
                
                <InfoSection>
                 <img src={LogoCadastroDois} alt="logonome" />
 
-                <p>Ainda não tem uma conta?</p>
-                <Button title="Cadastre-se" size="" type="button" secondary>Cadastre-se</Button>
+                <p className="letra">Já tem uma conta ?</p>
+                <Button title="Entrar" size="" type="button" secondary/>
                 
-                <p>Visite as nossas redes!</p>
+                <p className="letra">Visite as nossas redes!</p>
                 
                 <ul className="icons">
                 <img src={Instagram} alt="" />

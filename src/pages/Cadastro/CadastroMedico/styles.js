@@ -59,7 +59,7 @@ export const InfoSection = styled.div `
     text-align: center;
     border-radius: 0px 20px 20px 0px;
     overflow: hidden;
-    height: 34rem;
+    height: 34.3rem;
 
     .letra {
         color: #2B318A;

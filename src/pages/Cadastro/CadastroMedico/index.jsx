@@ -30,14 +30,14 @@ export default function CadastroMedico() {
                 <input type="checkbox" id="terms" />
                 <p>Eu aceito os termos de uso e as Políticas de Privacidade</p>
                 </div>
-                <Button title="Cadastrar" size="" type="submit">Cadastrar</Button>
+                <Button title="Cadastrar" size="" type="submit"/>
             </FormSection>
                
                <InfoSection>
                 <img src={LogoCadastroDois} alt="logonome" />
 
-                <p className="letra">Ainda não tem uma conta?</p>
-                <Button title="Cadastre-se" size="" type="button" secondary>Cadastre-se</Button>
+                <p className="letra">Já tem uma conta ?</p>
+                <Button title="Entrar" size="" type="button" secondary/>
                 
                 <p className="letra">Visite as nossas redes!</p>
                 
