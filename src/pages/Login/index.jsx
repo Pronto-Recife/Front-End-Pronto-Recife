@@ -15,7 +15,6 @@ export default function Login() {
       <div className="container-cadastro">
         <img className="logo" src={LogoNome} alt="Logo Pronto Recife" />
         <h5>Ainda não tem uma conta?</h5>
-        
         <a href="/Cadastro"><Button size='login' title='Cadastre-se'/></a>
 
         <div className="visiteno">
