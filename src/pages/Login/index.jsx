@@ -10,29 +10,14 @@ import { Input } from "../../components/Input";
 
 export default function Login() {
   return (
-    <S.Container>
-      
-<<<<<<< HEAD
-        <div className="ContainerInfo">
-                <img className="logo" src={LogoNome} alt="Logo" />
-                <h3>Ainda não tem uma conta?</h3>
-                <button className="button">Cadastre-se</button>
-                <h4>Visite as nossas redes!</h4>
-                <ul className="icons">
-                    <img src={Instagram} alt="" />
-                    <img src={Email} alt="" />
-                    <img src={Facebook} alt="" />
-                    <img src={Twitter} alt="" />
-                </ul>
-            </div>
-=======
-      <div className="container-cadastro">
+    <S.Container>   
+      <div className="ContainerInfo">
         <img className="logo" src={LogoNome} alt="Logo Pronto Recife" />
-        <h5>Ainda não tem uma conta?</h5>
+        <p className="letras">Ainda não tem uma conta?</p>
         <a href="/Cadastro"><Button size='login' title='Cadastre-se'/></a>
 
         <div className="visiteno">
-        <h5>Visite as nossas redes!</h5>
+        <p className="letras">Visite as nossas redes!</p>
         <div className="icons">
           <img src={Instagram} alt="Instagram" />
           <img src={Email} alt="Email" />
@@ -42,14 +27,13 @@ export default function Login() {
         </div>
 
       </div>
->>>>>>> 0176e08aa1372246c3e6a5f491391662bad2348b
 
       <div className="container-login">
-        <h1>Acesse a sua conta</h1>
+        <p>Acesse a sua conta</p>
 
         <div className="password-container">
 
-          <label for="tipoConta">Tipo de documento</label>
+          <label>Tipo de documento</label>
           <select className="documento" name="documento" id="documento">
             <option className="option" value="">Selecione o tipo do documento</option>
             <option className="option" value="CPF">CPF</option>
