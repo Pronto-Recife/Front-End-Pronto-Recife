@@ -55,7 +55,7 @@ export const Container = styled.div`
 
   .services {
     display: flex;
-    justify-content: center;
+    justify-contzent: center;
     align-items: center;
     gap: 3rem;
     padding: 5.9rem;

@@ -30,7 +30,10 @@ export default function CadastroMedico() {
                 <input type="checkbox" id="terms" />
                 <p>Eu aceito os termos de uso e as Políticas de Privacidade</p>
                 </div>
+                <a href="/psinicio">
                 <Button title="Cadastrar" size="" type="submit"/>
+                </a>
+                
             </FormSection>
                
                <InfoSection>
