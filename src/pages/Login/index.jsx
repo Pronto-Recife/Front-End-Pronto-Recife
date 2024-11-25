@@ -10,6 +10,7 @@ import { Input } from "../../components/Input";
 
 export default function Login() {
   return (
+<<<<<<< HEAD
     <S.Container>
       
 
@@ -27,12 +28,16 @@ export default function Login() {
             </div>
 
       <div className="container-cadastro">
+=======
+    <S.Container>   
+      <div className="ContainerInfo">
+>>>>>>> af40925fdc44838148c62f6b06a3f3f6305e7c92
         <img className="logo" src={LogoNome} alt="Logo Pronto Recife" />
-        <h5>Ainda não tem uma conta?</h5>
+        <p className="letras">Ainda não tem uma conta?</p>
         <a href="/Cadastro"><Button size='login' title='Cadastre-se'/></a>
 
         <div className="visiteno">
-        <h5>Visite as nossas redes!</h5>
+        <p className="letras">Visite as nossas redes!</p>
         <div className="icons">
           <img src={Instagram} alt="Instagram" />
           <img src={Email} alt="Email" />
@@ -42,14 +47,17 @@ export default function Login() {
         </div>
 
       </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> af40925fdc44838148c62f6b06a3f3f6305e7c92
 
       <div className="container-login">
-        <h1>Acesse a sua conta</h1>
+        <p>Acesse a sua conta</p>
 
         <div className="password-container">
 
-          <label for="tipoConta">Tipo de documento</label>
+          <label>Tipo de documento</label>
           <select className="documento" name="documento" id="documento">
             <option className="option" value="">Selecione o tipo do documento</option>
             <option className="option" value="CPF">CPF</option>

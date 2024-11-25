@@ -18,9 +18,11 @@ export const Container = styled.div`
     padding: 4rem 3rem 4rem 3rem;
     background-color: #f1f1f1;
     border-radius: 1.25rem 0 0 1.25rem;
+    
   }
 
 .ContainerInfo .logo {
+    
     max-width: 90%;
     padding-bottom: 15px;
   }
@@ -78,8 +80,14 @@ export const Container = styled.div`
     padding: 50px 30px 30px 50px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 0 20px 20px 0;
-    color: #2b318a;
-
+    
+  }
+  .letras{
+    color: #2B318A;
+    font-weight: 700;
+    width: 16rem;
+    text-align: center;
+  }
     .documento {
       display: flex;
       align-items: center;
@@ -94,6 +102,11 @@ export const Container = styled.div`
       color: #161B68;
     }
 
+    .icons {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
 
     h1 {
       font-size: 1.5rem;
@@ -142,9 +155,7 @@ export const Container = styled.div`
     .forgot-password:hover {
       text-decoration: underline;
     }
-  }
 
-  /* RESPONSIVIDADE */
   @media (max-width: 1024px) {
     .container-cadastro {
       width: 250px;

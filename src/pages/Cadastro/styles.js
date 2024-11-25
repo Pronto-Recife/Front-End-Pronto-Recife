@@ -15,7 +15,7 @@ export const Container= styled.div`
     justify-content: center;
     flex-direction: column;
     background-color: rgba(241, 241, 241, 0.8);
-    padding: 60px 100px;
+    padding: 50px 80px;
     row-gap: 20px;
     text-align: center;
     border-radius: 20px;
@@ -44,7 +44,6 @@ export const Container= styled.div`
 .butn-opcoes {
     display: flex;
     gap: 70px;
-    
 }
 
 
