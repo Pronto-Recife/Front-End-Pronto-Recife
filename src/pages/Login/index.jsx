@@ -7,34 +7,24 @@ import Button from "../../components/button/button";
 
 import * as S from "./styles";
 import { Input } from "../../components/Input";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Login() {
+
+  
+ const navigation = useNavigate();
+
   return (
-<<<<<<< HEAD
-    <S.Container>
-      
+    
 
-        <div className="ContainerInfo">
-                <img className="logo" src={LogoNome} alt="Logo" />
-                <h3>Ainda não tem uma conta?</h3>
-                <button className="button">Cadastre-se</button>
-                <h4>Visite as nossas redes!</h4>
-                <ul className="icons">
-                    <img src={Instagram} alt="" />
-                    <img src={Email} alt="" />
-                    <img src={Facebook} alt="" />
-                    <img src={Twitter} alt="" />
-                </ul>
-            </div>
 
-      <div className="container-cadastro">
-=======
     <S.Container>   
       <div className="ContainerInfo">
->>>>>>> af40925fdc44838148c62f6b06a3f3f6305e7c92
+
         <img className="logo" src={LogoNome} alt="Logo Pronto Recife" />
         <p className="letras">Ainda não tem uma conta?</p>
-        <a href="/Cadastro"><Button size='login' title='Cadastre-se'/></a>
+        <Button onClick={() => navigation('/cadastro')} size='home' title='Cadastre-se'/>
 
         <div className="visiteno">
         <p className="letras">Visite as nossas redes!</p>
@@ -47,10 +37,7 @@ export default function Login() {
         </div>
 
       </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> af40925fdc44838148c62f6b06a3f3f6305e7c92
 
       <div className="container-login">
         <p>Acesse a sua conta</p>

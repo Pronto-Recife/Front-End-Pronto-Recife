@@ -46,30 +46,7 @@ export const Container = styled.div`
     gap: 5px;
 }
 
-&& .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 8rem;
-    height: 2rem;
-    background-color: #6af670;
-    border-radius: 30px;
-    padding: 9px;
-    border: none;
-    color: #161b68;
-    font-family: 'poppins';
-    font-weight: 800;
-    cursor: pointer;
-
-    transition: background-color 0.3s ease-out, color 0.3s ease-out;
-
-    &:hover {
-      background-color: #2b318a;
-      color: #fff;
-    }
-  }
-
-      
+ 
   .container-login {
     display: flex;
     flex-direction: column;
