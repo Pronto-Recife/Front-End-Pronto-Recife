@@ -15,36 +15,42 @@ export const Container = styled.div`
 
     .intro-text {
       max-width: 60%;
-      margin: 0 2rem;
+      margin-left: 5rem;
+      margin-right: 5rem;
 
       h1 {
+
+        font-size: 2.2em;
         font-weight: 800;
-        font-size: 4rem;
         color: #2b318a;
         margin-bottom: 1rem;
       }
 
       p {
-        font-size: 1.8rem;
+        font-size: 1.2em;
+        font-weight: 500;
         color: #2b318a;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
       }
     }
   }
 
   .intro-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 10px;
+    padding-bottom: 15px;
   }
 
+  
   .line {
     background-color: #6af670;
     width: 160px;
     height: 5px;
     border-radius: 20px;
     margin-bottom: 1rem;
+
   }
 
   .services {
@@ -52,14 +58,17 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    padding: 2rem 2rem;
+    padding: 5.9rem;
     background: linear-gradient(50deg, #161b68 26%, #5f68f1 69%, #676fde 88%);
+
+
 
     .service-item {
       text-align: center;
       background-color: #f1f1f1;
       border-radius: 30px;
       padding: 1rem;
+
 
       img {
         width: 5rem;
@@ -68,7 +77,7 @@ export const Container = styled.div`
       }
 
       p {
-        font-size: 1rem;
+        font-size: 1em;
         margin-bottom: 1.5rem;
       }
 
@@ -80,16 +89,17 @@ export const Container = styled.div`
   .info {
     display: flex;
     flex-wrap: wrap;
-    padding: 4rem 2rem;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 4rem 2.6rem;
 
     .info-text {
-      max-width: 60%;
+    max-width: 60%;
+    
     }
 
     .info-text h2 {
       font-weight: 800;
-      font-size: 2.5rem;
+      font-size: 2.5em;
       margin-bottom: 2rem;
       color: #161b68;
     }
@@ -104,14 +114,14 @@ export const Container = styled.div`
     .info-text p {
       color: #2b318a;
       margin-bottom: 1.5rem;
-      font-size: 1.5rem;
+      font-size: 1.2em;
     }
 
     }
 
     .info-image img {
       width: 100%;
-      max-width: 30rem;
+      max-width: 25rem;
       margin-top: 2rem;
       transition: transform 0.3s ease-out;
     }
@@ -125,13 +135,17 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 2rem;
+    padding: 5.9rem;
+    gap: 30px;
     background: linear-gradient(50deg, #161b68 26%, #5f68f1 69%, #676fde 88%);
     color: #f1f1f1;
-    gap: 15px;
+    margin: auto;
+
+    
   }
 
   .clinic-list img {
+    max-width: 100%;
     transition: transform 0.3s ease-out;
   }
 
@@ -233,12 +247,12 @@ export const Container = styled.div`
 
   .team {
     color: #161b68;
-    padding: 4rem 2rem;
+    padding: 5.9rem;
   }
 
   .team h2 {
     font-weight: 800;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
     color: #161b68;
   }
@@ -247,6 +261,7 @@ export const Container = styled.div`
   .footer {
     background-color: #2b318a;
     color: #fff;
+
   }
 
   .linha {
@@ -264,7 +279,8 @@ export const Container = styled.div`
     grid-template-columns: repeat(4, 1fr);
     align-content: center;
     justify-content: center;
-    padding: 2rem;
+    padding-left: 5.9rem;
+    padding-right: 5.9rem;
   }
   .footer-logo img {
     width: 19rem;
@@ -342,9 +358,6 @@ export const Container = styled.div`
       text-align: center;
     }
 
-    .services {
-      flex-direction: column;
-    }
     
     .service-item {
       width: 100%;
@@ -420,10 +433,12 @@ export const Container = styled.div`
     .footer-content {
       grid-template-columns: 1fr;
       text-align: start;
+
     }
 
     .footer-info {
       margin-bottom: 10px;
+      
     }
 
     .footer-info p {
@@ -455,8 +470,8 @@ export const Container = styled.div`
     }
 
     .copy-text {
-      margin: 0 2rem;
-      font-size: 0.8rem;
+      margin: 0.9rem;
+      font-size: 0.em;
     }
 
     .footer-social-icons {

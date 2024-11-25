@@ -4,8 +4,8 @@ export const CardsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 1rem;
+  gap: 18px;
+  padding: 0.5rem;
 `;
 
 export const Container = styled.div`
@@ -13,11 +13,11 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 18rem;
-  height: 26rem;
+  width: 16rem;
+  height: 24rem;
   background-color: #EAEBFC;
-  border-radius: 20px;
-  row-gap: 5px;
+  border-radius: 18px;
+  row-gap: 4px;
 
   > img {
     width: 80%;
@@ -32,13 +32,13 @@ export const Container = styled.div`
   }
 
   && .team-name {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0;
     color: #161b68;
   }
 
   && .team-dev {
-    color: #6af670;
+    color: #161b68;
   }
 
   && .team-cargo {

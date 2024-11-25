@@ -67,14 +67,14 @@ body {
   .auth-buttons button {
     color: #2b318a;
     border: none;
-    border-radius: 50px;
-    width: 14rem;
-    height: 50px;
-    margin-right: 2rem;
+    border-radius: 30px;
+    width: 12rem;
+    height: 3rem;
+    margin-right: 5rem;
     background: #6af670;
-    font-size: 20px;
+    font-size: 1em;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 800;
     transition: background-color 0.3s ease-out, color 0.3s ease-out;
   }
 

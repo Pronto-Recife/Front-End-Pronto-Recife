@@ -8,79 +8,97 @@ export const Container = styled.div`
   background: linear-gradient(135deg, #161b68, #5f68f1);
   font-family: "Poppins", sans-serif;
   
-  .container-cadastro {
+    .ContainerInfo {
+    height: 27rem;
+    width: 18rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
-    justify-content: space-between;
-    width: 18.75rem;
-    height: 28.125rem;
-    padding: 3rem;
-    background-color: #ced0e7;
+    gap: 9px;
+    padding: 4rem 3rem 4rem 3rem;
+    background-color: #f1f1f1;
     border-radius: 1.25rem 0 0 1.25rem;
-
-
-    
   }
 
-  .logo {
-      width: 70%;
-    }
+.ContainerInfo .logo {
+    max-width: 90%;
+    padding-bottom: 15px;
+  }
 
-    .documento {
-      height: 39px;
-      margin: 15px 0;
-      padding: 10px;
-      width: 90%; 
-      font-size: 16px;
-      border-radius: 8px  ;
-      margin-top: -9px;
-      align-items:center;
-      background-color: #DEE0FB;
-      border: none;
-      border-bottom: 5px solid #161B68;
-      color: #161B68;
-      margin-top: 1px;
-    }
+.ContainerInfo  h3 {
+   font-size: 0.8em;
+   text-align: center;
+   font-weight: 600;
+   color: #2B318A;
+  }
 
-    h5 {
-      font-size: 0.825rem;
-      color: #2b318a;
-      margin-top: 15px;
-    }
+.ContainerInfo h4 {
+    text-align: center;
+    color:#2B318A;
+    font-size: 0.9em;
+}
 
-    .visiteno {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
+.ContainerInfo .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
 
-    .icons {
-      display: flex;
-      gap: 10px;
+&& .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 2rem;
+    background-color: #6af670;
+    border-radius: 30px;
+    padding: 9px;
+    border: none;
+    color: #161b68;
+    font-family: 'poppins';
+    font-weight: 800;
+    cursor: pointer;
 
-      img {
-        width: 25px;
-        cursor: pointer;
-      }
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+
+    &:hover {
+      background-color: #2b318a;
+      color: #fff;
     }
+  }
+
+      
   .container-login {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 450px;
-    padding: 20px;
+    width: 27rem;
+    height: 27rem;
+    padding: 50px 30px 30px 50px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 0 20px 20px 0;
     color: #2b318a;
 
+    .documento {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 39px;
+      padding: 9px;
+      width: 90%; 
+      font-size: 14px;
+      border-radius: 8px;
+      background-color: #DEE0FB;
+      border-bottom: 5px solid #161B68;
+      color: #161B68;
+    }
+
+
     h1 {
       font-size: 1.5rem;
       margin-bottom: 20px;
+      color: #f1f1f1;
     }
 
     label {
@@ -91,14 +109,11 @@ export const Container = styled.div`
     }
 
     .password-container input {
-      height: 39px;
-    margin: 15px 0;
+    height: 39px;
     padding: 10px;
     width: 90%; 
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 8px  ;
-    margin-top: -9px;
-    align-items:center;
     }
 
     .password-container {
@@ -117,7 +132,7 @@ export const Container = styled.div`
     .forgot-password {
       align-self: flex-start;
       font-size: 0.8rem;
-      color: #2b318a;
+      color: #f1f1f1;
       font-weight: bold;
       margin-bottom: 20px;
       cursor: pointer;
@@ -144,7 +159,6 @@ export const Container = styled.div`
       }
 
       .button-cadastro {
-        width: 100%;
         font-size: 0.9rem;
       }
     }
@@ -173,7 +187,7 @@ export const Container = styled.div`
       height: auto;
       border-radius: 20px;
     }
-
+    
     .container-login {
       margin-top: 20px;
       padding: 15px;
@@ -184,7 +198,6 @@ export const Container = styled.div`
 
       .input {
         font-size: 0.9rem;
-        padding: 10px;
       }
 
       .button-login {
@@ -193,7 +206,8 @@ export const Container = styled.div`
       }
     }
 
-    .container-cadastro .button-cadastro {
+    .container-cadastro, 
+    .button-cadastro {
       width: 90%;
     }
   }

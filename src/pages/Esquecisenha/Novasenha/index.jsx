@@ -40,8 +40,8 @@ export default function Novasenha() {
     };
 
     return (
-        <S.Conteiner>
-            <div className="ConteinerNovaSenha"> 
+        <S.Container>
+            <div className="ContainerNovaSenha"> 
                 <img src={Etapa_3_redefinicao} alt="etapa3" />
                 <h1>Redefinição de senha</h1>
                 <h2>Crie uma nova senha segura para acessar a sua conta</h2>
@@ -62,15 +62,15 @@ export default function Novasenha() {
                         value={confirmarSenha}
                         onChange={(e) => setConfirmarSenha(e.target.value)}
                     />
-                    <button className="buttonContinuar" type="submit">Continuar</button>
+                    <button className="button" type="submit">Continuar</button>
                 </form>
                 {mensagem && <p>{mensagem}</p>}
-
             </div>
-            <div className="ConteinerInfo">
+
+            <div className="ContainerInfo">
                 <img className="logo" src={LogoNome} alt="Logo" />
                 <h3>Ainda não tem uma conta?</h3>
-                <button className="buttoncad">Cadastre-se</button>
+                <button className="button">Cadastre-se</button>
                 <h4>Visite as nossas redes!</h4>
                 <ul className="icons">
                     <img src={Instagram} alt="" />
@@ -79,7 +79,8 @@ export default function Novasenha() {
                     <img src={Twitter} alt="" />
                 </ul>
             </div>
-        </S.Conteiner>
+            
+        </S.Container>
     );
 }
 

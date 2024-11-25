@@ -120,7 +120,7 @@ export function Home() {
           </div>
           <iframe
             className="clinics-video"
-            width="100%"
+            width="90%"
             height="420"
             src="https://www.youtube.com/embed/9lfY_nQriJ4?si=zcpsCtFsuZFcZVZp"
             title="YouTube video player"
