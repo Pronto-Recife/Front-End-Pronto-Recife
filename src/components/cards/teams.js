@@ -27,7 +27,7 @@ export const teams = [
     dev: 'Front-end',
     img: "/joana.jpg",
     name: "Joana Cosmo ",
-    cargo: "Líder de Design e Desenvolvedora",
+    cargo: "Líder de Design",
     ig: "https://www.instagram.com/leodalizzart/",
     github: "https://github.com/DALIZZA",
     linkedin: "https://www.linkedin.com/cosmodalizza/",

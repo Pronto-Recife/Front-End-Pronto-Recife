@@ -13,14 +13,14 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 16rem;
-  height: 24rem;
+  width: 14rem;
+  height: 22rem;
   background-color: #EAEBFC;
   border-radius: 18px;
   row-gap: 4px;
 
   > img {
-    width: 80%;
+    width: 70%;
     padding: 1rem;
     height: auto;
     border-radius: 100%;

@@ -59,27 +59,21 @@ export function Home() {
           <div className="service-item">
             <img src={Icon1} alt="" />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
+            Verifique e registre os seus prontuários médicos em um único lugar.
             </p>
             <Button size='home' title='Saiba Mais'/>
           </div>
           <div className="service-item">
             <img src={Icon2} alt="" />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
+            Marque as suas consultas com agilidade e eficiência sem precisar de casa.
             </p>
             <Button size='home' title='Saiba Mais'/>
           </div>
           <div className="service-item">
             <img src={Icon3} alt="" />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
+            Encontre o seu atendimento mais próximo na Região Metropolitana de Recife
             </p>
             <Button size='home' title='Saiba Mais'/>
           </div>
@@ -88,13 +82,10 @@ export function Home() {
         <section className="info">
           <div className="info-text">
             <div className="line">‎</div>
-            <h2>Neque porro quisquam est qui dolorem ipsum quia</h2>
+            <h2>Seu atendimento médico agora de forma simplificada</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-              sapiente tenetur modi corporis, facilis consectetur temporibus
-              ducimus voluptate harum dicta quibusdam reiciendis illum quaerat
-              velit perferendis rerum nostrum? Veniam, illo. Lorem ipsum dolor
-              sit, amet consectetur adipisicing elit.
+            Centralize todos os seus registros médicos e agende consultas no SUS Recife em um único lugar. Com segurança e eficiência, acompanhe seu histórico de saúde e simplifique seu atendimento médico. Nossa plataforma facilita o acesso a informações importantes e permite que você gerencie suas consultas de forma prática e rápida. Tudo isso com a tranquilidade de saber que seus dados estão protegidos.
+
             </p>
 
             <div className="info-buttons"> 
@@ -120,7 +111,7 @@ export function Home() {
           </div>
           <iframe
             className="clinics-video"
-            width="90%"
+            width="80%"
             height="420"
             src="https://www.youtube.com/embed/9lfY_nQriJ4?si=zcpsCtFsuZFcZVZp"
             title="YouTube video player"
@@ -165,15 +156,13 @@ export function Home() {
 
               <div className="footer-info">
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit
-                  odio eligendi, dolore neque cumque, voluptatem corporis magnam
-                  tempora excepturi cum tenetur quas.
+                  eEm caso de qualquer dúvida ou sujestões, por favor entre me contato conosco
                 </p>
                 <p>
-                  <img src={Phone} alt="phone" /> contato@prontorecife.com
+                  <img src={Phone} alt="phone" /> prontorecife@gmail.com
                 </p>
                 <p>
-                  <img src={Mail} alt="mail" /> (81) 1234-6789
+                  <img src={Mail} alt="mail" /> (81) 01234-6789
                 </p>
               </div>
             </div>

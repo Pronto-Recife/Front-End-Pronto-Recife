@@ -12,7 +12,7 @@ export default function Login() {
   return (
     <S.Container>
       
-<<<<<<< HEAD
+
         <div className="ContainerInfo">
                 <img className="logo" src={LogoNome} alt="Logo" />
                 <h3>Ainda não tem uma conta?</h3>
@@ -25,7 +25,7 @@ export default function Login() {
                     <img src={Twitter} alt="" />
                 </ul>
             </div>
-=======
+
       <div className="container-cadastro">
         <img className="logo" src={LogoNome} alt="Logo Pronto Recife" />
         <h5>Ainda não tem uma conta?</h5>
@@ -42,7 +42,7 @@ export default function Login() {
         </div>
 
       </div>
->>>>>>> 0176e08aa1372246c3e6a5f491391662bad2348b
+
 
       <div className="container-login">
         <h1>Acesse a sua conta</h1>

@@ -43,10 +43,9 @@ export const Container = styled.div`
     padding-bottom: 15px;
   }
 
-  
   .line {
     background-color: #6af670;
-    width: 160px;
+    width: 197px;
     height: 5px;
     border-radius: 20px;
     margin-bottom: 1rem;
@@ -55,100 +54,99 @@ export const Container = styled.div`
 
   .services {
     display: flex;
-    justify-contzent: center;
+    justify-content: center;
     align-items: center;
     gap: 3rem;
-    padding: 5.9rem;
+    padding: 6rem;
     background: linear-gradient(50deg, #161b68 26%, #5f68f1 69%, #676fde 88%);
-
-
-
-    .service-item {
-      text-align: center;
-      background-color: #f1f1f1;
-      border-radius: 30px;
-      padding: 1rem;
-
-
-      img {
-        width: 5rem;
-        margin-top: 1rem;
-        margin-bottom: 1.5rem;
-      }
-
-      p {
-        font-size: 1em;
-        margin-bottom: 1.5rem;
-      }
-
-      
-      }
-    }
   }
 
-  .info {
+  .service-item {
+    width: 25rem;
+    height: 20rem;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    padding: 4rem 2.6rem;
-
-    .info-text {
-    max-width: 60%;
-    
-    }
-
-    .info-text h2 {
-      font-weight: 800;
-      font-size: 2.5em;
-      margin-bottom: 2rem;
-      color: #161b68;
-    }
-
-    .info-buttons {
-    display: flex;
-    justify-content: start;
     align-items: center;
-    gap: 10px;
-    }
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    padding: 1rem;
 
-    .info-text p {
-      color: #2b318a;
+
+    img {
+      width: 5rem;
+      margin-top: 1rem;
       margin-bottom: 1.5rem;
-      font-size: 1.2em;
     }
 
+    p {
+      font-size: 1em;
+      margin-bottom: 1.5rem;
     }
 
-    .info-image img {
-      width: 100%;
-      max-width: 25rem;
-      margin-top: 2rem;
-      transition: transform 0.3s ease-out;
-    }
+    
+  }
 
-    .info-image img:hover {
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 4rem 2.6rem;
+  gap: 70px;
+
+  .info-text {
+  max-width: 55%;
+  
+  }
+
+  .info-text h2 {
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+    color: #161b68;
+  }
+
+  .info-buttons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  }
+
+  .info-text p {
+    color: #2b318a;
+    margin-bottom: 1.5rem;
+    font-size: 1.2em;
+  }
+
+  }
+
+  .info-image img {
+    width: 100%;
+    max-width: 25rem;
+    margin-top: 2rem;
+    transition: transform 0.3s ease-out;
+  }
+
+  .info-image img:hover {
   transform: scale(1.1);
 }
-
-
   .clinics {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5.9rem;
     gap: 30px;
     background: linear-gradient(50deg, #161b68 26%, #5f68f1 69%, #676fde 88%);
     color: #f1f1f1;
     margin: auto;
-
-    
+    padding: 2rem 6rem;
   }
 
   .clinic-list img {
-    max-width: 100%;
     transition: transform 0.3s ease-out;
   }
-
   .clinic-list img:hover {
     transform: scale(1.1);
   }
@@ -157,7 +155,6 @@ export const Container = styled.div`
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-
   .clinics-left h2 {
     margin-bottom: 1.5rem;
     font-size: 2rem;
@@ -169,7 +166,7 @@ export const Container = styled.div`
     align-items: center;
     width: 100%;
     height: 26.25rem;
-    padding: 30px;
+    padding: 3rem;
   }
 
   .map-card {
@@ -197,7 +194,7 @@ export const Container = styled.div`
     font-size: 1.125rem;
   }
   .map-text img {
-    width: 150px;
+    width: 100px;
   }
 
   .map-container img {
@@ -261,13 +258,16 @@ export const Container = styled.div`
   .footer {
     background-color: #2b318a;
     color: #fff;
-
   }
 
   .linha {
     border-left: none;
     border-bottom: none;
     border-top: none;
+  }
+
+  .footer-info {
+    max-width: 100%;
   }
 
   .footer-title {
@@ -279,11 +279,11 @@ export const Container = styled.div`
     grid-template-columns: repeat(4, 1fr);
     align-content: center;
     justify-content: center;
-    padding-left: 5.9rem;
-    padding-right: 5.9rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
   .footer-logo img {
-    width: 19rem;
+    width: 15rem;
   }
 
   .links {
@@ -311,20 +311,21 @@ export const Container = styled.div`
   .copy {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: #161b68;
-    height: 4rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .footer-social-icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 3rem;
   }
 
   .footer-social-icons img {
-    width: 30px;
+    width: 20px;
   }
 
   @media (max-width: 768px) {
@@ -358,9 +359,16 @@ export const Container = styled.div`
       text-align: center;
     }
 
+
+    .services {
+    flex-direction: column;
+    padding: 3rem;
+  }
+
     
     .service-item {
-      width: 100%;
+      width: 70%;
+      height: 80%;
       margin-bottom: 1rem;
     }
   
@@ -401,8 +409,7 @@ export const Container = styled.div`
         flex-direction: column;
       }
 
-      .clinics-video {
-      }
+
     }
 
     .map {
