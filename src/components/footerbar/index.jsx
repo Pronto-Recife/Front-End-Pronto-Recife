@@ -8,9 +8,9 @@ export default function Footerbar() {
             <p>Copyright ProntoRecife©2024 All rights reserved | Rede Cidadã - Start III</p>
             
             <S.Social>
-                <Facebook size={20} style={{ marginRight: "10px" }} /> 
-                <Instagram size={20} style={{ marginRight: "10px" }} /> 
-                <Linkedin size={20} style={{ marginRight: "10px" }} /> 
+                <Facebook size={20}  /> 
+                <Instagram size={20}  /> 
+                <Linkedin size={20}  /> 
             </S.Social>
         </S.Container>
     );

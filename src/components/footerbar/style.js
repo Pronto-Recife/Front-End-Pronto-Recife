@@ -4,17 +4,13 @@ export const Container = styled.footer`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 1rem;
     background: linear-gradient(50deg, #161b68 26%, #5f68f1 69%, #676fde 88%);
     color: #fff;
     font-size: 14px;
     width: 100%;
     margin-top: 15%;
 
-
-    p {
-        margin: 0 2rem;
-    }
 
     @media (max-width: 768px) {
         flex-direction: column;
@@ -24,9 +20,9 @@ export const Container = styled.footer`
 `;
 
 export const Social = styled.div`
-    margin: 0 2rem;
+    width: 15%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 
     svg {

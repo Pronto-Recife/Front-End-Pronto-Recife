@@ -1,18 +1,49 @@
+import { Dbcard } from "../../../components/dbcard";
 import Footerbar from "../../../components/footerbar";
-import Sidebarprofissionais from "../../../components/sidebarprofissionais";
+import SidebarProfissionais from "../../../components/sidebarprofissionais";
 import Superiorbar from "../../../components/superiorbar";
+import * as S from "./style";
+import { Stethoscope, TestTubeDiagonal, ScrollText, TriangleAlert } from 'lucide-react';
 
 
-export default function Psinicio() {
+export default function Psinicio(){ 
+  return (
+    <S.Container>
+    <S.Sidebar>
+      <SidebarProfissionais />
+    </S.Sidebar>
 
-    return (
-        <>
-        <Superiorbar />
-        <Sidebarprofissionais />
+    <S.Header>
+      <Superiorbar />
+    </S.Header>
 
-        <footer>
-         <Footerbar />
-        </footer>
-        </>
-    )
+    <S.Main>
+      <h1>Seus atalhos</h1>
+
+      <S.CardContainer>
+        <Dbcard 
+          title="Agendar Especialista" 
+          icon={<Stethoscope />} 
+        />
+        <Dbcard 
+          title="Exames Pendentes" 
+          icon={<TestTubeDiagonal />} 
+        />
+        <Dbcard 
+          title="Prescrições Ativas" 
+          icon={<ScrollText />} 
+        />
+        <Dbcard 
+          title="Alertas de Saúde" 
+          icon={<TriangleAlert />} 
+        />
+      </S.CardContainer>
+    </S.Main>
+
+    <S.Footer>
+      <Footerbar />
+    </S.Footer>
+  </S.Container>
+);
 }
+

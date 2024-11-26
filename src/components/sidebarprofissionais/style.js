@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.aside`
-    width: 250px;
-    height: 100vh;
+    width: 220px;
+    height: 100;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -14,23 +14,20 @@ export const Container = styled.aside`
 export const Logo = styled.div`
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
     img {
-        width: 180px;
+        width: 150px;
     }
 `;
 
 export const Menu = styled.nav`
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
 
     h5 {
-        margin-left: 1.125rem;
+        margin-left: 1rem;
         color: #BCBCBC
     }
 `;
@@ -38,8 +35,8 @@ export const Menu = styled.nav`
 export const MenuItem = styled.div`
     display: flex;
     align-items: center;
-    font-size: 1rem;
-    font-weight: ${(props) => (props.active ? "bold" : "600")};
+    font-size: 0.9rem;
+    font-weight: ${(props) => (props.active ? "600" : "600")};
     color: ${(props) => (props.active ? "#161B68" : "#161B68")};
     padding: 10px 15px;
     border-radius: 50px;

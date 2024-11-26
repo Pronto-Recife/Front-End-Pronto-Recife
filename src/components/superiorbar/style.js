@@ -2,13 +2,16 @@ import styled from 'styled-components';
 
 export const BarContainer = styled.div`
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
     align-items: center;
     padding: 10px 20px;
     font-family: 'Poppins', sans-serif;
-    background-color: transparent;  
+    background-color: transparent;
     z-index: 9999;
-
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    
     @media (max-width: 768px) {
         padding: 10px 15px;
     }
