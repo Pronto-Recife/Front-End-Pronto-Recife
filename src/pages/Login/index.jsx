@@ -24,7 +24,7 @@ export default function Login() {
 
         <img className="logo" src={LogoNome} alt="Logo Pronto Recife" />
         <p className="letras">Ainda não tem uma conta?</p>
-        <Button onClick={() => navigation('/cadastro')} size='home' title='Cadastre-se'/>
+        <Button onClick={() => navigation('/cadastro')} size='entrar' title='Cadastre-se'/>
 
         <div className="visiteno">
         <p className="letras">Visite as nossas redes!</p>

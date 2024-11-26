@@ -8,10 +8,13 @@ import Twitter from "../../../assets/twitter.svg";
 import * as S from "./styles";
 import Button from "../../../components/button/button";
 import { Input } from "../../../components/Input";
+import { useNavigate } from "react-router-dom";
 
 
 
 export default function CadastroPaciente() {
+    const navigation = useNavigate();
+    
     return (
         <Container>
             <FormSection>
@@ -30,16 +33,16 @@ export default function CadastroPaciente() {
                 <input type="checkbox" id="terms" />
                 <label htmlFor="terms">Eu aceito os termos de uso e as Políticas de Privacidade</label>
                 </div>
-                <a href="/inicio">
-                <Button title="Cadastrar" size="" type="submit"/>
-                </a>
+               
+                <Button onClick={() => navigation('/inicio')} title="Cadastrar" size="" type="submit"/>
+                
             </FormSection>
                
                <InfoSection>
                 <img src={LogoCadastroDois} alt="logonome" />
 
                 <p className="letra">Já tem uma conta ?</p>
-                <a href="/login"><Button title="Entrar" size="" type="button" secondary/></a>
+                <Button onClick={() => navigation('/login')} title="Entrar" size="" type="button" secondary/>
                 
                 <p className="letra">Visite as nossas redes!</p>
                 
