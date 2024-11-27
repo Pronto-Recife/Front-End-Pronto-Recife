@@ -47,16 +47,13 @@ export default function Consultas() {
           </div>
         </S.FiltersContainer>
 
-        {/* Histórico de consultas */}
+       
         <S.HistoryText>
           Não encontrei um histórico de consultas do paciente selecionado.
         </S.HistoryText>
       </S.Main>
 
-      {/* Footer */}
-      <S.Footer>
-        <Footerbar />
-      </S.Footer>
+      
     </S.Container>
   );
 }

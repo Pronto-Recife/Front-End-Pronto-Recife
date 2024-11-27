@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   text-align: center;
   font-family: 'Arial', sans-serif;
-  color: #2d2d2d;
-  padding: 20px;
+  color: #EAEBFC;
+  
 `;
 
 export const CardsContainer = styled.div`
@@ -27,11 +27,11 @@ export const Card = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+ 
+  transition: background-color 0.3s;
   
   &:hover {
-    transform: scale(1.05);
+    background-color: #C6C9FF;
   }
 
 

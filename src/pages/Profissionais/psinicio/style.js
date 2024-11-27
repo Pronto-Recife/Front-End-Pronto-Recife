@@ -41,6 +41,7 @@ export const Sidebar = styled.aside`
   grid-area: sidebar;
   display: flex;
   flex-direction: column;
+  color: white;
 
   nav {
     display: flex;
@@ -62,8 +63,10 @@ export const Sidebar = styled.aside`
 
 export const Main = styled.main`
   grid-area: main;
-  margin: 80px 0px 90px 20px;
+  margin: 80px 20px 90px 20px;
   background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
   display: grid;
 
   h1 {
@@ -73,7 +76,7 @@ export const Main = styled.main`
   }
 
   @media (max-width: 768px) {
-    margin: 80px 0px 20px 20px;
+    margin: 80px 20px 20px 20px;
   }
 `;
 
@@ -82,7 +85,7 @@ export const CardContainer = styled.div`
   justify-content: start;
   gap: 20px;
   margin-top: 20px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 `;
 
 export const Footer = styled.footer`

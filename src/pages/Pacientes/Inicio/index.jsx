@@ -39,9 +39,7 @@ export default function Inicio() {
         </S.CardContainer>
       </S.Main>
 
-      <S.Footer>
-        <Footerbar />
-      </S.Footer>
+  
     </S.Container>
   );
 }
