@@ -62,7 +62,7 @@ export const Main = styled.main`
   h1 {
     font-size: 24px;
     font-weight: bold;
-    color: #161B68;
+    color: #030f41;
     margin-bottom: 20px;
   }
 

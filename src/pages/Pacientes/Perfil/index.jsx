@@ -5,87 +5,114 @@ import Foto from "../../../assets/Paciente/foto.svg";
 
 import * as S from "./styles";
 
+export default function Perfil() {
+    const pacienteInfo = [
+        {
+            title: "Dados Pessoais",
+            content: [
+                { label: "Nome", value: "Maria Lucia da Silva" },
+                { label: "Idade", value: "68 anos" },
+                { label: "Telefone", value: "(00) 0000-0000" },
+                { label: "Endereço", value: "R. Afonso Barbosa, 48" }
+            ]
+        },
+        {
+            title: "Informações da Consulta",
+            content: [
+                { label: "Primeira consulta", value: "2022-01-01" },
+                { label: "Convênio", value: "Público" },
+                { label: "Gênero", value: "Feminino" }
+            ]
+        },
+        {
+            title: "Outros Detalhes",
+            content: [
+                { label: "Email", value: "marialucia@gmail.com" },
+                { label: "Atendimento", value: "1" },
+                { label: "Faltas", value: "0" }
+            ]
+        }
+    ];
 
-export default function perfil() {
+    const historicoMedico = [
+        {
+            title: "Doenças Pré-existentes",
+            content: "Hipertensão, diabetes e histórico de problemas cardíacos."
+        },
+        {
+            title: "Condições Crônicas",
+            content: "Asma diagnosticada aos 40 anos, monitoramento contínuo necessário."
+        },
+        {
+            title: "Histórico de Medicação",
+            content: "Uso regular de metformina e medicamentos para controle da pressão arterial."
+        },
+        {
+            title: "Cirurgias Realizadas",
+            content: "Cirurgia de catarata em 2020 e cirurgia ortopédica no joelho direito em 2018."
+        },
+        {
+            title: "Alergias",
+            content: "Alérgica a penicilina e frutos do mar."
+        },
+        {
+            title: "Vacinas Atualizadas",
+            content: "Vacinas contra gripe, hepatite B e COVID-19 atualizadas em 2023."
+        }
+    ];
 
     return (
-        <> 
-           <Superiorbar />
-          
-           
-          <S.Container>
-            
-          <Sidebarpacientes />
-          <div>
-            <div className="paciente">
-                   
-                <img src={Foto} alt="" />
+        <>
+            <Superiorbar />
+            <S.Container>
+                <Sidebarpacientes />
+                <S.Main>
+                    <div className="paciente">
+                        <img src={Foto} alt="Foto do paciente" />
 
-                <div className="Inf">
+                        <div className="Inf">
+                            <div className="dados-pessoais">
+                                <h2>Dados Pessoais</h2>
+                                {pacienteInfo[0].content.map((item, idx) => (
+                                    <p key={idx}>
+                                        <strong>{item.label}:</strong> {item.value}
+                                    </p>
+                                ))}
+                            </div>
+                            <div className="dados-pessoais">
+                                <h2>Informações da Consulta</h2>
+                                {pacienteInfo[1].content.map((item, idx) => (
+                                    <p key={idx}>
+                                        <strong>{item.label}:</strong> {item.value}
+                                    </p>
+                                ))}
+                            </div>
+                            <div className="dados-pessoais">
+                                <h2>Outros Detalhes</h2>
+                                {pacienteInfo[2].content.map((item, idx) => (
+                                    <p key={idx}>
+                                        <strong>{item.label}:</strong> {item.value}
+                                    </p>
+                                ))}
+                            </div>
+                        </div>
 
-                        <h2>Maria Lucia da silva</h2>
+                        <S.Button>Visualizar Cadastro</S.Button>
+                        <S.Button>Inserir Email Automático</S.Button>
+                    </div>
 
-                        <p> <strong>Idade :</strong>  68 anos </p>
-                        <p><strong>Telefone:</strong> (00) 0000-0000</p>
-                        <p> <strong>Endereço:</strong> R. Afonso Barbosa ,48 </p>
-                        <p> <strong>Primeira consulta:</strong>  2022-01-01</p>
-                        <p> <strong>Convênio :</strong> Público </p>
-                        <p> <strong>Genero:</strong> Feminino </p>
-                        <p> <strong>Email:</strong> marialucia@gmail.com</p>
-                        <p><strong>Atendimento :</strong> 1 </p>
-                        <p> <strong>Faltas : </strong> 0 </p>
+                    <div className="historico">
+                        <h1>Histórico Médico</h1>
 
-
-                        <button>Visualizar Cadastro </button>
-                        <button> Inserir Email Automático </button>
-                </div>
-
-           </div>
-
-
-        <div className="historico">
-
-                <h1>Historico Médico</h1>
-
-
-                <h3>Doenças Pré-existentes</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Quibusdam repellendus quasi, quae unde distinctio dolorum 
-                    quis dicta amet error qui recusandae quos dolorem eius dolor 
-                    sint consectetur! Mollitia, aut est.</p>
-               
-                    
-                <h3>Condições Crônicas</h3>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Vitae odio debitis cum at sit asperiores, 
-                    non minima ad tempora veniam qui molestias.
-                    Mollitia at aperiam, cumque tempore officia nostrum ste?</p>
-
-                    
-                <h3>Historico de medicação</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nostrum, obcaecati. Est nulla excepturi consequuntur praesentium optio accusamus 
-                laboriosam? Excepturi dolor enim nobis id recusandae soluta ut rem aspernatur dolore minima!</p>
-                
-                
-
-          </div>
-
-          
-          </div>
-       
-      
-     
-
-
-
-
-         </S.Container>
-        
-
-        <footer>
-         <Footerbar />
-        </footer>
+                        {historicoMedico.map((item, index) => (
+                            <S.Card key={index}>
+                                <h3>{item.title}</h3>
+                                <p>{item.content}</p>
+                            </S.Card>
+                        ))}
+                    </div>
+                </S.Main>
+            </S.Container>
         </>
-    )
+    );
 }
