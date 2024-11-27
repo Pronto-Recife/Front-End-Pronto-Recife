@@ -1,7 +1,24 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: cen;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 250px 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  font-family: 'Poppins', sans-serif;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    margin-left: 0;
+  }
 `;
 
 export const Header = styled.header`
@@ -112,6 +129,6 @@ export const VejaMaisButton = styled.button`
   }
 
   svg {
-    margin-bottom: 0.5rem; /
+    margin-bottom: 0.5rem;
   }
 `;

@@ -7,17 +7,18 @@ import * as S from "./styles";
 
 export default function Psprescricoes() {
     return (
-        <>
+        <>  
+        <S.Container>
             <Superiorbar />
             <Sidebarprofissionais />
 
-            <S.Container>
+            
                 <S.Header>
                     <h1>Prescrição médica</h1>
-                    <S.Container>
+                    <S.SearchWrapper>
                         <S.SearchInput type="text" placeholder="Id do paciente, Nº do Prontuário" />
-                        <Search size={24} color="#161B68" /> {/* Ícone de lupa */}
-                    </S.Container>
+                        <Search size={24} color="#161B68" />
+                    </S.SearchWrapper>
                 </S.Header>
 
                 <S.ProfileSection>
@@ -37,52 +38,33 @@ export default function Psprescricoes() {
                 </S.ProfileSection>
 
                 <S.Prescriptions>
-                    <S.PrescriptionCard>
-                        <h3>Medicamentos</h3>
-                        <ul>
-                            <li>AAS 100 mg Comprido Similar, <b>Administrar 1 cp</b></li>
-                            <li>Digoxina 0,5 mg Comprimido Marca, <b>Administrar 1 cp</b></li>
-                        </ul>
-                        <h3>Horários</h3>
-                        <ul>
-                            <li>8:00 - 16h</li>
-                            <li>8:00 - 16h</li>
-                        </ul>
-                        <h4>Observações</h4>
-                        <ul>
-                            <li>Esquema de soro: correr durante 8 horas.</li>
-                            <li>Repouso relativo no leito.</li>
-                        </ul>
-                    </S.PrescriptionCard>
-
-                    <S.PrescriptionCard>
-                        <h3>Medicamentos</h3>
-                        <ul>
-                            <li>AAS 100 mg Comprido Similar, <b>Administrar 1 cp</b></li>
-                            <li>Digoxina 0,5 mg Comprimido Marca, <b>Administrar 1 cp</b></li>
-                        </ul>
-                        <h3>Horários</h3>
-                        <ul>
-                            <li>8:00 - 16h</li>
-                            <li>8:00 - 16h</li>
-                        </ul>
-                        <h4>Observações</h4>
-                        <ul>
-                            <li>Esquema de soro: correr durante 8 horas.</li>
-                            <li>Repouso relativo no leito.</li>
-                        </ul>
-                    </S.PrescriptionCard>
+                    {[1, 2].map((_, index) => (
+                        <S.PrescriptionCard key={index}>
+                            <h3>Medicamentos</h3>
+                            <ul>
+                                <li>AAS 100 mg Comprido Similar, <b>Administrar 1 cp</b></li>
+                                <li>Digoxina 0,5 mg Comprimido Marca, <b>Administrar 1 cp</b></li>
+                            </ul>
+                            <h3>Horários</h3>
+                            <ul>
+                                <li>8:00 - 16h</li>
+                                <li>8:00 - 16h</li>
+                            </ul>
+                            <h4>Observações</h4>
+                            <ul>
+                                <li>Esquema de soro: correr durante 8 horas.</li>
+                                <li>Repouso relativo no leito.</li>
+                            </ul>
+                        </S.PrescriptionCard>
+                    ))}
                 </S.Prescriptions>
 
                 <S.VejaMaisButton>
-                    <CirclePlus size={24} color="#161B68" /> {/* Ícone CirclePlus */}
+                    <CirclePlus size={24} color="#161B68" />
                     Veja mais
                 </S.VejaMaisButton>
             </S.Container>
 
-            <footer>
-                <Footerbar />
-            </footer>
         </>
     );
 }
