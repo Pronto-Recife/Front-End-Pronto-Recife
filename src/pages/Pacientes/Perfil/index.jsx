@@ -1,7 +1,7 @@
 import Footerbar from "../../../components/footerbar";
 import Sidebarpacientes from "../../../components/sidebarpacientes";
 import Superiorbar from "../../../components/superiorbar";
-import Foto from "../../../assets/Paciente/foto.svg";
+import Maria from "../../../assets/maria.svg";
 
 import * as S from "./styles";
 
@@ -68,7 +68,7 @@ export default function Perfil() {
                 <Sidebarpacientes />
                 <S.Main>
                     <div className="paciente">
-                        <img src={Foto} alt="Foto do paciente" />
+                        <img src={Maria} alt="Foto do paciente" />
 
                         <div className="Inf">
                             <div className="dados-pessoais">
