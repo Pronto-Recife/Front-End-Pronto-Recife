@@ -2,7 +2,7 @@ import { Search, CirclePlus } from "lucide-react";
 import Footerbar from "../../../components/footerbar";
 import Sidebarprofissionais from "../../../components/sidebarprofissionais";
 import Superiorbar from "../../../components/superiorbar";
-import Foto from "../../../assets/Paciente/foto.svg";
+import Maria from "../../../assets/maria.svg";
 import * as S from "./styles";
 
 export default function Psprescricoes() {
@@ -25,7 +25,7 @@ export default function Psprescricoes() {
                     </S.Header>
 
                     <S.ProfileSection>
-                        <img src={Foto} alt="Foto de perfil" />
+                        <img src={Maria} alt="Foto de perfil" />
                         <S.Info>
                             <div>
                                 <p><strong>Nº Prescrição:</strong> 1115</p>
