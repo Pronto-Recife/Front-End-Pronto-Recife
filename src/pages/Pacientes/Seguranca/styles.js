@@ -19,7 +19,7 @@ export const Container = styled.div`
 
 export const Sidebar = styled.aside`
   grid-area: sidebar;
-  color: white;
+
 
   @media (max-width: 768px) {
     position: fixed;
@@ -62,19 +62,15 @@ export const Main = styled.main`
   h1 {
     font-size: 24px;
     font-weight: bold;
-    color: #030f41;
-    margin-bottom: 20px;
+    color: #161B68;
+    margin-bottom: 10px;
   }
 
-  p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.5;
-  }
+
 `;
 
 export const Content = styled.div`
-  margin-top: 20px;
+  margin-top: 0px;
 `;
 export const Footer = styled.footer`
   grid-area: footer;

@@ -28,20 +28,28 @@ export const Sidebar = styled.aside`
 
 export const Main = styled.main`
   grid-area: main;
+  display: flex;
   margin: 80px 20px 20px 20px;
   padding: 20px;
+  gap: 20px;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #161B68;
+  }
 
   h1 {
     font-size: 24px;
     font-weight: bold;
-    color: #030f41;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    color: #161B68;
+    margin-bottom: 15px;
+
   }
 
   p {
-    font-size: 16px;
-    color: #666;
+    font-size: 14px;
+    color: #161B68;
     line-height: 1.5;
   }
 
@@ -73,31 +81,30 @@ export const Paciente = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin: 20px 0;
+  margin: 20px;
 
-  img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
 `;
 
 export const Inf = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   gap: 20px; 
+  align-items: center;
 
-  div {
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 8px;
+
+
+  .dados-cadastrais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 10px;
+    width: 100%;
   }
 
-  h2 {
-    font-size: 16px;
-    color: #161b68;
-    margin-bottom: 10px;
+  .section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   p {
@@ -106,26 +113,31 @@ export const Inf = styled.div`
     line-height: 1.4;
   }
 
-  @media (max-width: 1024px) {
-    flex-direction: column; 
+  @media (max-width: 768px) {
+    .dados-cadastrais {
+      grid-template-columns: 1fr;
+    }
   }
 `;
+
+
 
 export const Historico = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
   background-color: #EAEBFC;
-  border-radius: 10px;
   padding: 20px;
-  margin: 20px 0;
-  gap: 10px;
+  margin: 20px 20px;
+  gap: 20px;
   display: flex;
-
-
+  
   h3 {
     font-size: 20px;
     color: #161B68;
+    margin-left: 10px;
+    margin-bottom: 10px;
+   
   }
 
   p {
@@ -138,7 +150,7 @@ export const Card = styled.div`
   background-color: #EAEBFC;
   border-radius: 8px;
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   h3 {
     font-size: 20px;

@@ -7,7 +7,7 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
-    padding: 4rem 1rem;
+    padding: 7rem 1rem;
     background-image: url(${Fundoimg});
     background-size: cover;
     background-repeat: no-repeat;

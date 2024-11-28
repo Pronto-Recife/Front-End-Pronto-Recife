@@ -89,7 +89,16 @@ export const Card = styled.div`
   transition: background-color 0.3s;
   border: #161B68;
  
-
+  li {
+    font-size: 14px;
+    color: #161B68;
+    margin: 15px;
+    background-color: #f0f1ff;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    list-style: none;
+  }
 
   h2 {
     font-size: 20px;

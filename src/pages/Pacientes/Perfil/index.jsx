@@ -68,11 +68,11 @@ export default function Perfil() {
                 <Sidebarpacientes />
                 <S.Main>
                     <div className="paciente">
-                        <img src={Foto} alt="Foto do paciente" />
 
                         <div className="Inf">
+                             <h2>Dados Pessoais</h2>
                             <div className="dados-pessoais">
-                                <h2>Dados Pessoais</h2>
+                                
                                 {pacienteInfo[0].content.map((item, idx) => (
                                     <p key={idx}>
                                         <strong>{item.label}:</strong> {item.value}
@@ -98,7 +98,7 @@ export default function Perfil() {
                         </div>
 
                         <S.Button>Visualizar Cadastro</S.Button>
-                        <S.Button>Inserir Email Automático</S.Button>
+                        <S.Button>Imprimir</S.Button>
                     </div>
 
                     <div className="historico">

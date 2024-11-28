@@ -43,7 +43,7 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 10px 10px;
 
   @media (max-width: 768px) {
     left: 0;
@@ -69,11 +69,6 @@ export const Main = styled.main`
     color: #161B68;
   }
 
-  p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.5;
-  }
 `;
 
 export const Content = styled.div`
@@ -100,15 +95,3 @@ export const Feature = styled.section`
   }
 `;
 
-export const Footer = styled.footer`
-  grid-area: footer;
-  background-color: #f8f9fd;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
-  color: #8a8a8a;
-
-  @media (max-width: 768px) {
-    font-size: 12px;
-  }
-`;

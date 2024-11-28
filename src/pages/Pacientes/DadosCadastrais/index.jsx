@@ -1,7 +1,6 @@
-import Footerbar from "../../../components/footerbar";
 import Sidebarpacientes from "../../../components/sidebarpacientes";
 import Superiorbar from "../../../components/superiorbar";
-
+import * as S from "./styles";
 
 export default function Dadoscadastrais() {
 
@@ -9,10 +8,9 @@ export default function Dadoscadastrais() {
         <>
         <Superiorbar />
         <Sidebarpacientes />
+        
 
-        <footer>
-         <Footerbar />
-        </footer>
+        
         </>
     )
 }
