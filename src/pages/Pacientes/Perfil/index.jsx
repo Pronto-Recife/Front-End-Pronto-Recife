@@ -68,10 +68,9 @@ export default function Perfil() {
                 <Sidebarpacientes />
                 <S.Main>
                     <div className="paciente">
-<<<<<<< HEAD
-=======
+
                         <img src={Maria} alt="Foto do paciente" />
->>>>>>> 1f6e9c9414e641ed1514177cd443bc8d4c3d1441
+
 
                         <div className="Inf">
                              <h2>Dados Pessoais</h2>
