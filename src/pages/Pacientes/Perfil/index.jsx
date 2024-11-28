@@ -69,7 +69,7 @@ export default function Perfil() {
                 <S.Main>
                     <div className="paciente">
 
-                        <img src={Maria} alt="Foto do paciente" />
+                        
 
 
                         <div className="Inf">

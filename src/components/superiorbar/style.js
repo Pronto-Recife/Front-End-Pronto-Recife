@@ -6,7 +6,7 @@ export const BarContainer = styled.div`
     align-items: center;
     padding: 10px 20px;
     font-family: 'Poppins', sans-serif;
-    background-color: transparent;
+    background-color: #fff;
     
     
     @media (max-width: 768px) {
