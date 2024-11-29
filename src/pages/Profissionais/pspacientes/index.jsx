@@ -3,7 +3,6 @@ import Footerbar from "../../../components/footerbar";
 import Sidebarprofissionais from "../../../components/sidebarprofissionais";
 import Superiorbar from "../../../components/superiorbar";
 
-
 import * as S from "./style.js"
 
 export default function Pspacientes() {
