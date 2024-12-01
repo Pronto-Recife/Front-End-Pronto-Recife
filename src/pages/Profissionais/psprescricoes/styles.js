@@ -6,7 +6,8 @@ export const Container = styled.div`
   grid-template-columns: 250px 1fr;
   grid-template-areas:
     "sidebar header"
-    "sidebar main";
+    "sidebar main"
+    "sidebar footer";
   font-family: 'Poppins', sans-serif;
 
   @media (max-width: 768px) {
@@ -15,136 +16,181 @@ export const Container = styled.div`
       "header"
       "main"
       "footer";
-    margin-left: 0;
   }
 `;
 
-export const Sidebar = styled.div`
-  grid-area: sidebar;
-
-`;
-
-export const MainContent = styled.main`
-  grid-area: main;
-  padding: 20px;
-`;
-
-export const Header = styled.div`
+export const Header = styled.header`
+  grid-area: header;
+  position: fixed;
+  top: 0;
+  left: 250px;
+  width: calc(100% - 250px);
+  z-index: 999;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 80px 20px 20px 0px;
-  margin-left: 50px;
-  
+  justify-content: space-between;
+  padding: 10px 20px;
+
+
+  @media (max-width: 768px) {
+    left: 0;
+    width: 100%;
+  }
+`;
+
+export const Sidebar = styled.aside`
+  grid-area: sidebar;
+  color: white;
+
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    height: calc(100vh - 60px);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+`;
+
+export const Main = styled.main`
+  grid-area: main;
+  margin: 80px 20px 20px 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+
   h1 {
-    font-size: 35px;
+    font-size: 24px;
     font-weight: bold;
     color: #161B68;
-    white-space: nowrap;
-  }
-`;
-
-export const SearchWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  background-color: #f1f1f1;
-  border-radius: 30px;
-  margin-right: 50px;
-`;
-
-export const SearchInput = styled.input`
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #c1c1c1;
-  border-radius: 20px;
-  font-size: 1rem;
-  margin-right: 0.5rem;
-`;
-
-export const ProfileSection = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-
-  img {
-    margin-left: 50px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-right: 2rem;
-
-  }
-`;
-
-export const Info = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-
-  div {
-    
-    flex: 1;
-    margin-right: 1rem;
   }
 
   p {
-    margin: 0.3rem 0;
-    color: #161B68;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
   }
 `;
 
-export const Prescriptions = styled.div`
-  margin-bottom: 2rem;
-  margin-left: 50px;
-  margin-right: 50px;
-`;
-
-export const PrescriptionCard = styled.div`
-  background-color: #f8f8f8;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-
-  h3 {
-    color: #161B68;
-    display: inline-block;
-    margin-right: 1rem;
-  }
-
-  ul {
-    padding-left: 1.5rem;
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-  }
-`;
-
-export const VejaMaisButton = styled.button`
+export const SearchSection = styled.div`
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  background-color: transparent;
-  color: #030F41; 
+  justify-content: end;
+  padding: 20px 0;
+`;
+
+export const SearchBar = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  background-color: #dee0ff;
+  border-radius: 40px;
+  padding: 10px 30px;
+
+  .box {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+  .searchbutton {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+`;
+
+export const Content = styled.div`
+  background: white;
+  border: 2px solid #161b68;
+  border-radius: 10px;
+  padding: 20px;
+`;
+
+export const LogoContainer = styled.div`
+  text-align: center;
+
+  img {
+    max-width: 200px;
+  }
+
+  .title {
+    margin-top: 10px;
+    color: #161b68;
+    font-size: 20px;
+  }
+`;
+
+export const TextContext = styled.div`
+  margin: 20px 0;
+
+  h2 {
+    color: #161b68;
+    margin-top: 15px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+`;
+
+export const FooterContent = styled.footer`
+  margin-top: 20px;
+  padding: 10px;
+  text-align: right;
+
+  p {
+    margin: 5px 0;
+  }
+`;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  justify-content: end;
+  margin-top: 30px;
+  gap: 10px;
+`;
+
+export const Button = styled.button`
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #161B68;
   font-weight: 600;
+  background-color: #161b68;
   border: none;
-  border-radius: 4px;
-  font-size: 1rem;
+  border-radius: 20px;
   cursor: pointer;
-  margin-top: 1rem;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  align-self: flex-end;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: none; 
-    transform: scale(1.1); 
+    background-color: #0a1234;
   }
 
-  svg {
-    margin-right: 0.5rem;
+  &.imprimir {
+    background-color: #6AF670;
+  }
+
+  &.imprimir:hover {
+    background-color: #24E42C;
+  }
+
+  &.enviar-email {
+    background-color: #6AF670;
+  }
+
+  &.enviar-email:hover {
+    background-color: #24E42C;
   }
 `;
 
-
+export const List = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 20px;
+  
+  li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #666;
+  }`

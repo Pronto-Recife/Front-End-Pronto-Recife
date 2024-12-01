@@ -37,19 +37,19 @@ export const Header = styled.header`
   top: 0;
   left: 250px;
   width: calc(100% - 250px);
-  background-color: #ffffff;
   z-index: 999;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  
+
 
   @media (max-width: 768px) {
     left: 0;
     width: 100%;
   }
 `;
+
 
 export const Main = styled.main`
   grid-area: main;

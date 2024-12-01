@@ -3,7 +3,7 @@ import Superiorbar from "../../../components/superiorbar";
 import * as S from "./style.js";
 import SidebarProfissionais from "../../../components/sidebarprofissionais";
 
-export function Pspacientes() {
+export default function Pspacientes() {
     const pacientes = [
         {
             id: "1",
@@ -72,9 +72,8 @@ export function Pspacientes() {
                 <Superiorbar />
             </S.Header>
             <S.Main>
-            <h1>Pacientes</h1>
+                <h1>Pacientes</h1>
                 <S.SearchSection>
-                    
                     <S.SearchBar>
                         <input type="text" placeholder="Pesquisar pacientes..." />
                         <button type="submit">
