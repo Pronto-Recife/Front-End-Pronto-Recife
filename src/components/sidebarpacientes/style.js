@@ -24,7 +24,6 @@ export const Logo = styled.div`
 export const Menu = styled.nav`
     display: flex;
     flex-direction: column;
-    gap: 5px;
 
     h5 {
         margin-left: 1rem;

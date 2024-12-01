@@ -6,16 +6,14 @@ export const Container = styled.div`
   grid-template-columns: 250px 1fr;
   grid-template-areas:
     "sidebar header"
-    "sidebar main"
-    "sidebar footer";
+    "sidebar main";
   font-family: 'Poppins', sans-serif;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     grid-template-areas:
       "header"
-      "main"
-      "footer";
+      "main";
   }
 `;
 
@@ -63,16 +61,22 @@ export const Sidebar = styled.aside`
 
 export const Main = styled.main`
   grid-area: main;
-  margin: 80px 20px 90px 20px;
+  margin: 80px 20px 20px 20px;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  display: grid;
+  
 
   h1 {
     font-size: 24px;
     font-weight: bold;
-    color: #161b68;
+    color: #161B68;
+  }
+
+  p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
   }
 
   @media (max-width: 768px) {

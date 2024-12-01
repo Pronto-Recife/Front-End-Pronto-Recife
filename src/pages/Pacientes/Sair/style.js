@@ -49,6 +49,7 @@ export const Container = styled.div`
   padding: 10px 40px;
   border-radius: 20px;  
   border: 2px solid #2b318a;
+  font-weight: 600;
 
 
   } 
@@ -66,6 +67,7 @@ export const Container = styled.div`
   color: #2b318a;
   border-radius: 20px;
   padding: 10px 40px;
+  font-weight: 600;
 
 }
 

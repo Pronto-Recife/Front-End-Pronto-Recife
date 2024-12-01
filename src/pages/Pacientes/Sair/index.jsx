@@ -9,13 +9,10 @@ import { useNavigate } from "react-router-dom";
 export default function Sair() {
   const [showModal, setShowModal] = useState(true);
   const closeModal = () => setShowModal(false);
-  const navigation = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <>
-      <Superiorbar />
-      <Sidebarpacientes />
-
       <Modal isOpem={showModal}>
         <Container>
           <div className="modal">
@@ -24,10 +21,9 @@ export default function Sair() {
             <h3 className="text">Deseja Realmente Sair?</h3>
 
             <div className="components">
-              <button className="buttons" onClick={() => navigation("/") } >Sim,sair </button>
-              <button className="button" onClick={() => closeModal()}>
-                {" "}
-                Cancelar{" "}
+              <button className="buttons" onClick={() => navigate("/")}>Sair</button>
+              <button className="button" onClick={() => navigate(-1)}>
+                Cancelar
               </button>
             </div>
           </div>
