@@ -38,7 +38,7 @@ export const Container = styled.div`
   }
 
   && .team-dev {
-    color: #161b68;
+    color: #6AF670;
   }
 
   && .team-cargo {
@@ -49,7 +49,7 @@ export const Container = styled.div`
   }
 
 
-  /* Responsividade */
+
   @media (max-width: 768px) {
     > div {
       flex: 1 1 calc(50% - 20px);

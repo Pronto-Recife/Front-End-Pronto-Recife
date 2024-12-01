@@ -9,29 +9,56 @@ export const Container = styled.div`
   height: 100vh;
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 2fr; 
     grid-template-areas:
       "main";
   }
 `;
 
-export const Sidebar = styled.aside`
-  grid-area: sidebar;
+
+export const Header = styled.header`
+  grid-area: header;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 250px;
-  height: 100%;
-  padding: 20px;
-  z-index: 1000;
+  left: 250px;
+  width: calc(100% - 250px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+
+
+  @media (max-width: 768px) {
+    left: 0;
+    width: 100%;
+  }
 `;
+
+export const Sidebar = styled.aside`
+  grid-area: sidebar;
+  color: white;
+
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+`;
+
 
 export const Main = styled.main`
   grid-area: main;
   display: flex;
   margin: 80px 20px 20px 20px;
-  padding: 20px;
   gap: 20px;
+  padding: 20px;
+  
 
   h2 {
     font-size: 24px;
@@ -44,6 +71,7 @@ export const Main = styled.main`
     font-weight: bold;
     color: #161B68;
     margin-bottom: 15px;
+    
 
   }
 
@@ -149,16 +177,18 @@ export const Historico = styled.div`
 export const Card = styled.div`
   background-color: #EAEBFC;
   border-radius: 8px;
-  padding: 15px;
+  padding: 10px;
   margin-bottom: 10px;
+  width: 39.375rem;
+  height: 70px;
 
   h3 {
-    font-size: 20px;
+    font-size: 16px;
     color: #161B68;
   }
 
   p {
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
   }
 `;

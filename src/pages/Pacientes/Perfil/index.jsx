@@ -62,10 +62,14 @@ export default function Perfil() {
     ];
 
     return (
-        <>
-            <Superiorbar />
+        
             <S.Container>
-                <Sidebarpacientes />
+                <S.Sidebar>
+                    <Sidebarpacientes />
+                </S.Sidebar>
+                <S.Header>
+                    <Superiorbar />
+                </S.Header>
                 <S.Main>
                     <div className="paciente">
 
@@ -106,7 +110,6 @@ export default function Perfil() {
 
                     <div className="historico">
                         <h1>Histórico Médico</h1>
-
                         {historicoMedico.map((item, index) => (
                             <S.Card key={index}>
                                 <h3>{item.title}</h3>
@@ -116,6 +119,6 @@ export default function Perfil() {
                     </div>
                 </S.Main>
             </S.Container>
-        </>
+        
     );
 }

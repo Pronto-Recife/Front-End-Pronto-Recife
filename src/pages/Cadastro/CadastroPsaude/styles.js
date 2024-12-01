@@ -18,7 +18,7 @@ export const FormSection = styled.div `
     flex-direction: column;
     background: white;
     background-color: rgba(241, 241, 241, 0.3);
-    padding: 30px 80px;
+    padding: 27px 80px;
     row-gap: 5.0px;
     border-radius: 20px 0px 0px 20px;
     overflow: hidden;

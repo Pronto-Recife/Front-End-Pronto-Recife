@@ -135,7 +135,13 @@ export function Home() {
               </div>
             </div>
 
-            <img src={Mapa} alt="Mapa de Clínicas" />
+            <iframe src="https://www.google.com/maps?q=hospitais+perto+de+Av.+Alfredo+Lisboa,+268,+Recife,+PE,+50030-150&output=embed" 
+        width="600" 
+        height="324"
+        frameborder="0"
+        allowfullscreen="" 
+        loading="lazy">
+            </iframe>
           </div>
         </section>
 

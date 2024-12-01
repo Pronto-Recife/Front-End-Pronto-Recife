@@ -176,25 +176,26 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #ccc;
-    border-radius: 20px;
+    
   }
 
   .map-card img {
     height: 100%;
-    width: 50%;
+    width: 20%;
   }
 
   .input {
-    max-width: 80%;
+    max-width: 50%;
     font-size: 1.25rem;
     color: #2b318a;
   }
 
   .map-text {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
   .map-text img {
-    width: 100px;
+    width: 60px;
+    margin: 10px;
   }
 
   .map-container img {
@@ -208,6 +209,10 @@ export const Container = styled.div`
     gap: 0px;
     margin-bottom: 2rem;
   }
+
+  .map-text h2{
+
+  }  
 
   .procura {
     background-color: #f1f1f1;
@@ -254,7 +259,7 @@ export const Container = styled.div`
     color: #161b68;
   }
 
-  /* Footer */
+
   .footer {
     background-color: #2b318a;
     color: #fff;
@@ -422,10 +427,7 @@ export const Container = styled.div`
         flex-direction: column;
       }
 
-      .map-card img {
-        width: 100%;
-        height: auto;
-      }
+      
     }
 
     .map-text {

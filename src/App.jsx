@@ -7,10 +7,9 @@ import { paginas } from "./routes/index.routes";
 export default function App() {
   return (
     <>
-      <GlobalStyles /> {/* Styles Globais usando styled-components */}
+      <GlobalStyles /> 
       <RouterProvider router={paginas} />{" "}
-      {/* Renderizar a lista de Paginas = SPA */}
-      
+
     </>
   );
 }

@@ -77,17 +77,19 @@ export const CardContainer = styled.div`
   justify-content: start;
   gap: 20px;
   margin-top: 20px;
+  margin-right: 50px;
 `;
 
 export const Card = styled.div`
   flex: 1;
   background-color: #EAEBFC;
   color: #161B68;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
   text-align: center;
   transition: background-color 0.3s;
   border: #161B68;
+  
  
   li {
     font-size: 14px;

@@ -146,9 +146,7 @@ export const Container = styled.div`
         font-size: 0.9rem;
       }
 
-      .button-cadastro {
-        font-size: 0.9rem;
-      }
+      
     }
 
     .container-login {
@@ -159,10 +157,7 @@ export const Container = styled.div`
         font-size: 1.2rem;
       }
 
-      .button-login {
-        width: 80%;
-        font-size: 0.9rem;
-      }
+     
     }
   }
 
@@ -188,14 +183,10 @@ export const Container = styled.div`
         font-size: 0.9rem;
       }
 
-      .button-login {
-        width: 90%;
-        font-size: 0.8rem;
-      }
+      
     }
 
-    .container-cadastro, 
-    .button-cadastro {
+    .container-cadastro {
       width: 90%;
     }
   }
@@ -217,9 +208,6 @@ export const Container = styled.div`
       font-size: 0.8rem;
     }
 
-    .button-login,
-    .button-cadastro {
-      font-size: 0.8rem;
-    }
+
   }
 `;

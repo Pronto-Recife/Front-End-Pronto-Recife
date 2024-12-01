@@ -27,7 +27,6 @@ import Sair from "../pages/Pacientes/Sair";
 
 // Fluxo de Profissional de Saúde
 import Psinicio from "../pages/Profissionais/psinicio";
-import Pspacientes from "../pages/Profissionais/pspacientes";
 import Psexames from "../pages/Profissionais/psexames";
 import Psprescricoes from "../pages/Profissionais/psprescricoes";
 import Psrelatorios from "../pages/Profissionais/psrelatorios";
@@ -35,6 +34,7 @@ import Psdadoscadastrais from "../pages/Profissionais/psdadoscadastrais";
 import Psseguranca from "../pages/Profissionais/psseguranca";
 import Psajuda from "../pages/Profissionais/psajuda";
 import Pssair from "../pages/Profissionais/pssair";
+import { Pspacientes } from "../pages/Profissionais/pspacientes";
 
 export const paginas = createBrowserRouter([
   {

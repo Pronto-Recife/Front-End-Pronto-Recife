@@ -72,7 +72,7 @@ export const Main = styled.main`
   h1 {
     font-size: 24px;
     font-weight: bold;
-    color: #030F41;
+    color: #161b68;
   }
 
   @media (max-width: 768px) {

@@ -17,7 +17,9 @@ export const Container = styled.button`
   padding: ${(props) => 
     props.size === "home"
     ? "12px 45px"
-    : "16px 50px"
+    : props.size === "login"
+    ? "12px 45px"
+    : "12px 45px"
   };
   
   font-size: ${(props) => 

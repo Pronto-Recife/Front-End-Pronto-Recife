@@ -1,157 +1,187 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-    padding: 20px;
+export const Content = styled.div`
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-areas:
+    "sidebar main";
+  width: 100%;
+  height: 100vh;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main";
+  }
+`;
+
+export const Sidebar = styled.aside`
+  grid-area: sidebar;
+  color: white;
+
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+`;
+
+export const Header = styled.header`
+  grid-area: header;
+  position: fixed;
+  top: 0;
+  left: 250px;
+  width: calc(100% - 250px);
+  background-color: #ffffff;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  
+
+  @media (max-width: 768px) {
+    left: 0;
     width: 100%;
-    display: flex;   
-    flex-direction: column;
-    border-radius: 10px;
-    row-gap: 20px;
-    
-    .titlecontent {
-        display: flex;
-        font-size: 26px;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        color: #161B68;
-    }
+  }
+`;
 
-    .titleresultados {
-        color: #161B68;
-        font-size: 25px;
-        font-weight: 500;
-        
-    }
+export const Main = styled.main`
+  grid-area: main;
+  margin: 80px 20px 20px 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
-    .pesquisa {
-        display: flex;
-        justify-content: space-between;
-        align-items: center; 
-    }
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #161b68;
+    margin-bottom: 20px;
+  }
+`;
 
-    .search {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-        background-color: #DEE0FF;
-        border-radius: 40px;
-        -webkit-box-shadow: 10px 11px 11px -10px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 11px 11px -10px rgba(0,0,0,0.75);
-        box-shadow: 10px 11px 11px -10px rgba(0,0,0,0.75);
-    }
+export const SearchSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 
-    .box {
-        width: 100%;
-        padding: 20px;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        
-    }
+  input {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+  }
 
-    .searchbutton {
-        background-color: transparent;
-        border: none;
-        padding: 15px;
+  button {
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+  }
+`;
 
-    }
-       
-`
+export const ResultsTitle = styled.div`
+  font-size: 16px;
+  color: #161b68;
+`;
+
 export const Cardlist = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+`;
+
+export const Card = styled.div`
+  background-color: #eaebfc;
+  border-radius: 8px;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .informacoes {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;   
-`
-export const Card = styled.div`
-    display: flex;  
-    height: 15rem;
     align-items: center;
-    margin-bottom: 20px;
-    gap: 20px; 
-    
-   
-   .img{
-    width: 10%;
-    height: 200px;
-    
-   }
-
-   .info{   
-    color: #161B68;
-    font-size: 14px;
-   }
-
-   .informacoes{
-    display: flex;
-    padding: 16px;
-    align-items: center;
-    gap: 100px 80px;
-    width: 60%;
-    background: #DEE0FF;
-    border: 4px solid #161B68;
-    border-radius: 10px;
-   }
-
-   .infos{
-    display: flex;
-    flex-direction: column;   
-    color: #161B68;
-   }
-
-   .botao{
-    display: flex;
-    flex-direction: column;  
-   }
-`
-export const Content = styled.div`
-   display: flex;
-   width: 100%;
-`
-export const PrescriptionCard = styled.div`
-  background-color: #f8f8f8;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-
-  h3 {
-    color: #161B68;
-    display: inline-block;
-    margin-right: 1rem;
+    width: 100%;
   }
 
-  ul {
-    padding-left: 1.5rem;
-
-    li {
-      margin-bottom: 0.5rem;
+  .informacoes h2 {
+      font-size: 20px;
+      color: #161b68;
     }
-  }
-`
+
+    .informacoes p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .info {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .info strong {
+        color: #161b68;
+      }
+
+    .botao {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 10px;
+    }
+
+    .botao button {
+        background-color: #6AF670;
+        color: #161B68;
+        font-weight: 600;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #24E42C;
+        }
+      }
+`;
+
 export const VejaMaisButton = styled.button`
-  display: flex;
-  justify-content: flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  background-color: transparent;
-  color: #030F41; 
-  font-weight: 600;
+  color: #161b68;
   border: none;
-  border-radius: 4px;
-  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
   cursor: pointer;
-  margin-top: 1rem;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  align-self: flex-end;
+`;
 
-  &:hover {
-    background-color: none; 
-    transform: scale(1.1); 
-  }
+export const SearchBar = styled.div`
 
-  svg {
-    margin-right: 0.5rem;
-  }
-`
-
+`;
