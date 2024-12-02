@@ -9,54 +9,114 @@ import * as S from "./styles";
 import Button from "../../../components/button/button";
 import { Input } from "../../../components/Input";
 import { useNavigate } from "react-router-dom";
-
-
+import { useState } from "react";
+import axios from "axios";
 
 export default function CadastroPaciente() {
-    const navigation = useNavigate();
-    
-    return (
-        <Container>
-            <FormSection>
-                    <Input titulo="Nome Completo" pass={false} type="text" subtitulo="Nome Completo"/>
+  const navigation = useNavigate();
+  const [formData, setFormData] = useState({
+    CPF: "",
+    nomeCompleto: "",
+    email: "",
+    senha: "",
+  });
 
-                    <Input titulo="Número do CPF" pass={false} type="text" subtitulo="Número do CPF"/>
-                    
-                    <Input titulo="E-mail" pass={false} type="text" subtitulo="E-mail"/>
-                    
-                    <Input titulo="Senha" pass subtitulo="Senha"/>
-                    
-                    
-                    <Input titulo="Confirmar Senha" pass subtitulo="Confirmar Senha"/>
-                    
-                <div className="containercheckbox">
-                <input type="checkbox" id="terms" />
-                <label htmlFor="terms">Eu aceito os termos de uso e as Políticas de Privacidade</label>
-                </div>
-               
-                <Button onClick={() => navigation('/inicio')} title="Cadastrar" size="" type="submit"/>
-                
-            </FormSection>
-               
-               <InfoSection>
-                <img src={LogoCadastroDois} alt="logonome" />
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-                <p className="letra">Já tem uma conta ?</p>
-                <Button onClick={() => navigation('/login')} title="Entrar" size="" type="button" secondary/>
-                
-                <p className="letra">Visite as nossas redes!</p>
-                
-                <ul className="icons">
-                <img src={Instagram} alt="" />
-                <img src={Mail} alt="" />
-                <img src={Facebook} alt="" />
-                <img src={Twitter} alt="" />
+  const handleSubmit = async () => {
+    try {
+      const response = await axios.post(
+        "https://c8d9-160-20-194-16.ngrok-free.app/paciente/register",
+        formData
+      );
 
-                </ul>
-               
+      if (response.status === 201) {
+        alert("Cadastro realizado com sucesso!");
+        navigation("/inicio");
+      }
+    } catch (error) {
+      console.error(error);
+      alert(
+        "Erro ao realizar o cadastro. Verifique os dados e tente novamente."
+      );
+    }
+  };
 
-               </InfoSection>
-        </Container>
-    );
+  return (
+    <Container>
+      <FormSection>
+        <Input
+          titulo="Nome Completo"
+          pass={false}
+          type="text"
+          subtitulo="Nome Completo"
+          name="nomeCompleto"
+          onChange={handleChange}
+        />
+        <Input
+          titulo="Número do CPF"
+          pass={false}
+          type="text"
+          subtitulo="Número do CPF"
+          name="CPF"
+          onChange={handleChange}
+        />
+        <Input
+          titulo="E-mail"
+          pass={false}
+          type="email"
+          subtitulo="E-mail"
+          name="email"
+          onChange={handleChange}
+        />
+        <Input
+          titulo="Senha"
+          pass
+          subtitulo="Senha"
+          name="senha"
+          onChange={handleChange}
+        />
+        <Input
+          titulo="Confirmar Senha"
+          pass
+          subtitulo="Confirmar Senha"
+          onChange={handleChange}
+        />
+        <div className="containercheckbox">
+          <input type="checkbox" id="terms" />
+          <label htmlFor="terms">
+            Eu aceito os termos de uso e as Políticas de Privacidade
+          </label>
+        </div>
+        <Button
+          onClick={handleSubmit}
+          title="Cadastrar"
+          size=""
+          type="button"
+        />
+      </FormSection>
+
+      <InfoSection>
+        <img src={LogoCadastroDois} alt="logonome" />
+        <p className="letra">Já tem uma conta ?</p>
+        <Button
+          onClick={() => navigation("/login")}
+          title="Entrar"
+          size=""
+          type="button"
+          secondary
+        />
+        <p className="letra">Visite as nossas redes!</p>
+        <ul className="icons">
+          <img src={Instagram} alt="" />
+          <img src={Mail} alt="" />
+          <img src={Facebook} alt="" />
+          <img src={Twitter} alt="" />
+        </ul>
+      </InfoSection>
+    </Container>
+  );
 }
-

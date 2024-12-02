@@ -8,7 +8,6 @@ import Inserircodigo from "../pages/Esquecisenha/Inserircodigo";
 import Novasenha from "../pages/Esquecisenha/Novasenha";
 import Sucesso from "../pages/Esquecisenha/Sucesso";
 import CadastroPaciente from "../pages/Cadastro/CadastroPaciente";
-import CadastroPsaude from "../pages/Cadastro/CadastroPsaude";
 import CadastroMedico from "../pages/Cadastro/CadastroMedico";
 import Default from "../pages/Default";
 import Ops from "../pages/Ops";
@@ -36,6 +35,10 @@ import Psajuda from "../pages/Profissionais/psajuda";
 import Pssair from "../pages/Profissionais/pssair";
 import Pspacientes from "../pages/Profissionais/pspacientes";
 
+//Barra Superior
+import Servicos from "../pages/Servicos";
+import Ajudaesup from '../pages/Ajudaesup';
+
 export const paginas = createBrowserRouter([
   {
     path: "/",
@@ -53,10 +56,7 @@ export const paginas = createBrowserRouter([
     path: "/cadastromedico",
     element: <CadastroMedico />,
   },
-  {
-    path: "/cadastropsaude",
-    element: <CadastroPsaude />,
-  },
+
   {
     path: "/cadastropaciente",
     element: <CadastroPaciente />,
@@ -175,7 +175,21 @@ export const paginas = createBrowserRouter([
   {
     path: "/pssair",
     element: <Pssair />,
+  }, 
+
+  //Barra Superior
+  {
+    path: "/servicos",
+    element: <Servicos />
   },
+  {
+    path: "/ajudaesup",
+    element: <Ajudaesup />
+  },
+  // {
+  //   path: "/sobre",
+  //   element: <Sobre />
+  // },
 
  
 

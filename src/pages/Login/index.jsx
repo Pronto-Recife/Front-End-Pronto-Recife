@@ -8,60 +8,102 @@ import Button from "../../components/button/button";
 import * as S from "./styles";
 import { Input } from "../../components/Input";
 import { useNavigate } from "react-router-dom";
-
+import { useState } from "react";
+import { api } from "../../service/api";
+import { TOKEN_STORAGE } from "../../constants/TOKEN_STORAGE";
 
 export default function Login() {
+  const [identificador, setIdentificador] = useState("");
+  const [senha, setSenha] = useState("");
+  const [flow, setFlow] = useState("");
 
-  
- const navigation = useNavigate();
+  const navigation = useNavigate();
+
+  async function handleLogin() {
+    console.log("Type", identificador, "document", flow, "senha", senha);
+    const response = await api
+      .post("/login", {
+        identificador: identificador,
+        senha: senha,
+        flow: flow,
+      })
+      .then((res) => {
+        localStorage.setItem(TOKEN_STORAGE, res.data.accessToken);
+        navigation(flow == 'CPF' ? "/inicio" : "/psinicio");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      console.log(response)
+  }
 
   return (
-    
-
-
-    <S.Container>   
+    <S.Container>
       <div className="ContainerInfo">
-
         <img className="logo" src={LogoNome} alt="Logo Pronto Recife" />
         <p className="letras">Ainda não tem uma conta?</p>
-        <Button onClick={() => navigation('/cadastro')} size='login' title='Cadastre-se'/>
+        <Button
+          onClick={() => navigation("/cadastro")}
+          size="login"
+          title="Cadastre-se"
+        />
 
         <div className="visiteno">
-        <p className="letras">Visite as nossas redes!</p>
-        <div className="icons">
-          <img src={Instagram} alt="Instagram" />
-          <img src={Email} alt="Email" />
-          <img src={Facebook} alt="Facebook" />
-          <img src={Twitter} alt="Twitter" />
+          <p className="letras">Visite as nossas redes!</p>
+          <div className="icons">
+            <img src={Instagram} alt="Instagram" />
+            <img src={Email} alt="Email" />
+            <img src={Facebook} alt="Facebook" />
+            <img src={Twitter} alt="Twitter" />
+          </div>
         </div>
-        </div>
-
       </div>
-
 
       <div className="container-login">
         <p>Acesse a sua conta</p>
 
         <div className="password-container">
-
           <label>Tipo de documento</label>
-          <select className="documento" name="documento" id="documento">
-            <option className="option" value="">Selecione o tipo do documento</option>
-            <option className="option" value="CPF">CPF</option>
-            <option className="option" value="CRM">CRM</option>
-            <option className="option" value="COREN">COREN</option>
+          <select
+            onChange={(e) => setFlow(e.target.value)}
+            className="documento"
+            name="documento"
+            id="documento"
+          >
+            <option className="option" value="">
+              Selecione o tipo do documento
+            </option>
+            <option className="option" value="CPF">
+              CPF
+            </option>
+            <option className="option" value="CRM">
+              CRM
+            </option>
+            <option className="option" value="COREN">
+              COREN
+            </option>
           </select>
-          
-          <Input type='text' titulo='Documento' subtitulo='Digite seu documento' />
-          
-          <Input type='password' titulo='Senha' subtitulo='Digite sua senha' />
+
+          <Input
+            onChange={(e) => setIdentificador(e.target.value)}
+            type="text"
+            titulo="Documento"
+            subtitulo="Digite seu documento"
+          />
+
+          <Input
+            onChange={(e) => setSenha(e.target.value)}
+            type="password"
+            titulo="Senha"
+            subtitulo="Digite sua senha"
+          />
         </div>
 
         <a href="/Esquecisenha" className="forgot-password">
           Esqueceu sua senha?
         </a>
 
-        <Button size='entrar' title='Entrar'/>
+        <Button onClick={() => handleLogin()} size="entrar" title="Entrar" />
       </div>
     </S.Container>
   );

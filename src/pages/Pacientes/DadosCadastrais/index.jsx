@@ -7,7 +7,7 @@ export default function Dadoscadastrais() {
     const historicoMedico = [
         {
             title: "Nome Legal",
-            content: "Maria Lucia Da Silva"
+            content: "Alice Maria Sena"
         },
         {
             title: "CPF",
@@ -19,11 +19,11 @@ export default function Dadoscadastrais() {
         },
         {
             title: "Cônjuge",
-            content: "Ananias Nicolau Benevides Dias"
+            content: "Não possue"
         },
         {
-            title: "Data de nasciemento",
-            content: "19/04/1952"
+            title: "Data de nascimento",
+            content: "09/10/2005"
         },
         {
             title: "Gênero",
@@ -35,29 +35,29 @@ export default function Dadoscadastrais() {
         },
         {
             title: "Responsável Legal",
-            content: "Juliana Maria Tenório da Silva"
+            content: "Célia Maria da Silva Sena"
         }
     ];
 
     const saude = [
         {
             title: "Peso",
-            content: "86Kg"
+            content: "46Kg"
         },
         {
             title: "Altura",
-            content: "1,54m"
+            content: "1,64m"
         },
         {
             title: "Tipo sanguíneo",
-            content: "Tipo: 0 | fator RG: Negativo"
+            content: "Tipo: B | fator RG: Negativo"
         },
     ];
 
     const contatos = [
         {
             title: "E-mail",
-            content: "marialucia@gmail.com"
+            content: "alicesena@gmail.com"
         },
         {
             title: "Telefone",
