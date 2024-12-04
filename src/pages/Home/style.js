@@ -31,6 +31,8 @@ export const Container = styled.div`
         font-weight: 500;
         color: #2b318a;
         margin-bottom: 2rem;
+        padding: 10px;
+        border-radius: 20px;
       }
     }
   }

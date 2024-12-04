@@ -23,21 +23,21 @@ import Seguranca from "../pages/Pacientes/Seguranca";
 import Ajuda from "../pages/Pacientes/Ajuda";
 import Sair from "../pages/Pacientes/Sair";
 
-
 // Fluxo de Profissional de Saúde
 import Psinicio from "../pages/Profissionais/psinicio";
 import Psexames from "../pages/Profissionais/psexames";
 import Psprescricoes from "../pages/Profissionais/psprescricoes";
-import Psrelatorios from "../pages/Profissionais/psrelatorios"
+import Psrelatorios from "../pages/Profissionais/psrelatorios";
 import Psdadoscadastrais from "../pages/Profissionais/psdadoscadastrais";
 import Psseguranca from "../pages/Profissionais/psseguranca";
 import Psajuda from "../pages/Profissionais/psajuda";
 import Pssair from "../pages/Profissionais/pssair";
 import Pspacientes from "../pages/Profissionais/pspacientes";
+import AgendamentoConsultas from "../pages/AgendamentoConsultas";
 
 //Barra Superior
 import Servicos from "../pages/Servicos";
-import Ajudaesup from '../pages/Ajudaesup';
+import Ajudaesup from "../pages/Ajudaesup";
 
 export const paginas = createBrowserRouter([
   {
@@ -89,7 +89,7 @@ export const paginas = createBrowserRouter([
     element: <OPS />,
   },
 
- //Fluxo de Paciente
+  //Fluxo de Paciente
   {
     path: "/inicio",
     element: <Inicio />,
@@ -175,23 +175,20 @@ export const paginas = createBrowserRouter([
   {
     path: "/pssair",
     element: <Pssair />,
-  }, 
+  },
 
   //Barra Superior
   {
     path: "/servicos",
-    element: <Servicos />
+    element: <Servicos />,
   },
   {
     path: "/ajudaesup",
-    element: <Ajudaesup />
+    element: <Ajudaesup />,
   },
-  // {
-  //   path: "/sobre",
-  //   element: <Sobre />
-  // },
 
- 
-
-
+  {
+    path: "/agendamento",
+    element: <AgendamentoConsultas />,
+  },
 ]);

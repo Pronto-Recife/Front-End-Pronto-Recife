@@ -38,7 +38,7 @@ export const Container = styled.div`
   }
 
   && .team-dev {
-    color: #6AF670;
+    color: #161b68;
   }
 
   && .team-cargo {

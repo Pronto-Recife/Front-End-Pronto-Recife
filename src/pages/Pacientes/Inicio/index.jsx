@@ -1,11 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import { Dbcard } from "../../../components/dbcard";
-import Footerbar from "../../../components/footerbar";
 import Sidebarpacientes from "../../../components/sidebarpacientes";
 import Superiorbar from "../../../components/superiorbar";
 import * as S from "./styles";
-import { Stethoscope, TestTubeDiagonal, ScrollText, TriangleAlert } from 'lucide-react';
+import { TestTubeDiagonal, ScrollText, TriangleAlert, Navigation, BriefcaseMedical } from 'lucide-react';
 
 export default function Inicio() {
+
+  const navigation = useNavigate();
   return (
     <S.Container>
       <S.Sidebar>
@@ -20,9 +22,10 @@ export default function Inicio() {
         <h1>Seus atalhos</h1>
 
         <S.CardContainer>
-          <Dbcard 
+        <Dbcard 
+            onClick={() => navigation("/agendamento")}
             title="Agendar Especialista" 
-            icon={<Stethoscope />} 
+            icon={<BriefcaseMedical  />} 
           />
           <Dbcard 
             title="Exames Pendentes" 

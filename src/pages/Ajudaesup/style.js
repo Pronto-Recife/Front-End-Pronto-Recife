@@ -36,9 +36,9 @@ export const Header = styled.header`
 
 export const Main = styled.main`
   grid-area: main;
-  margin: 80px 20px 20px 20px;
+  margin: 80px 20px 30px 20px;
   background-color: #fff;
-  padding: 20px;
+  padding: 0px;
   border-radius: 8px;
 
   h1 {
@@ -46,10 +46,15 @@ export const Main = styled.main`
     font-weight: bold;
     color: #161B68;
     margin-bottom: 10px;
+    margin-left: 20px;
   }
 
   span {
     color: #161B68;
+  }
+  
+  p { 
+    margin: 0px 20px;
   }
 `;
 
@@ -79,4 +84,8 @@ export const Button = styled.button`
 `;
 
 export const Card = styled.div`
+background-color: #ccc;
+margin: 10px 0;
+padding: 20px;
+border-radius: 20px;
 `

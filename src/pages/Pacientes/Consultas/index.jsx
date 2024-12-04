@@ -1,11 +1,14 @@
-import Footerbar from "../../../components/footerbar";
 import Sidebarpacientes from "../../../components/sidebarpacientes";
 import Superiorbar from "../../../components/superiorbar";
 import * as S from "./styles";
 import { Dbcard } from "../../../components/dbcard";
 import { BriefcaseMedical , Video  } from 'lucide-react'
+import { useNavigate } from "react-router-dom";
 
 export default function Consultas() {
+
+  const navigation = useNavigate();
+
   return (
     <S.Container>
       <S.Sidebar>
@@ -20,8 +23,9 @@ export default function Consultas() {
         <h1>Consultas</h1>
 
         <S.CardContainer>
-          <Dbcard 
-            title="Agendar Especialista" 
+        <Dbcard 
+            onClick={() => navigation("/agendamento")}
+            title="Agendar Clínico Geral" 
             icon={<BriefcaseMedical  />} 
           />
           <Dbcard 
