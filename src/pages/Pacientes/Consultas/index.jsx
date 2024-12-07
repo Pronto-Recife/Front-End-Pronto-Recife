@@ -28,10 +28,7 @@ export default function Consultas() {
             title="Agendar Clínico Geral" 
             icon={<BriefcaseMedical  />} 
           />
-          <Dbcard 
-            title="Consultas Online 24h" 
-            icon={<Video  />} 
-          />
+          
         </S.CardContainer>
 
         <S.FiltersContainer>

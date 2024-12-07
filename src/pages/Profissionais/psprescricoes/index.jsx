@@ -17,16 +17,10 @@ export default function Psprescricoes() {
                     <Superiorbar />
                 </S.Header>
                 <S.SearchSection>
-                    <S.SearchBar>
-                        <input
-                            className="box"
-                            type="text"
-                            placeholder="ID do Paciente..."
-                        />
-                        <button className="searchbutton" type="submit">
-                            <Search size={24} color="#161B68" />
-                        </button>
-                    </S.SearchBar>
+                    <p>Selecione a Data</p>
+                    <input type="date" />
+                    <p>Selecione a Hora</p>
+                    <input type="time" />
                 </S.SearchSection>
                 <S.Content>
                     <S.LogoContainer>
@@ -92,7 +86,7 @@ export default function Psprescricoes() {
                 
                 <S.ButtonsContainer>
                     <S.Button className="imprimir">Imprimir</S.Button>
-                    <S.Button className="enviar-email">Enviar por Email</S.Button>
+                    <S.Button className="imprimir">Enviar</S.Button>
                 </S.ButtonsContainer>
             </S.Main>
         </S.Container>

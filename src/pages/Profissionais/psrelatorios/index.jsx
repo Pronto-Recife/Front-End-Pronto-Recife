@@ -21,7 +21,7 @@ export default function Psrelatorios() {
                         <input
                             className="box"
                             type="text"
-                            placeholder="ID do Paciente..."
+                            placeholder="CPF do Paciente..."
                         />
                         <button className="searchbutton" type="submit">
                             <Search size={24} color="#161B68" />

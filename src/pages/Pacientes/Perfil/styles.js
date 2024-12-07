@@ -56,13 +56,13 @@ export const Main = styled.main`
   grid-area: main;
   display: flex;
   margin: 80px 20px 20px 20px;
-  gap: 20px;
+  gap: 50px;
   padding: 20px;
   
 
   h2 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: #161B68;
   }
 
@@ -79,6 +79,7 @@ export const Main = styled.main`
     font-size: 14px;
     color: #161B68;
     line-height: 1.5;
+
   }
 
   @media (max-width: 768px) {
@@ -119,20 +120,8 @@ export const Inf = styled.div`
   gap: 20px; 
   align-items: center;
 
-
-
-  .dados-cadastrais {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 10px;
-    width: 100%;
-  }
-
-  .section {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  .dados-pessoais {
+    margin: 10px 0;
   }
 
   p {
@@ -179,8 +168,11 @@ export const Card = styled.div`
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 10px;
-  width: 39.375rem;
-  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem;
+  height: 50px;
 
   h3 {
     font-size: 16px;
@@ -188,7 +180,8 @@ export const Card = styled.div`
   }
 
   p {
-    font-size: 14px;
+    font-size: 12px;
     color: #333;
+    text-decoration: underline;
   }
 `;

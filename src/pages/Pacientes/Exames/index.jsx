@@ -47,18 +47,9 @@ export default function Exames() {
             <h2>Histórico</h2>
             <p>Consulte o histórico de exames.</p>
             <ul>
-              <li>Hemograma Completo - Realizado em 10/10/2024</li>
-              <li>Tomografia Computadorizada - Realizado em 15/09/2024</li>
-              <li>Exame de Urina - Realizado em 20/08/2024</li>
-            </ul>
-          </S.Card>
-          <S.Card>
-            <h2>Resultados</h2>
-            <p>Acesse os resultados disponíveis.</p>
-            <ul>
-              <li>Hemograma: Normal</li>
-              <li>Tomografia: Sem alterações</li>
-              <li>Exame de Urina: Infecção detectada</li>
+              <li>Hemograma Completo - Realizado em 10/10/2024 - Resultado: Normal </li>
+              <li>Tomografia Computadorizada - Realizado em 15/09/2024 - Resultado: Sem alterações </li>
+              <li>Exame de Urina - Realizado em 20/08/2024 - Resultado: Infecção detectada</li>
             </ul>
           </S.Card>
         </S.CardContainer>

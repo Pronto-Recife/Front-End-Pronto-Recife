@@ -22,7 +22,7 @@ export default function Psnicio() {
 
         <S.CardContainer>
           <Dbcard 
-            title="Agendar Especialista" 
+            title="Visualizar Consultas" 
             icon={<Stethoscope />} 
           />
           <Dbcard 
@@ -33,10 +33,7 @@ export default function Psnicio() {
             title="Prescrições Ativas" 
             icon={<ScrollText />} 
           />
-          <Dbcard 
-            title="Alertas de Saúde" 
-            icon={<TriangleAlert />} 
-          />
+         
         </S.CardContainer>
       </S.Main>
 

@@ -36,10 +36,7 @@ export default function Superiorbar({ onSearch }) {
                 <Bell />
             </S.IconWrapper>
 
-            <S.AccountWrapper>
-                <User />
-                <S.Text onClick={() => navigation('/inicio')} >Minha Conta</S.Text>
-            </S.AccountWrapper>
+            
         </S.BarContainer>
     );
 }

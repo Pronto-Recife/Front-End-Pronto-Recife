@@ -21,8 +21,8 @@ export const Card = styled.div`
   background-color: #f5f5ff;
   border-radius: 10px;
   padding: 20px;
-  width: 150px; 
-  height: 150px; 
+  width: 125px; 
+  height: 125px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,13 +42,13 @@ export const Card = styled.div`
 `;
 
 export const Icon = styled.div`
-  font-size: 36px;
+  font-size: 24px;
   color: #161B68;
   margin-bottom: 10px;
 `;
 
 export const Title = styled.h3`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: #161B68;
 `;

@@ -29,7 +29,7 @@ export default function CadastroPaciente() {
   const handleSubmit = async () => {
     try {
       const response = await axios.post(
-        "https://59bc-160-20-194-18.ngrok-free.app/paciente/register",
+        "https://a489-160-20-194-20.ngrok-free.app/paciente/register",
         formData
       );
 

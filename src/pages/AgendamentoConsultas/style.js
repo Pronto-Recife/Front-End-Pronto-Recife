@@ -158,7 +158,7 @@ export const DivMain = styled.div`
     color: #161B68;
   }
 
-  select {
+  select, input {
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
