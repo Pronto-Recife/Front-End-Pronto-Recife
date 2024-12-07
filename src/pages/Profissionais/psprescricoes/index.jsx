@@ -52,17 +52,11 @@ export default function Psprescricoes() {
 
                         <S.List> 
                         <ul>
-                            <li>AAS 100 mg, 1 comprimido</li>
-                            <li>Digoxina 0,5 mg, 1 comprimido</li>
+                            <li>AAS 100 mg, 1 comprimido. de 12 em 12 horas.</li>
+                            <li>Digoxina 0,5 mg, 1 comprimido de 24 em 24 horas.</li>
                         </ul>
                         </S.List>
-                        <h2>Horários</h2>
-                        <S.List> 
-                        <ul>
-                            <li>8:00 - 16:00</li>
-                            <li>8:00 - 16:00</li>
-                        </ul>
-                        </S.List>
+                        
                         <h2>Observações</h2>
                         <S.List>
                         <ul>

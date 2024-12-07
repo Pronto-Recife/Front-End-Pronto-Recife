@@ -1,7 +1,7 @@
-import Footerbar from "../../../components/footerbar";
+
 import Sidebarpacientes from "../../../components/sidebarpacientes";
 import Superiorbar from "../../../components/superiorbar";
-import Maria from "../../../assets/maria.svg";
+
 
 import * as S from "./styles";
 
@@ -26,8 +26,6 @@ export default function Perfil() {
       title: "Outros Detalhes",
       content: [
         { label: "Email", value: "marialucia@gmail.com" },
-        { label: "Atendimento", value: "1" },
-        { label: "Faltas", value: "0" },
       ],
     },
   ];
@@ -38,7 +36,7 @@ export default function Perfil() {
       content: "Hipertensão, diabetes e histórico de problemas cardíacos.",
     },
     {
-      title: "Condições Crônicas",
+      title: "Condições Gerais",
       content:
         "Asma diagnosticada aos 40 anos, monitoramento contínuo necessário.",
     },
@@ -111,7 +109,7 @@ export default function Perfil() {
             <S.Card key={index}>
               <h3>{item.title}</h3>
               <p>Ver detalhes</p>
-              {/* <p>{item.content}</p> */}
+              {/* <p>{item.content}</p>  */}
             </S.Card>
           ))}
         </div>
