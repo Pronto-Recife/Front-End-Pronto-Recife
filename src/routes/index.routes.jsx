@@ -39,6 +39,9 @@ import AgendamentoConsultas from "../pages/AgendamentoConsultas";
 import Servicos from "../pages/Servicos";
 import Ajudaesup from "../pages/Ajudaesup";
 
+//Dev info
+import Usuarios from "../pages/Usuarios";
+
 export const paginas = createBrowserRouter([
   {
     path: "/",
@@ -191,4 +194,11 @@ export const paginas = createBrowserRouter([
     path: "/agendamento",
     element: <AgendamentoConsultas />,
   },
+
+  //Dev info
+  {
+    path: "/usuarios",
+    element: <Usuarios />,
+  },
+  
 ]);

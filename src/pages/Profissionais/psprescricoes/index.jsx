@@ -77,7 +77,7 @@ export default function Psprescricoes() {
                             <strong>Dr. Roberto Lima</strong>
                         </p>
                         <p>CRM: PE-123456</p>
-                        <p>Especialidade Clínica Geral</p>
+                        <p>Especialidade: Clínica Geral</p>
                         <p>Contato: (81) 97545-4321</p>
                         <p>Email: roberto.lima@clinicaficticia.com</p>
                     </S.FooterContent>

@@ -85,7 +85,7 @@ export default function Psrelatorios() {
                         </p>
                         <h2>Conduta e Tratamento</h2>
                         <p>
-                            Recomenda-se a seguinte conduta: omeprazol 20 mg, 1x ao dia, por 30
+                            Recomenda-se a seguinte conduta: Omeprazol 20 mg, 1x ao dia, por 30
                             dias, retorno em consulta após 30 dias.
                         </p>
                     </S.TextContext>
@@ -95,7 +95,7 @@ export default function Psrelatorios() {
                         <strong>Dr. Lucas Ferreira Mendes</strong>
                     </p>
                     <p>CRM: PE-123456</p>
-                    <p>Especialidade Clínica Geral</p>
+                    <p>Especialidade: Clínica Geral</p>
                     <p>Contato: (81) 97545-4321</p>
                     <p>Email: lucas.mendes@clinicaficticia.com</p>
                 </S.FooterContent>
