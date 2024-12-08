@@ -25,11 +25,28 @@ export const Container = styled.div`
     padding-bottom: 15px;
   }
 
+
   .ContainerInfo h3 {
     font-size: 0.8em;
     text-align: center;
     font-weight: 600;
     color: #2B318A;
+  }
+
+  .logoM {
+    display: none;
+  }
+
+  .contentLetras {
+    display: none;
+  }
+
+
+.ContainerInfo  h3 {
+   font-size: 0.8em;
+   text-align: center;
+   font-weight: 600;
+   color: #2B318A;
   }
 
   .ContainerInfo h4 {
@@ -79,6 +96,21 @@ export const Container = styled.div`
     width: 16rem;
     text-align: center;
   }
+ 
+    .documento {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 39px;
+      padding: 9px;
+      width: 90%; 
+      font-size: 14px;
+      border-radius: 8px;
+      background-color: #DEE0FB;
+      border-bottom: 5px solid #161B68;
+      color: #161B68;
+    }
+
 
   .documento {
     display: flex;
@@ -191,10 +223,25 @@ export const Container = styled.div`
       .input {
         font-size: 0.9rem;
       }
+      
     }
 
-    .container-cadastro {
+    .ContainerInfo {
       width: 90%;
+      display: none;
+    }
+
+    .logoM {
+      display: flex;
+    }
+
+    .contentLetras {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 10px;
+      padding: 10px 0;
     }
   }
 

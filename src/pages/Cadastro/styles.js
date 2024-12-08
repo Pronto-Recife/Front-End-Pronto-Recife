@@ -63,9 +63,7 @@ export const Container= styled.div`
     
 @media screen and (max-width: 730px){  
     .container {
-    width: 80%;
-    
- 
+    width: 80%; 
 }
 .butn-opcoes {
     flex-direction: column;

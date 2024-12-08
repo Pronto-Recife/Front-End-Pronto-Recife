@@ -12,8 +12,8 @@ export const Container = styled.div`
 
 
   && .modal {
-    width: 40em;
     height: 25rem;
+    padding: 30px 100px;
     border-radius: 10px;
     background-color: #fff;
     display: flex;
@@ -69,5 +69,11 @@ export const Container = styled.div`
 
 }
 
+@media screen and (max-width: 600px) {
+        display: flex;
+
+        && .modal {
+            padding: 30px 50px;
+        }
 
 `

@@ -35,9 +35,9 @@ export const Header = styled.header`
   }
 `;
 
-export const Sidebar = styled.aside`
-  grid-area: sidebar;
-  color: white;
+  export const Sidebar = styled.aside`
+    grid-area: sidebar;
+    color: white;
 
   @media (max-width: 768px) {
     position: fixed;
@@ -70,9 +70,7 @@ export const Main = styled.main`
     font-size: 24px;
     font-weight: bold;
     color: #161B68;
-    margin-bottom: 15px;
-    
-
+    margin-bottom: 15px;   
   }
 
   p {
@@ -111,7 +109,6 @@ export const Paciente = styled.div`
   align-items: center;
   gap: 20px;
   margin: 20px;
-
 `;
 
 export const Inf = styled.div`
@@ -183,5 +180,11 @@ export const Card = styled.div`
     font-size: 12px;
     color: #333;
     text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .paciente {
+      
+    }
   }
 `;

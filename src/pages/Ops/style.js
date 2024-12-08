@@ -8,27 +8,23 @@ export const Container = styled.div`
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
     flex-direction: column;
-    
+  
 
     && .mensagem {
-    
-    width: 35rem; 
     height: 25rem ;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: white;
-    padding: 30px 10px;
+    padding: 30px 100px;
     border-radius: 5px;
     border: 1 solid black ;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-
  }
 
   && .mensagem img {
     width: 60%;
-
   }
 
     && .mensagem h1 {
@@ -43,17 +39,13 @@ export const Container = styled.div`
             align-items: start;
             row-gap: 10px;
 
-
-
-
         }
   
+        @media screen and (max-width: 600px) {
+        display: flex;
 
-
-
-
-
-
-
-
+        && .mensagem {
+            padding: 30px 50px;
+        }
+    }
 `

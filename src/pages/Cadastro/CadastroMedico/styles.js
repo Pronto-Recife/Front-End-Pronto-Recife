@@ -9,6 +9,10 @@ export const Container = styled.div `
     align-items: center;
     padding: 20px;
     
+
+    @media screen and (max-width: 700px){
+        flex-direction: column;
+    }
 `
 
 export const FormSection = styled.div `
@@ -47,6 +51,31 @@ export const FormSection = styled.div `
         font-size: 12px;
     }
 
+    .logoM {
+        display: none;
+    }
+
+    .contentLetras {
+        display: none;
+    }
+
+    @media screen and (max-width: 700px){
+        border-radius: 20px;
+
+        .logoM {
+      display: flex;
+    }
+
+    .contentLetras {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 10px;
+      padding: 10px 0;
+    }
+    }
+
 `
 export const InfoSection = styled.div `
     display: flex;
@@ -64,5 +93,10 @@ export const InfoSection = styled.div `
     .letra {
         color: #2B318A;
         font-weight: 700;
+    }
+
+    @media screen and (max-width: 700px) {
+        display: none;
+
     }
 `

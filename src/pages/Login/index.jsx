@@ -4,6 +4,7 @@ import Facebook from "../../assets/Login/facebook (1).svg";
 import Twitter from "../../assets/Login/twitter.svg";
 import Email from "../../assets/Login/email.svg";
 import Button from "../../components/button/button";
+import Logo from "../../assets/logoprescricao.svg";
 
 import * as S from "./styles";
 import { Input } from "../../components/Input";
@@ -73,7 +74,11 @@ export default function Login() {
       </div>
 
       <div className="container-login">
+
         <h2>Acesse a sua conta</h2>
+
+      <img className="logoM" src={Logo} alt="Logo Pronto Recife" />
+        <p className="letras">Acesse a sua conta</p>
 
         <div className="password-container">
           
@@ -120,6 +125,11 @@ export default function Login() {
         <div className="error"> {error && <p className="error-message">{error}</p>} </div>
 
         <Button onClick={() => handleLogin()} size="entrar" title="Entrar" />
+        <div className="contentLetras">
+        <p className="letras">Ainda não tem uma conta?</p>
+        <Button onClick={() => handleLogin()} size="entrar" title="Cadastre-se" />
+        </div>
+
       </div>
     </S.Container>
   );
