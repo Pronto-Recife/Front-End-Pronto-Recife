@@ -1,50 +1,84 @@
 import Footerbar from "../../components/footerbar/";
 import SidebarProfissionais from "../../components/sidebarprofissionais";
 import Superiorbar from "../../components/superiorbar";
-import { Search } from "lucide-react";
-import { FilePenLine } from "lucide-react";
+
+import { Search, FilePenLine, Check } from "lucide-react";
+
+import Pencil from "../../assets/Usuarios/Pencil.svg";
 
 import * as S from "./styles";
 
+import ModalList from "../../components/ModalList";
+import { useState } from "react";
+
 export default function Usuarios() {
-    return (
-      <S.Container>
-        <S.Sidebar>
-          <SidebarProfissionais />
-        </S.Sidebar>
-            <S.Main>
-                <S.Header>
-                    <Superiorbar />
-                </S.Header>
-                <h1>ID</h1>
+  const [openModal, setOpenModal] = useState(false);
 
-                <S.button>
-                <button id="prof" >Profissionais</button>
-                <button id="paci" >Pacientes</button>
-                </S.button>
+  return (
+    <S.Container>
+      <S.Sidebar>
+        <SidebarProfissionais />
+      </S.Sidebar>
+      <S.Main>
+        <S.Header>
+          <Superiorbar />
+        </S.Header>
 
-                <S.SearchSection>
-                    <S.SearchBar>
-                        <input
-                            className="box"
-                            type="text"
-                            placeholder="ID do Usuário..."
-                            />
-                        <button   button className="searchbutton" type="submit">
-                        <Search size={24} color="#161B68" />
-                        </button>
-                    </S.SearchBar>
-                </S.SearchSection>
+        <S.Buton>
+          <h1>ID</h1>
+          <button className="prof">Profissionais</button>
+          <button className="paci">Pacientes</button>
 
-                <h2 className="Idlist" ></h2>
-                <ul>
-                    <li>Nome</li>
-                    <li>E-mail</li>
-                    <li> <FilePenLine size={30} color="#161B68" /> </li>
-                </ul>
+          <S.SearchSection>
+            <S.SearchBar>
+              <input
+                className="box"
+                type="text"
+                placeholder="ID do Usuário..."
+              />
+              <button className="searchbutton" type="submit">
+                <Search size={24} color="#161B68" />
+              </button>
+            </S.SearchBar>
+          </S.SearchSection>
+        </S.Buton>
 
-            </S.Main>
+        <h2 className="Idlist"></h2>
 
+        <section className="list">
+          <div className="container">
+            <div className="contentButton">
+              <button className="idButton">7890</button>
+              <button className="idButton">
+                <Check size={24} color="#161b68" strokeWidth={3} />
+              </button>
+            </div>
+
+            <div className="listitem">
+              <div className="item">
+                <label>Nome: </label>
+                <strong>Ananias Nicolau Benevides</strong>
+              </div>
+
+              <div className="item">
+                <label>E-mail: </label>
+                <strong>ananias@gmail.com</strong>
+              </div>
+
+              <button className="button" onClick={() => setOpenModal(true)}>
+                <img src={Pencil} alt="" />
+              </button>
+
+              <div></div>
+            </div>
+          </div>
+
+          <ModalList
+            isOpen={openModal}
+            setModalClose={() => setOpenModal(!openModal)}
+          />
+        </section>
+      </S.Main>
     </S.Container>
-);
+  );
 }
