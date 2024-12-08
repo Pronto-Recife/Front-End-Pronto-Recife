@@ -42,6 +42,12 @@ import Ajudaesup from "../pages/Ajudaesup";
 //Dev info
 import Usuarios from "../pages/Usuarios";
 
+//Serviços públicos
+import Medicamentos from "../pages/APIservicos/medicamentos";
+import Laboratoriais from "../pages/APIservicos/Laboratoriais";
+
+
+
 export const paginas = createBrowserRouter([
   {
     path: "/",
@@ -200,5 +206,15 @@ export const paginas = createBrowserRouter([
     path: "/usuarios",
     element: <Usuarios />,
   },
+
+  {
+    path: "/medicamentos",
+    element: <Medicamentos />
+  },
+  {
+    path: "/laboratoriais",
+    element: <Laboratoriais />
+  },
+  
   
 ]);

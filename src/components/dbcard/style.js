@@ -18,6 +18,7 @@ export const CardsContainer = styled.div`
 `;
 
 export const Card = styled.div`
+cursor: pointer;
   background-color: #f5f5ff;
   border-radius: 10px;
   padding: 20px;

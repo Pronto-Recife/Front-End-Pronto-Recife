@@ -108,6 +108,7 @@ export const List = styled.div`
   margin-bottom: 20px;
 `;
 export const Item = styled.div`
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -116,7 +117,7 @@ export const Item = styled.div`
   border-radius: 10px;
   background-color: #161b68;
   width: 250px;
-  height: auto;
+  height: 230px;
   color: #fff;
   padding: 0 0 10px 0;
   transition: 0.2s;
@@ -129,36 +130,37 @@ export const Item = styled.div`
     border-radius: 10px 10px 0 0;
   }
 
-  &&:hover {
+  && :hover {
     scale: 1.01;
   }
 
   span {
+    width: 250px;
+    height: 230px;
     font-size: 14px;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 5px 10px;
     border-radius: 10px;
-    height: 100%;
     opacity: 0;
     transform: translateY(5px);
     transition: opacity 0.3s, transform 0.3s;
   }
 
-  &:hover span {
+  && span:hover {
     opacity: 1;
     transform: translateY(0);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(3px);
   }
-
-  &:hover span {
-    opacity: 1;
-    transform: translateY(0);
-  }
 `;
 
 export const Services = styled.div`
+
+`
+export const ServiceItem = styled.div`
+cursor: pointer;
+background-color: #ff0000;
 
 `
