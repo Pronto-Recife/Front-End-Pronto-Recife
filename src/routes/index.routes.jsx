@@ -44,7 +44,7 @@ import Usuarios from "../pages/Usuarios";
 
 //Serviços públicos
 import Medicamentos from "../pages/APIservicos/medicamentos";
-import Laboratoriais from "../pages/APIservicos/Laboratoriais";
+import Laboratoriais from "../pages/APIservicos/laboratoriais";
 
 
 
