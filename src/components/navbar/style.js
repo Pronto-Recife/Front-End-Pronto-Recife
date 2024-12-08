@@ -70,7 +70,6 @@ body {
     border-radius: 30px;
     width: 12rem;
     height: 3rem;
-    margin-right: 5rem;
     background: #6af670;
     font-size: 1em;
     cursor: pointer;

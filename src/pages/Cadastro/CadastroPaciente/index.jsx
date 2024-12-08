@@ -4,6 +4,7 @@ import Instagram from "../../../assets/instagramazul.svg";
 import Mail from "../../../assets/mailazul.svg";
 import Facebook from "../../../assets/facebookazul.svg";
 import Twitter from "../../../assets/twitter.svg";
+import Logo from "../../../assets/logoprescricao.svg";
 
 import * as S from "./styles";
 import Button from "../../../components/button/button";
@@ -29,7 +30,7 @@ export default function CadastroPaciente() {
   const handleSubmit = async () => {
     try {
       const response = await axios.post(
-        "https://59bc-160-20-194-18.ngrok-free.app/paciente/register",
+        "https://a489-160-20-194-20.ngrok-free.app/paciente/register",
         formData
       );
 
@@ -48,6 +49,7 @@ export default function CadastroPaciente() {
   return (
     <Container>
       <FormSection>
+      <img className="logoM" src={Logo} alt="Logo Pronto Recife" />
         <Input
           titulo="Nome Completo"
           pass={false}

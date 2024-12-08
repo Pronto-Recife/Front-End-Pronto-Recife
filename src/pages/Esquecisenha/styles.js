@@ -12,6 +12,7 @@ background-size: cover;
 display: flex;  
 font-family: 'poppins';
 
+
 && .ConteinerEsquecisenha {
    
 height:27rem;
@@ -24,7 +25,11 @@ background-color: rgba(241, 241, 241, 0.4);
 border-radius: 1.25rem 0 0 1.25rem;
 border: 10px;
 gap: 5px;
+
+
+
 }
+
 
 && .ConteinerEsquecisenha h1 {
     color: #F1F1F1;
@@ -86,11 +91,16 @@ gap: 5px;
     padding: 4rem 3rem 4rem 3rem;
     background-color: #f1f1f1;
     border-radius: 0 1.25rem 1.25rem 0;
+
+    @media screen and (max-width: 700px) {
+        display: none;
+    }
   }
+
 
   && .ConteinerInfo .logo {
     max-width: 90%;
-    padding-bottom: 15px;
+    padding-bottom: 15px;   
   }
 
 && .ConteinerInfo  h3 {
@@ -98,6 +108,7 @@ gap: 5px;
    text-align: center;
    font-weight: 600;
    color: #2B318A;
+
   }
 
 && .buttoncad {
@@ -134,6 +145,12 @@ gap: 5px;
     display: flex;
     flex-direction: row;
     gap: 5px;
+}
+
+@media screen and (max-width: 700px){
+  && .ConteinerEsquecisenha  {
+    border-radius: 1.25rem;
+  }
 }
 
 `

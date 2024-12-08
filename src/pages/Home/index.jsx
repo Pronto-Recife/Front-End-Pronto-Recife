@@ -135,13 +135,14 @@ export function Home() {
               </div>
             </div>
 
-            <iframe src="https://www.google.com/maps?q=hospitais+perto+de+Av.+Alfredo+Lisboa,+268,+Recife,+PE,+50030-150&output=embed" 
-        width="600" 
-        height="324"
-        frameborder="0"
-        allowfullscreen="" 
-        loading="lazy">
+           <div className="maps">
+            <iframe 
+                src="https://www.google.com/maps?q=hospitais+perto+de+Av.+Alfredo+Lisboa,+268,+Recife,+PE,+50030-150&output=embed"
+                frameborder="0"
+                allowfullscreen="" 
+                loading="lazy">
             </iframe>
+        </div>
           </div>
         </section>
 
@@ -162,7 +163,7 @@ export function Home() {
 
               <div className="footer-info">
                 <p>
-                  eEm caso de qualquer dúvida ou sujestões, por favor entre me contato conosco
+                  Em caso de qualquer dúvida ou sujestões, por favor entre me contato conosco
                 </p>
                 <p>
                   <img src={Phone} alt="phone" /> prontorecife@gmail.com

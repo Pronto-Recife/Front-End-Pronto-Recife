@@ -12,21 +12,22 @@ export const Container = styled.div`
 
 
   && .modal {
-    width: 40em;
     height: 25rem;
     border-radius: 10px;
+    padding: 30px 100px;
     background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 40px;
-
   }
+
   && .img {
     width: 40%;
     height: 5rem;
   }
+  
   && .text {
     color: #2b318a;
     font-size: 1.2rem;
@@ -71,5 +72,10 @@ export const Container = styled.div`
 
 }
 
-
+@media screen and (max-width: 600px) {
+          display: flex;
+          && .modal {
+              padding: 30px 50px;
+          }
+        }
 `

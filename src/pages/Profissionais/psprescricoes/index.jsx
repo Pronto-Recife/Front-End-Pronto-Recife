@@ -17,16 +17,10 @@ export default function Psprescricoes() {
                     <Superiorbar />
                 </S.Header>
                 <S.SearchSection>
-                    <S.SearchBar>
-                        <input
-                            className="box"
-                            type="text"
-                            placeholder="ID do Paciente..."
-                        />
-                        <button className="searchbutton" type="submit">
-                            <Search size={24} color="#161B68" />
-                        </button>
-                    </S.SearchBar>
+                    <p>Selecione a Data</p>
+                    <input type="date" />
+                    <p>Selecione a Hora</p>
+                    <input type="time" />
                 </S.SearchSection>
                 <S.Content>
                     <S.LogoContainer>
@@ -58,17 +52,11 @@ export default function Psprescricoes() {
 
                         <S.List> 
                         <ul>
-                            <li>AAS 100 mg, 1 comprimido</li>
-                            <li>Digoxina 0,5 mg, 1 comprimido</li>
+                            <li>AAS 100 mg, 1 comprimido. de 12 em 12 horas.</li>
+                            <li>Digoxina 0,5 mg, 1 comprimido de 24 em 24 horas.</li>
                         </ul>
                         </S.List>
-                        <h2>Horários</h2>
-                        <S.List> 
-                        <ul>
-                            <li>8:00 - 16:00</li>
-                            <li>8:00 - 16:00</li>
-                        </ul>
-                        </S.List>
+                        
                         <h2>Observações</h2>
                         <S.List>
                         <ul>
@@ -92,7 +80,7 @@ export default function Psprescricoes() {
                 
                 <S.ButtonsContainer>
                     <S.Button className="imprimir">Imprimir</S.Button>
-                    <S.Button className="enviar-email">Enviar por Email</S.Button>
+                    <S.Button className="imprimir">Enviar</S.Button>
                 </S.ButtonsContainer>
             </S.Main>
         </S.Container>

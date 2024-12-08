@@ -1,0 +1,13 @@
+services:
+  frontend:
+    container_name: frontend-app
+    build: .
+    volumes:
+      - './:/app'
+      - '/app/node_modules'
+    ports:
+      - 3001:3000
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: npm start

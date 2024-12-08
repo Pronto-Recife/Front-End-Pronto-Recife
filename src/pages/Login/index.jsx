@@ -4,6 +4,7 @@ import Facebook from "../../assets/Login/facebook (1).svg";
 import Twitter from "../../assets/Login/twitter.svg";
 import Email from "../../assets/Login/email.svg";
 import Button from "../../components/button/button";
+import Logo from "../../assets/logoprescricao.svg";
 
 import * as S from "./styles";
 import { Input } from "../../components/Input";
@@ -16,25 +17,38 @@ export default function Login() {
   const [identificador, setIdentificador] = useState("");
   const [senha, setSenha] = useState("");
   const [flow, setFlow] = useState("");
+  const [error, setError] = useState("");
 
   const navigation = useNavigate();
 
   async function handleLogin() {
-    console.log("Type", identificador, "document", flow, "senha", senha);
-    const response = await api
-      .post("/login", {
+    if (!identificador || !senha) {
+      setError("Por favor, preencha todos os campos.");
+      return;
+    }
+
+    if (!flow) {
+      setError("Selecione o tipo de documento.");
+      return;
+    }
+
+    try {
+      const response = await api.post("/login", {
         identificador: identificador,
         senha: senha,
         flow: flow,
-      })
-      .then((res) => {
-        localStorage.setItem(TOKEN_STORAGE, res.data.accessToken);
-        navigation(flow == 'CPF' ? "/inicio" : "/psinicio");
-      })
-      .catch((error) => {
-        console.log(error);
       });
-      console.log(response)
+      localStorage.setItem(TOKEN_STORAGE, response.data.accessToken);
+      navigation(flow === "CPF" ? "/inicio" : "/psinicio");
+    } catch (error) {
+      console.log(error);
+
+      if (error.response && error.response.status === 401) {
+        setError("Documento ou senha inválidos. Tente novamente.");
+      } else {
+        setError("Documento ou senha inválidos. Tente novamente.");
+      }
+    }
   }
 
   return (
@@ -60,9 +74,14 @@ export default function Login() {
       </div>
 
       <div className="container-login">
-        <p>Acesse a sua conta</p>
+
+        <h2>Acesse a sua conta</h2>
+
+      <img className="logoM" src={Logo} alt="Logo Pronto Recife" />
+        <p className="letras">Acesse a sua conta</p>
 
         <div className="password-container">
+          
           <label>Tipo de documento</label>
           <select
             onChange={(e) => setFlow(e.target.value)}
@@ -103,7 +122,14 @@ export default function Login() {
           Esqueceu sua senha?
         </a>
 
+        <div className="error"> {error && <p className="error-message">{error}</p>} </div>
+
         <Button onClick={() => handleLogin()} size="entrar" title="Entrar" />
+        <div className="contentLetras">
+        <p className="letras">Ainda não tem uma conta?</p>
+        <Button onClick={() => handleLogin()} size="entrar" title="Cadastre-se" />
+        </div>
+
       </div>
     </S.Container>
   );

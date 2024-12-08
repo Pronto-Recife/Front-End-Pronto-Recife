@@ -78,26 +78,19 @@ export const SearchSection = styled.div`
   display: flex;
   justify-content: end;
   padding: 20px 0;
-`;
+  flex-direction: column;
 
-export const SearchBar = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 40%;
-  background-color: #dee0ff;
-  border-radius: 40px;
-  padding: 10px 30px;
+  input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #161B68;
+    width: 560px;
 
-  .box {
-    border: none;
-    outline: none;
-    background: transparent;
-  }
-
-  .searchbutton {
-    background: none;
-    border: none;
-    cursor: pointer;
+    &:focus {
+      border-color: #161B68;
+    }
   }
 `;
 

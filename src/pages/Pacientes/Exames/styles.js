@@ -84,7 +84,7 @@ export const Card = styled.div`
   flex: 1;
   background-color: #EAEBFC;
   color: #161B68;
-  padding: 30px;
+  padding: 15px;
   border-radius: 8px;
   text-align: center;
   transition: background-color 0.3s;

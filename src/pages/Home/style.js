@@ -236,7 +236,9 @@ export const Container = styled.div`
   .procura input {
     background-color: transparent;
     border: none;
+    outline: none;
     font-size: 20px;
+    width: 80%;
   }
 
   .map-container {
@@ -356,7 +358,43 @@ export const Container = styled.div`
           font-size: 1rem;
         }
       }
+      
+      .service-item {
+      width: 90%;
+      max-width: 25rem;
+      height: auto;
+      padding: 1rem;
     }
+     
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+    img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  
+    }
+
+    @media (max-width: 480px) {
+  .intro {
+    padding: 2rem 1rem;
+  }
+
+  .intro-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .service-item {
+    width: 100%;
+    height: auto;
+  }
+}
+
 
     .buttons {
       display: flex;
@@ -426,10 +464,21 @@ export const Container = styled.div`
       .map-card {
         width: 100%;
         height: auto;
+        border-radius: 10px;
         flex-direction: column;
       }
 
       
+    }
+
+    .maps {
+      width: 100%;
+      height: 300px;
+    }
+
+    .maps iframe {
+      width: 100%;
+      height: 100%;
     }
 
     .map-text {
@@ -488,5 +537,14 @@ export const Container = styled.div`
     .footer-social-icons {
       margin: 0 2rem;
     }
+  }
+
+  @media screen and (max-width: 490px) {
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
   }
 `;

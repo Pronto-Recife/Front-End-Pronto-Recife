@@ -31,6 +31,23 @@ export const FormSection = styled.div `
         gap: 5px;
         font-size: 12px;
     }
+    @media screen and (max-width: 700px){
+        border-radius: 20px;
+
+        .logoM {
+      display: flex;
+        }
+
+        .letra {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 10px;
+      padding: 10px 0;
+    }
+    }
+    
 `
 export const InfoSection = styled.div `
     display: flex;
@@ -48,5 +65,10 @@ export const InfoSection = styled.div `
     .letra {
         color: #2B318A;
         font-weight: 700;
+    }
+
+    @media screen and (max-width: 700px) {
+        display: none;
+
     }
 `

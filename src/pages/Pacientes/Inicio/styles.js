@@ -7,7 +7,7 @@ export const Container = styled.div`
   grid-template-areas:
     "sidebar header"
     "sidebar main";
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -65,12 +65,12 @@ export const Main = styled.main`
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  
 
   h1 {
     font-size: 24px;
     font-weight: bold;
-    color: #161B68;
+    color: #161b68;
+    margin-bottom: 20px;
   }
 
   p {
@@ -84,6 +84,14 @@ export const Main = styled.main`
   }
 `;
 
+export const CardContainerAtalhos = styled.div`
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+`;
 export const CardContainer = styled.div`
   display: flex;
   justify-content: start;
@@ -92,10 +100,65 @@ export const CardContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-export const Footer = styled.footer`
-  grid-area: footer;
+export const List = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+`;
+export const Item = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #161b68;
+  width: 250px;
+  height: auto;
+  color: #fff;
+  padding: 0 0 10px 0;
+  transition: 0.2s;
 
-  @media (max-width: 768px) {
-    font-size: 10px;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+
+  img {
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &&:hover {
+    scale: 1.01;
+  }
+
+  span {
+    font-size: 14px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  &:hover span {
+    opacity: 1;
+    transform: translateY(0);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  &:hover span {
+    opacity: 1;
+    transform: translateY(0);
   }
 `;
+
+export const Services = styled.div`
+
+`

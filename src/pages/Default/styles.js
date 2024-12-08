@@ -9,19 +9,17 @@ export const Container = styled.div`
     font-family: "Poppins", sans-serif;
     flex-direction: column;
   
-  
-
-
+    
+    
 
 && .mensagem{
- width: 35rem; 
  height: 25rem ;
  display: flex;
  flex-direction: column;
  align-items: center;
  justify-content: center;
  background-color: white;
- padding: 30px 10px;
+ padding: 30px 100px;
  border-radius: 5px;
  border: 1 solid black ;
  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
@@ -41,4 +39,11 @@ export const Container = styled.div`
 
 }
 
+@media screen and (max-width: 600px) {
+        display: flex;
+
+        && .mensagem {
+            padding: 30px 50px;
+        }
+    }
 `

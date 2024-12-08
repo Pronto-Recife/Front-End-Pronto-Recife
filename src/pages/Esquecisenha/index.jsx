@@ -13,7 +13,8 @@ export default function Esquecisenha() {
 
         <S.Conteiner>
 
-            <div className="ConteinerEsquecisenha"> 
+            <div>
+                <div className="ConteinerEsquecisenha"> 
                 <img src= {Etapa_1_email} alt="etapa1" />
                 <h1> Esqueci a senha </h1>
                 <h2> Digite o e-mail cadastrado para receber o código de verificação </h2>
@@ -21,6 +22,7 @@ export default function Esquecisenha() {
                 <button className="buttonReceber"> Receber código </button>
             </div>
 
+            </div>
             <div className="ConteinerInfo" >
             <img className="logo" src={LogoNome} alt="Logo" />
             <h3> Ainda não tem uma conta?</h3>

@@ -65,6 +65,10 @@ font-family: 'poppins';
     padding: 4rem 3rem 4rem 3rem;
     background-color: #f1f1f1;
     border-radius: 0 1.25rem 1.25rem 0;
+
+    @media screen and (max-width: 700px) {
+        display: none;
+    }
   }
 
   && .ConteinerInfo .logo {
@@ -115,5 +119,10 @@ font-family: 'poppins';
     gap: 5px;
 }
 
+@media screen and (max-width: 700px){
+  && .ConteinerSucesso  {
+    border-radius: 1.25rem;
+  }
+}
 
 `

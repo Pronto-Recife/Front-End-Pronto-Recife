@@ -4,6 +4,7 @@ import Instagram from "../../../assets/instagramazul.svg";
 import Mail from "../../../assets/mailazul.svg";
 import Facebook from "../../../assets/facebookazul.svg";
 import Twitter from "../../../assets/twitter.svg";
+import Logo from "../../../assets/logoprescricao.svg";
 
 import * as S from "./styles";
 import Button from "../../../components/button/button";
@@ -49,6 +50,7 @@ export default function CadastroMedico() {
   return (
     <Container>
       <FormSection>
+      <img className="logoM" src={Logo} alt="Logo Pronto Recife" />
         <Input
           titulo="Nome Completo"
           pass={false}
@@ -94,6 +96,10 @@ export default function CadastroMedico() {
           </label>
         </div>
         <Button onClick={() => handleSubmit()} title="Cadastrar" size="" type="button" />
+        <div className="contentLetras">
+        <p className="letras">Ainda não tem uma conta?</p>
+        <Button onClick={() => handleLogin()} size="entrar" title="Cadastre-se" />
+        </div>
       </FormSection>
 
       <InfoSection>

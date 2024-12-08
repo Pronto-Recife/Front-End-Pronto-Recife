@@ -50,9 +50,7 @@ export default function Psexames() {
         </S.CardContainer>
         <S.HistoryText>Você pode usar os filtros acima para refinar sua busca.</S.HistoryText>
       </S.Main>
-      <S.Footer>
-        <Footerbar />
-      </S.Footer>
+        
     </S.Container>
     )
 }

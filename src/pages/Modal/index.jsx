@@ -1,6 +1,11 @@
 
 import {ModalBackground,Modalstyle} from "./styles";
 
+
+
+import Logo from "../../assets/logo.svg";
+
+
 export default function Modal({isOpem,children}) {
     
     

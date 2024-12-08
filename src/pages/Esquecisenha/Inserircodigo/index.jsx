@@ -16,7 +16,7 @@ export default function Inserircodigo() {
         e.preventDefault();
 
         try {
-            // Chamada à API para verificar o código
+            
             const response = await fetch('/api/verificar-codigo', {
                 method: 'POST',
                 headers: {
@@ -27,7 +27,7 @@ export default function Inserircodigo() {
 
             if (response.ok) {
                 setMensagem("Código verificado com sucesso!");
-                // Redirecionar para a página de redefinição de senha
+
             } else {
                 setMensagem("Código de verificação inválido.");
             }

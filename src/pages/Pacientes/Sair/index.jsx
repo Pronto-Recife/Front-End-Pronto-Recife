@@ -18,7 +18,7 @@ export default function Sair() {
           <div className="modal">
             <img className="img" src={Logo} alt="" />
 
-            <h3 className="text">Deseja Realmente Sair?</h3>
+            <h3 className="text">Deseja realmente sair?</h3>
 
             <div className="components">
               <button className="buttons" onClick={() => navigate("/")}>Sair</button>

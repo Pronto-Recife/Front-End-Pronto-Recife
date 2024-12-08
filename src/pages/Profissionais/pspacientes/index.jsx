@@ -87,7 +87,7 @@ export default function Pspacientes() {
                 <S.Cardlist>
                     {pacientes.map((item) => (
                         <S.Card key={item.id}>
-                            <img className="img" src={item.foto} alt={item.nome} />
+                            
                             <div className="informacoes">
                                 <div className="info">
                                     <h2>{item.nome}</h2>
@@ -121,8 +121,8 @@ export default function Pspacientes() {
                                 </div>
                                 <div className="botao">
                                     <button>Visualizar Cadastro</button>
-                                    <button>Inserir E-mail Automático</button>
                                     <button>Ver Exames</button>
+                                    <button>Relatórios</button>
                                 </div>
                             </div>
                         </S.Card>

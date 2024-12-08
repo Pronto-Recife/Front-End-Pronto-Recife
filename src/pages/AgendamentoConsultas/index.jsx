@@ -65,13 +65,11 @@ export default function AgendamentoConsultas() {
     console.log("Consulta reagendada.");
   };
 
+  const [selectedButton, setSelectedButton] = useState(null);
 
-    const [selectedButton, setSelectedButton] = useState(null);
-
-  
-    const handleButtonClick = (buttonId) => {
-      setSelectedButton(buttonId); 
-    };
+  const handleButtonClick = (buttonId) => {
+    setSelectedButton(buttonId);
+  };
 
   return (
     <S.Container>
@@ -87,8 +85,7 @@ export default function AgendamentoConsultas() {
         <h1>Agendar Consulta</h1>
 
         <S.DivContainer>
-
-        <S.DivMain>
+          <S.DivMain>
             <p>Selecione um Médico:</p>
             <select
               value={medicoSelecionado}
@@ -102,24 +99,24 @@ export default function AgendamentoConsultas() {
               ))}
             </select>
 
+            <p>Selecione uma Data:</p>
+            <input type="date" />
+
             <p>Horários Disponíveis:</p>
-            <S.Horarios> 
-
-            {horarios.map((horario, index) => (
-              <button
-              isSelected={selectedButton === "inicio"}
-                key={index}>{horario}</button>
-            ))}
-
+            <S.Horarios>
+              {horarios.map((horario, index) => (
+                <button isSelected={selectedButton === "inicio"} key={index}>
+                  {horario}
+                </button>
+              ))}
             </S.Horarios>
-
           </S.DivMain>
-          
-           
 
           <S.CardContainer>
             <S.Button onClick={handleReagendar}>Reagendar Consulta</S.Button>
-            <S.ButtonCancel onClick={handleCancelar}>Cancelar Consulta</S.ButtonCancel>
+            <S.ButtonCancel onClick={handleCancelar}>
+              Cancelar Consulta
+            </S.ButtonCancel>
           </S.CardContainer>
         </S.DivContainer>
       </S.Main>
