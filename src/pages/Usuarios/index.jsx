@@ -69,7 +69,7 @@ export default function Usuarios() {
                 <img src={Pencil} alt="" />
               </button>
 
-              <div></div>
+              
             </div>
           </div>
 

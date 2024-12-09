@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Button from "../../components/button/button";
+
 
 export const Container = styled.div`
   display: grid;
@@ -28,7 +28,7 @@ export const Container = styled.div`
   && .container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap:20px ;
     width: 100%;
   }
 
@@ -68,6 +68,8 @@ export const Container = styled.div`
   && .button {
     background-color: #161b68;
     border: none;
+    cursor: pointer;
+ 
   }
   
 `;

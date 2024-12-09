@@ -4,52 +4,71 @@ import Icon from "../../assets/X.svg";
 
 export default function ModalList({ isOpen, setModalClose, setModal }) {
   if (isOpen) {
+    
     return (
       <S.Container>
         <section className="modal">
-          <button class="close-button" onClick={() => setModalClose(true)}>
-            <img className="img" src={Icon} alt="" />
-          </button>
 
-          <div class="form">
-            <label> Nome: </label>
-            <input className="input" type="text" />
+          <div className="form">
+            <button
+              className="close-button "
+              onClick={() => setModalClose(false)} >
 
-            <label>E-mail: </label>
-            <input className="input" type="email" />
-          </div>
+              <img className="Icon" src={Icon} alt="" />
 
-          <div className="form-group">
-            <div className="form-cad">
+            </button>
+
+            <label>Nome:</label>
+            <input className="input" type="text" id="name" maxLength="100" />
+
+            <label>E-mail:</label>
+            <input className="input" type="email" id="email" />
+
+
+            <div className="info">
               <strong>Cadastrado em:</strong>
-              <input className="Input" type="text" />
+              <input className="input" type="date" id="cadastro" />
             </div>
 
-            <div className="form-cpf">
-              <strong>CPF: </strong>
-              <input className="Input" type="" />
+            <div className="info">
+              <strong>CPF:</strong>
+
+              <input
+                className="input"
+                type="text"
+                placeholder="000.000.000-00"
+                maxLength="14"
+              />
             </div>
+
+            <div className="info">
+              <label>Telefone:</label>
+              <input
+                className="input"
+                type="tel"
+                placeholder="(00) 00000-0000"
+              />
+            </div>
+
+            <div className="info">
+              <label>Celular:</label>
+              <input
+                className="input"
+                type="tel"
+                placeholder="(00) 00000-0000"
+              />
+            </div>
+            
           </div>
+          
 
-          <div className="form-contato">
-            <div className="form-tel">
-              <label>Telefone</label>
-              <input className=" digite" type="tel" />
-            </div>
-            <div className="form-cel">
-              <label>Celular </label>
-              <input className=" digite" type="text" />
-            </div>
-          </div>
+          <div className="form-actions">
 
-          <div class="form-actions">
             <button className="edit">
-              {" "}
-              <strong> Editar</strong>{" "}
+              <strong>Editar</strong>
             </button>
             <button className="del">
-              {" "}
-              <strong>Deletar</strong>{" "}
+              <strong>Deletar</strong>
             </button>
           </div>
         </section>

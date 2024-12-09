@@ -24,14 +24,15 @@ export const Container = styled.div`
    transform: translate(-50%, -50%);
    background-color: white;
    border-radius: 20px;
-   width: 30%;
-   height: 70%;
+   height: 60%;
    padding: 20px;
+   gap: 10px;
    justify-content: center;
    align-items: center;
    display: flex;
    flex-direction: column;
    color: #161b68;
+   width: 500px;
 
     }
 
@@ -39,23 +40,24 @@ export const Container = styled.div`
 && .close-button {
     
     position: absolute;
-    top: 10px;
-    right: 5px;
+    top: 15px;
+    right: 15px;
     background: none;
     border: none;
-    font-size: 18px;
     cursor: pointer;
-    
-} 
-
- && .img {
-    width: 50%;
- }
-
- && .form {
    
+} 
+&& .Icon{
+   width: 60%;
+}
+
+ 
+ && .form {
+  
     width: 90%;
-    margin-bottom: 15px
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 
  } 
 
@@ -64,15 +66,25 @@ export const Container = styled.div`
     display: flex;
     font-size: 14px;
     color: #161b68;   
+    font-weight: bold;
+
+
+ }
+ && .form strong{
+
+    display: flex;
+    font-size: 14px;
+    color: #161b68;   
+    font-weight: bold;
 
  }
 
- && .form input{
+ && .form .input{
 
   width: 100%;
-  padding: 10px;
+  height: 40px;
   border-radius: 5px;
-  border: 1px solid #161b68;
+  border: 1.5px solid #161b68;
   font-size: 14px;
   box-sizing: border-box;
   align-items: center;
@@ -81,124 +93,41 @@ export const Container = styled.div`
  }
 
 
-&& .form-group {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    gap:40px;
-   
- }
-  && .form-cad {
-    display: flex;
-    flex-direction: column;
-    
-  }
-  && .form-cpf {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5px;
-   
-  }
-
- && .form-contato{
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    gap:40px;
- }
- && .Input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #161b68;
-  font-size: 14px;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-
-
- }
-
-
- && .form-contato{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    gap:40px;
-
-}
-&& .form-tel{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5px;
-    
-}
-&& .form-cel{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5px;
-
-}
-
-&& .form-tel input{
-   width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #161b68;
-
-}
-
-&& .form-cel input{
-   width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #161b68;
-
-    
-}
 
 
 //botões de editar e deletar 
 
 && .form-actions {
    position: absolute;
-   bottom: 14px;
-   right: 30px;
+   bottom:40px;
+   width: 100%;
    display: flex;
-   justify-content: space-between;
-   margin-top: 20px;
-   gap: 10px ;
-   margin-left: 30px;
-
+   justify-content: center;
+   gap: 20px ;
  }
 && .edit{
-
 color: #fff;
-padding: 10px 30px;
+padding: 12px 50px;
 background-color: #4CAF50;
-border: 10px;
+border: none;
 border-radius: 10px;
+cursor: pointer;
+}
+&& .edit:hover{
+background-color: #161b68;
 }
 
 && .del{
+cursor: pointer;
 color: #fff;
-padding: 10px 30px;
+padding: 12px 50px;
 background-color: #8A2B2B;
-border: 10px;
+border: none;
 border-radius: 10px;
+}
+&& .del:hover {  
+   background-color: #161b68;
 }
  
 `;
+
