@@ -83,7 +83,10 @@ export const Main = styled.main`
   @media (max-width: 768px) {
     margin-left: 0;
     margin-top: 20px;
-  }
+    flex-direction: column;
+    
+   
+   }
 `;
 
 export const Button = styled.button`
@@ -187,4 +190,7 @@ export const Card = styled.div`
       
     }
   }
+
+  
+ 
 `;
