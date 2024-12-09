@@ -15,12 +15,21 @@ export default function AgendamentoConsultas() {
   const [horarios, setHorarios] = useState([]);
   const [horariosDisponiveis, setHorariosDisponiveis] = useState([]);
   const [medicoSelecionado, setMedicoSelecionado] = useState("");
-  const [medicos, setMedicos] = useState([
-    { id: 1, nome: "Dr. João Silva", especialidade: "Clínico Geral" },
-    { id: 2, nome: "Dr. Ana Souza", especialidade: "Cardiologista" },
-    { id: 3, nome: "Dr. Carlos Lima", especialidade: "Pediatra" },
-  ]);
+  const [medicos, setMedicos] = useState([]);
 
+  // Função para buscar médicos do backend
+  async function fetchMedicos() {
+    try {
+      const response = await api.get("/medico");
+      console.log("Médicos retornados:", response.data); // Verifique o formato no console
+      setMedicos(response.data); // Atualiza o estado com os médicos retornados
+    } catch (error) {
+      console.error("Erro ao buscar médicos:", error);
+      alert("Ocorreu um erro ao buscar médicos.");
+    }
+  }
+
+  // Função para buscar consultas do backend
   async function handleConsulta() {
     try {
       const response = await api.get("/consulta/getAll");
@@ -62,69 +71,38 @@ export default function AgendamentoConsultas() {
     setHorarios(horariosGerados);
   };
 
-  const handleHorarioDisponivel = () => {
-    console.log("Data Selecionada:", dataSelecionada);
-    console.log("Consultas carregadas:", consulta);
-  
+  const handleHorarioDisponivel = (medicoIdSelecionado) => {
+    const formatarData = (data) => {
+      const [day, month, year] = data.split("/");
+      return `${year}-${month}-${day}`;
+    };
+
     const horariosMarcados = consulta
       .filter((item) => {
-        // Convertendo data da consulta para o formato YYYY-MM-DD
-        const dataConsulta = item.dataConsulta.split(" ")[0];
-        const [day, month, year] = dataConsulta.split("/"); // Exemplo: "08/12/2024"
-        const formattedDate = `${year}-${month}-${day}`; // Formato "YYYY-MM-DD"
-        console.log("Data da consulta formatada:", formattedDate);
-  
-        // Comparando as datas
-        return formattedDate === dataSelecionada;
+        const dataConsultaFormatada = formatarData(item.dataConsulta.split(" ")[0]);
+        return (
+          dataConsultaFormatada === dataSelecionada &&
+          item.medicoId === medicoIdSelecionado
+        );
       })
-      .map((item) => {
-        const horaConsulta = item.dataConsulta.split(" ")[1].slice(0, 5); // Extrair hora
-        return horaConsulta;
-      });
-  
-    console.log("Horários marcados:", horariosMarcados);
-  
-    const filtrados = horarios.filter((hora) => !horariosMarcados.includes(hora));
-    console.log("Horários disponíveis:", filtrados);
-  
-    setHorariosDisponiveis(filtrados);
+      .map((item) => item.dataConsulta.split(" ")[1].slice(0, 5));
+
+    const horariosFiltrados = horarios.filter((hora) => !horariosMarcados.includes(hora));
+    setHorariosDisponiveis(horariosFiltrados);
   };
-  
-  
-  
-  useEffect(() => {
-    async function fetchConsultas() {
-      try {
-        const response = await api.get("/consulta/getAll");
-        console.log("Consultas retornadas:", response.data); // Verifique o formato aqui
-        setConsulta(response.data);
-      } catch (error) {
-        console.error("Erro ao buscar consultas", error);
-      }
-    }
-    fetchConsultas();
-  }, []);
-  
 
-
+  // Buscar médicos ao montar o componente
   useEffect(() => {
-    gerarHorarios();
+    fetchMedicos();
     handleConsulta();
+    gerarHorarios();
   }, []);
 
   useEffect(() => {
-    if (consulta.length > 0 && dataSelecionada) {
-      handleHorarioDisponivel();
+    if (dataSelecionada && medicoSelecionado) {
+      handleHorarioDisponivel(medicoSelecionado);
     }
-  }, [consulta, dataSelecionada]);
-
-  const handleCancelar = () => {
-    console.log("Consulta cancelada.");
-  };
-
-  const handleReagendar = () => {
-    console.log("Consulta reagendada.");
-  };
+  }, [dataSelecionada, medicoSelecionado]);
 
   return (
     <S.Container>
@@ -146,10 +124,10 @@ export default function AgendamentoConsultas() {
               value={medicoSelecionado}
               onChange={(e) => setMedicoSelecionado(e.target.value)}
             >
-              <option value="">Selecione</option>
+              <option value="" disabled>Selecione um médico</option>
               {medicos.map((medico) => (
                 <option key={medico.id} value={medico.id}>
-                  {medico.nome} - {medico.especialidade}
+                  {medico.nomeCompleto}
                 </option>
               ))}
             </select>
@@ -170,8 +148,10 @@ export default function AgendamentoConsultas() {
           </S.DivMain>
 
           <S.CardContainer>
-            <S.Button onClick={handleReagendar}>Reagendar Consulta</S.Button>
-            <S.ButtonCancel onClick={handleCancelar}>
+            <S.Button onClick={() => console.log("Reagendar Consulta")}>
+              Reagendar Consulta
+            </S.Button>
+            <S.ButtonCancel onClick={() => console.log("Cancelar Consulta")}>
               Cancelar Consulta
             </S.ButtonCancel>
           </S.CardContainer>
