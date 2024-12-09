@@ -3,6 +3,7 @@ import Sidebarpacientes from "../../components/sidebarpacientes";
 import Superiorbar from "../../components/superiorbar";
 import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import Modalconsulta from "../../components/modalconsulta";
 import { api } from "../../service/api";
 
 export default function AgendamentoConsultas() {
@@ -17,19 +18,17 @@ export default function AgendamentoConsultas() {
   const [medicoSelecionado, setMedicoSelecionado] = useState("");
   const [medicos, setMedicos] = useState([]);
 
-  // Função para buscar médicos do backend
   async function fetchMedicos() {
     try {
       const response = await api.get("/medico");
-      console.log("Médicos retornados:", response.data); // Verifique o formato no console
-      setMedicos(response.data); // Atualiza o estado com os médicos retornados
+      console.log("Médicos retornados:", response.data);
+      setMedicos(response.data);
     } catch (error) {
       console.error("Erro ao buscar médicos:", error);
       alert("Ocorreu um erro ao buscar médicos.");
     }
   }
 
-  // Função para buscar consultas do backend
   async function handleConsulta() {
     try {
       const response = await api.get("/consulta/getAll");
@@ -79,7 +78,9 @@ export default function AgendamentoConsultas() {
 
     const horariosMarcados = consulta
       .filter((item) => {
-        const dataConsultaFormatada = formatarData(item.dataConsulta.split(" ")[0]);
+        const dataConsultaFormatada = formatarData(
+          item.dataConsulta.split(" ")[0]
+        );
         return (
           dataConsultaFormatada === dataSelecionada &&
           item.medicoId === medicoIdSelecionado
@@ -87,11 +88,12 @@ export default function AgendamentoConsultas() {
       })
       .map((item) => item.dataConsulta.split(" ")[1].slice(0, 5));
 
-    const horariosFiltrados = horarios.filter((hora) => !horariosMarcados.includes(hora));
+    const horariosFiltrados = horarios.filter(
+      (hora) => !horariosMarcados.includes(hora)
+    );
     setHorariosDisponiveis(horariosFiltrados);
   };
 
-  // Buscar médicos ao montar o componente
   useEffect(() => {
     fetchMedicos();
     handleConsulta();
@@ -103,6 +105,8 @@ export default function AgendamentoConsultas() {
       handleHorarioDisponivel(medicoSelecionado);
     }
   }, [dataSelecionada, medicoSelecionado]);
+
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <S.Container>
@@ -124,7 +128,9 @@ export default function AgendamentoConsultas() {
               value={medicoSelecionado}
               onChange={(e) => setMedicoSelecionado(e.target.value)}
             >
-              <option value="" disabled>Selecione um médico</option>
+              <option value="" disabled>
+                Selecione um médico
+              </option>
               {medicos.map((medico) => (
                 <option key={medico.id} value={medico.id}>
                   {medico.nomeCompleto}
@@ -141,10 +147,17 @@ export default function AgendamentoConsultas() {
 
             <p>Horários Disponíveis:</p>
             <S.Horarios>
-              {horariosDisponiveis.map((horario, index) => (
-                <button key={index}>{horario}</button>
-              ))}
-            </S.Horarios>
+  {horariosDisponiveis.map((horario, index) => (
+    <button onClick={() => setOpenModal(true)} key={index}>
+      {horario}
+    </button>
+  ))}
+</S.Horarios>
+
+<Modalconsulta
+  isOpen={openModal}
+  setModalClose={() => setOpenModal(false)}
+/>
           </S.DivMain>
 
           <S.CardContainer>
