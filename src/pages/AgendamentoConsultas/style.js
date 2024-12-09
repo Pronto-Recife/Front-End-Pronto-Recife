@@ -84,6 +84,8 @@ export const Main = styled.main`
 
   @media (max-width: 768px) {
     margin: 80px 20px 20px 20px;
+    
+
   }
 `;
 
@@ -169,6 +171,22 @@ export const DivMain = styled.div`
     &:focus {
       border-color: #161B68;
     }
+  }
+  @media (max-width: 768px) {
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    box-sizing: 10px;
+    
+
+
+   @media (max-width: 480px ){
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+   }
+   
   }
 `;
 

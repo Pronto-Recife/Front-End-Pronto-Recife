@@ -34,6 +34,7 @@ export const Header = styled.header`
   @media (max-width: 768px) {
     left: 0;
     width: 100%;
+   
   }
 `;
 
@@ -77,6 +78,21 @@ export const Main = styled.main`
 
   .Contatos {
     margin-top: 35px;
+  }
+
+  @media (max-width: 768px) {
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+
+
+   @media (max-width: 480px ){
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+   }
+   
   }
 `;
 

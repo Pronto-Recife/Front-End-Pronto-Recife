@@ -22,6 +22,8 @@ import DadosCadastrais from "../pages/Pacientes/DadosCadastrais";
 import Seguranca from "../pages/Pacientes/Seguranca";
 import Ajuda from "../pages/Pacientes/Ajuda";
 import Sair from "../pages/Pacientes/Sair";
+import Relatorios from "../pages/Pacientes/Relatorios";
+import Prescricoes from "../pages/Pacientes/Prescricoes";
 
 // Fluxo de Profissional de Saúde
 import Psinicio from "../pages/Profissionais/psinicio";
@@ -45,6 +47,7 @@ import Usuarios from "../pages/Usuarios";
 //Serviços públicos
 import Medicamentos from "../pages/APIservicos/medicamentos";
 import Laboratoriais from "../pages/APIservicos/laboratoriais";
+
 
 
 
@@ -138,8 +141,16 @@ export const paginas = createBrowserRouter([
     path: "/sair",
     element: <Sair />,
   },
+  {
+    path: "/prescricoes",
+    element: <Prescricoes />,
+  },
+  {
+    path: "/relatorios",
+    element: <Relatorios />,
+  },
 
-  //Fluxo de Profissinal de Saúde
+  //Fluxo de Profissional de Saúde
 
   {
     path: "/psinicio",
@@ -215,6 +226,7 @@ export const paginas = createBrowserRouter([
     path: "/laboratoriais",
     element: <Laboratoriais />
   },
+  
   
   
 ]);

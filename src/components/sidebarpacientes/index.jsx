@@ -4,7 +4,7 @@ import * as S from './style';
 import Sidebarlogo from "../../assets/pacientes/sidebarlogo.svg"
 
 
-import { Home, Calendar, Microscope, User, Settings, Shield, LifeBuoy, LogOut } from "lucide-react"; 
+import { Home, Calendar, Microscope, User, Settings, Shield, LifeBuoy, LogOut, BookOpen, FolderHeart } from "lucide-react"; 
 
 export default function Sidebarpacientes() {
     const location = useLocation();
@@ -41,6 +41,22 @@ export default function Sidebarpacientes() {
                         Perfil
                     </a>
                 </S.MenuItem>
+                <S.MenuItem active={location.pathname === "/prescricoes"}>
+                    <a href="/prescricoes">
+                        <BookOpen  size={20} style={{ marginRight: "10px" }} /> 
+                        Prescrições
+                    </a>
+                </S.MenuItem>
+
+                <S.MenuItem active={location.pathname === "/relatorios"}>
+                    <a href="/relatorios">
+                        <FolderHeart  size={20} style={{ marginRight: "10px" }} /> 
+                        Relatorios
+                    </a>
+                </S.MenuItem>
+                
+
+
             </S.Menu>
 
             <S.Divider />

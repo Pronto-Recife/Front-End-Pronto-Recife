@@ -35,7 +35,7 @@ export default function SidebarProfissionais() {
                         Exames
                     </a>
                 </S.MenuItem>
-                <S.MenuItem active={location.pathname === "/psprescricoes"}>
+                <S.MenuItem active={location.pathname === "/prescricoes"}>
                     <a href="/psprescricoes">
                         <BookOpen  size={20} style={{ marginRight: "10px" }} /> 
                         Prescrições
@@ -48,6 +48,7 @@ export default function SidebarProfissionais() {
                         Relatorios
                     </a>
                 </S.MenuItem>
+               
             </S.Menu>
 
             <S.Divider />
