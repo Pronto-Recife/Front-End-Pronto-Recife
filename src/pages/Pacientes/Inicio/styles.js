@@ -170,6 +170,16 @@ justify-content: center;
 align-items: center;
 text-align: center;
 border-radius: 10px;
+<<<<<<< HEAD
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+=======
+>>>>>>> c131c8c (pegando)
 
   p {
     font-size: 16px;
