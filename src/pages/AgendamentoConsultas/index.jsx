@@ -3,7 +3,6 @@ import Sidebarpacientes from "../../components/sidebarpacientes";
 import Superiorbar from "../../components/superiorbar";
 import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import Modalconsulta from "../../components/modalconsulta";
 import { api } from "../../service/api";
 
 export default function AgendamentoConsultas() {
@@ -154,10 +153,7 @@ export default function AgendamentoConsultas() {
   ))}
 </S.Horarios>
 
-<Modalconsulta
-  isOpen={openModal}
-  setModalClose={() => setOpenModal(false)}
-/>
+
           </S.DivMain>
 
           <S.CardContainer>
