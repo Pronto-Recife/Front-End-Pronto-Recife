@@ -13,6 +13,7 @@ import { useState } from "react";
 import { api } from "../../service/api";
 import { TOKEN_STORAGE } from "../../constants/TOKEN_STORAGE";
 import axios from "axios";
+import { apiauth } from "../../service/apiauth";
 
 export default function Login() {
   const [identificador, setIdentificador] = useState("");
@@ -34,8 +35,8 @@ export default function Login() {
     }
 
     try {
-      const response = await axios.post(
-        "https://prontorecifeauth-dev.up.railway.app/auth/login",
+      const response = await apiauth.post(
+        "/auth/login",
         {
           identificador: identificador,
           senha: senha,
