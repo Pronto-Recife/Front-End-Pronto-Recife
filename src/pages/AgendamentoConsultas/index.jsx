@@ -174,15 +174,6 @@ export default function AgendamentoConsultas() {
             />
           </S.DivMain>
 
-          <S.CardContainer>
-            <S.Button onClick={() => console.log("Reagendar Consulta")}>
-              Reagendar Consulta
-            </S.Button>
-            <S.ButtonCancel onClick={() => console.log("Cancelar Consulta")}>
-              Cancelar Consulta
-            </S.ButtonCancel>
-            <Modalconsulta/>
-          </S.CardContainer>
         </S.DivContainer>
       </S.Main>
     </S.Container>
