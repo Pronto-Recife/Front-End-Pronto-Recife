@@ -7,6 +7,13 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true,
+    proxy: {
+      "/authLogin": {
+        target: "https://prontorecifeauth-dev.up.railway.app/",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/authLogin/, ""),
+      },
+    },
   },
   preview: {
     port: 3000,
