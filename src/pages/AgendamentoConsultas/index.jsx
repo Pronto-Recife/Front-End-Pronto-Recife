@@ -4,6 +4,7 @@ import Superiorbar from "../../components/superiorbar";
 import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { api } from "../../service/api";
+import Modalconsulta from "../../components/modalconsulta";
 
 export default function AgendamentoConsultas() {
   const navigation = useNavigate();
