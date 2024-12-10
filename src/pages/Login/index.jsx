@@ -33,7 +33,7 @@ export default function Login() {
     }
 
     try {
-      const response = await api.post("/login", {
+      const response = await api.post("/auth/login", {
         identificador: identificador,
         senha: senha,
         flow: flow,

@@ -1,7 +1,13 @@
 import axios from "axios";
 
+// export const api = axios.create({
+//     baseURL: 'https://prontorecife-app-dev.up.railway.app',
+//     timeout: 5000,
+//     headers: { 'Content-Type': 'application/json' }
+// })
+
 export const api = axios.create({
-    baseURL: 'https://prontorecife-app-dev.up.railway.app',
+    baseURL: 'http://localhost:8080',
     timeout: 5000,
     headers: { 'Content-Type': 'application/json' }
 })

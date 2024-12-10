@@ -1,82 +1,94 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./style";
-import { useState } from "react";
+import { api } from "../../service/api";
 
+const Spinner = () => <div className="spinner"></div>;
 
-export default function Modalconsulta({ isOpen,
-  setCloseModal,
+const formatarData = (dataISO) => {
+  const [date, time] = dataISO.split(" ");
+  const [year, month, day] = date.split("-");
+  const dataFormatada = `${day}/${month}/${year} ${time}`;
+  console.log("Data formatada:", dataFormatada); // Log da data formatada
+  return dataFormatada;
+};
+
+export default function Modalconsulta({
+  isOpen,
   setModalClose,
-  horariosDisponiveis,
   dataSelecionada,
   medicoSelecionado,
   medicoNome,
-  horarioSelecionado
+  horarioSelecionado,
 }) {
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  // const agendarConsulta = async () => {
-  //   try {
-  //     const response = await api.post("/consulta/agendar", {
-  //       dataConsulta: `${dataSelecionada} ${horarioSelecionado}`,
-  //       medicoId: medicoSelecionado,
-  //     });
+  const agendarConsulta = async () => {
+    if (!dataSelecionada || !medicoSelecionado || !horarioSelecionado) {
+      setErrorMessage("Preencha todos os dados antes de confirmar!");
+      console.log("Erro: Dados não preenchidos.");
+      return;
+    }
 
-  //     // Sucesso ao agendar consulta
-  //     console.log("Consulta agendada com sucesso!", response.data);
-  //     alert("Consulta agendada com sucesso!");
-  //     setModalClose();  // Fecha o modal após sucesso
-  //   } catch (error) {
-  //     // Caso ocorra algum erro
-  //     console.error("Erro ao agendar consulta:", error);
-  //     alert("Ocorreu um erro ao agendar a consulta.");
-  //   }
-  // };
+    console.log("Dados antes de formatar:", dataSelecionada, horarioSelecionado); // Log dos dados recebidos
 
-  if (isOpen) {
-    return (
-      <S.Container>
-        <section className="modal">
+    const dataFormatada = formatarData(`${dataSelecionada} ${horarioSelecionado}`);
 
-          <div className="text">
-            <div className="data">
-              <label >Data da consulta: {dataSelecionada}</label>
+    setLoading(true);
+    try {
+      const response = await api.post("/consulta/create", {
+        dataConsulta: dataFormatada,
+        medicoId: medicoSelecionado,
+      });
 
-            </div>
+      console.log("Resposta da API:", response.data); // Log da resposta da API
 
-            <div className="medico">
-              <label >Nome do medico: {medicoNome}</label>
+      alert("Consulta agendada com sucesso!");
+      setModalClose(false);
+    } catch (error) {
+      console.log("Erro ao agendar consulta:", error); // Log do erro
+      setErrorMessage("Ocorreu um erro ao agendar a consulta. Tente novamente.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-            </div>
+  if (!isOpen) return null;
 
-            <div className="horario">
-              <label >Horario agendado: {horarioSelecionado}</label>
-
-            </div>
-
-
-
-
+  return (
+    <S.Container>
+      <section className="modal">
+        <header>
+          <h2>Detalhes da Consulta</h2>
+        </header>
+        <main>
+          <div>
+            <label>Data da consulta:</label>
+            <span>{dataSelecionada}</span>
           </div>
-
-
-
-          <h3>Deseja confirmar a Consulta?</h3>
-
-          <div className="grup">
-
-
-            <button className="confirmar">Confirmar</button>
-            <button className="cancelar" onClick={() => setModalClose(false)}
-            >Cancelar</button>
-
+          <div>
+            <label>Nome do médico:</label>
+            <span>{medicoNome}</span>
           </div>
-
-        </section>
-
-      </S.Container>
-    );
-  }
-
-
-
-  return null;
+          <div>
+            <label>Horário agendado:</label>
+            <span>{horarioSelecionado}</span>
+          </div>
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
+        </main>
+        <footer>
+          <button
+            className="confirmar"
+            onClick={agendarConsulta}
+            disabled={loading}
+          >
+            {loading ? <Spinner /> : "Confirmar"}
+          </button>
+          <button className="cancelar" onClick={() => setModalClose(false)}>
+            Cancelar
+          </button>
+        </footer>
+      </section>
+    </S.Container>
+  );
 }
