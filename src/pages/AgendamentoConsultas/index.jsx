@@ -3,8 +3,8 @@ import Sidebarpacientes from "../../components/sidebarpacientes";
 import Superiorbar from "../../components/superiorbar";
 import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import Modalconsulta from "../../components/modalconsulta";
 import { api } from "../../service/api";
+import Modalconsulta from "../../components/modalconsulta";
 
 export default function AgendamentoConsultas() {
   const navigation = useNavigate();
@@ -17,6 +17,8 @@ export default function AgendamentoConsultas() {
   const [horariosDisponiveis, setHorariosDisponiveis] = useState([]);
   const [medicoSelecionado, setMedicoSelecionado] = useState("");
   const [medicos, setMedicos] = useState([]);
+  const [horarioSelecionado, setHorarioSelecionado] = useState(null);
+
 
   async function fetchMedicos() {
     try {
@@ -147,17 +149,29 @@ export default function AgendamentoConsultas() {
 
             <p>Horários Disponíveis:</p>
             <S.Horarios>
-  {horariosDisponiveis.map((horario, index) => (
-    <button onClick={() => setOpenModal(true)} key={index}>
-      {horario}
-    </button>
-  ))}
-</S.Horarios>
+              {horariosDisponiveis.map((horario, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    setHorarioSelecionado(horario);
+                    setOpenModal(true);
+                  }}
+                >
+                  {horario} {}
+                </button>
+              ))}
+            </S.Horarios>
 
-<Modalconsulta
-  isOpen={openModal}
-  setModalClose={() => setOpenModal(false)}
-/>
+
+            <Modalconsulta
+              isOpen={openModal}
+              setModalClose={() => setOpenModal(false)}
+              horariosDisponiveis={horariosDisponiveis}
+              dataSelecionada={dataSelecionada}
+              medicoSelecionado={medicoSelecionado}
+              medicoNome={medicos.find(medico => medico.id === medicoSelecionado)?.nomeCompleto}
+              horarioSelecionado={horarioSelecionado}
+            />
           </S.DivMain>
 
           <S.CardContainer>
@@ -167,6 +181,7 @@ export default function AgendamentoConsultas() {
             <S.ButtonCancel onClick={() => console.log("Cancelar Consulta")}>
               Cancelar Consulta
             </S.ButtonCancel>
+            <Modalconsulta/>
           </S.CardContainer>
         </S.DivContainer>
       </S.Main>

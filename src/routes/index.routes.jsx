@@ -219,7 +219,7 @@ export const paginas = createBrowserRouter([
   },
 
   {
-    path: "/medicamentos",
+    path: "/medicamento",
     element: <Medicamentos />
   },
   {
