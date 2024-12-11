@@ -75,7 +75,7 @@ export const Main = styled.main`
   p {
     margin-top: 10px;
     font-size: 16px;
-    color: #666;
+    color: #161B68;
   }
 
   @media (max-width: 768px) {
@@ -83,11 +83,70 @@ export const Main = styled.main`
   }
 `;
 
-export const CardContainer = styled.div`
-  display: flex;
-  justify-content: start;
-  gap: 20px;
-  margin-top: 20px;
+
+export const List = styled.div`
+background-color: #EAEBFC;
+border-radius: 10px;
+border: #161B68 solid 2px;
+padding: 15px;
+margin-top: 10px;
+`
+export const ListItem = styled.div`
+
+`
+export const  Footer = styled.div`
+
+`
+export const  Consulta = styled.div`
+display: flex;
+align-items: center;
+justify-content: space-between;
+`
+export const  Info = styled.div``
+
+export const  Btn = styled.div`
+margin-top: 20px;
+
+`
+
+export const Button = styled.button`
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #6AF670;
+  color: #161B68;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  margin-right: 10px;
+
+  &:hover {
+    background-color: #24E42C;
+  }
+
+  &:active {
+    background-color: #24E42C;
+  }
 `;
 
+export const ButtonCancel = styled.button`
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: transparent;
+  color: #E42424;
+  font-weight: 600;
+  border: 2px solid #E42424;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
 
+  &:hover {
+    background-color: #E42424;
+    color: #fff;
+  }
+
+  &:active {
+    background-color: #E42424;
+  }
+`;

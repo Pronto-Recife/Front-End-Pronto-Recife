@@ -161,6 +161,26 @@ export const Services = styled.div`
 `
 export const ServiceItem = styled.div`
 cursor: pointer;
-background-color: #ff0000;
+width: 125px;
+height: 125px;
+border-radius: 10px;
+background-color: #161b68;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center ;
+ 
+p
+{
+  gap: 10px;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center ;
+  flex-direction: column;
+  font-size: 14px;
+  color: #fff;
+}
 
 `

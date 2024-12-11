@@ -146,6 +146,10 @@ export const Container = styled.div`
     padding: 2rem 6rem;
   }
 
+  .clinics-video{
+    margin-top: 4.5rem;
+  }  
+
   .clinic-list img {
     transition: transform 0.3s ease-out;
   }
@@ -171,13 +175,20 @@ export const Container = styled.div`
     padding: 3rem;
   }
 
+  .googlemaps {
+    width: 30rem;
+    height: 15rem;
+    border-radius: 20px;
+
+  }
   .map-card {
-    width: 60rem;
+    width: 70rem;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ccc;
+    background-color: #eaebfc;
+    border-radius: 20px;
     
   }
 
@@ -454,9 +465,7 @@ export const Container = styled.div`
         flex-direction: column;
       }
 
-
     }
-
     .map {
       flex-direction: column;
       height: auto;
@@ -467,7 +476,6 @@ export const Container = styled.div`
         border-radius: 10px;
         flex-direction: column;
       }
-
       
     }
 

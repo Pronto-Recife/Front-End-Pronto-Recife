@@ -25,7 +25,8 @@ export const Container = styled.div`
    background-color: white;
    border-radius: 20px;
    height: 60%;
-   padding: 20px;
+   padding-top: 250px;
+   padding-bottom: 350px;
    gap: 10px;
    justify-content: center;
    align-items: center;
@@ -80,7 +81,6 @@ export const Container = styled.div`
  }
 
  && .form .input{
-
   width: 100%;
   height: 40px;
   border-radius: 5px;
@@ -89,13 +89,11 @@ export const Container = styled.div`
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
-
+  font-family: Poppins;
+  padding-left: 10px;
+  padding-right: 10px;
  }
 
-
-
-
-//botões de editar e deletar 
 
 && .form-actions {
    position: absolute;
