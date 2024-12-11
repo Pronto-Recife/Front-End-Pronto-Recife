@@ -78,7 +78,7 @@ export default function Login() {
         </div>
       </div>
 
-      <div className="container-login">
+      <form className="container-login">
         <h2>Acesse a sua conta</h2>
 
         <img className="logoM" src={Logo} alt="Logo Pronto Recife" />
@@ -101,9 +101,7 @@ export default function Login() {
             <option className="option" value="CRM">
               CRM
             </option>
-            <option className="option" value="COREN">
-              COREN
-            </option>
+            
           </select>
 
           <Input
@@ -139,7 +137,7 @@ export default function Login() {
             title="Cadastre-se"
           />
         </div>
-      </div>
+      </form>
     </S.Container>
   );
 }
