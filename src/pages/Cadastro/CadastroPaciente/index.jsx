@@ -12,6 +12,7 @@ import { Input } from "../../../components/Input";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { api } from "../../../service/api";
 
 export default function CadastroPaciente() {
   const navigation = useNavigate();
@@ -29,8 +30,8 @@ export default function CadastroPaciente() {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post(
-        "https://a489-160-20-194-20.ngrok-free.app/paciente/register",
+      const response = await api.post(
+        "/paciente/register",
         formData
       );
 

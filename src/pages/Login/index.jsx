@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { api } from "../../service/api";
 import { TOKEN_STORAGE } from "../../constants/TOKEN_STORAGE";
+import { apiauth } from "../../service/apiauth";
 
 export default function Login() {
   const [identificador, setIdentificador] = useState("");
@@ -33,11 +34,14 @@ export default function Login() {
     }
 
     try {
-      const response = await api.post("/login", {
-        identificador: identificador,
-        senha: senha,
-        flow: flow,
-      });
+      const response = await apiauth.post(
+        "/auth/login",
+        {
+          identificador: identificador,
+          senha: senha,
+          flow: flow,
+        }
+      );
       localStorage.setItem(TOKEN_STORAGE, response.data.accessToken);
       navigation(flow === "CPF" ? "/inicio" : "/psinicio");
     } catch (error) {
