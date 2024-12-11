@@ -15,13 +15,12 @@ const VLibras = () => {
     };
 
     document.body.appendChild(script);
-
     return () => {
       document.body.removeChild(script);
     };
   }, []);
 
-  return null; 
+  return null;
 };
 
 export default VLibras;

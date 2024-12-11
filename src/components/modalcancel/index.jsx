@@ -12,7 +12,7 @@ export default function Modalcancel({ isOpen, setModalClose, onCancel }) {
       alert("Consulta cancelada com sucesso!");
       setLoading(false);
       setModalClose(false);
-      onCancel(); // Chama a função passada pelo pai para remover a consulta
+      onCancel(); 
     }, 2000);
   };
 
