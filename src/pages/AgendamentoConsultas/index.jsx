@@ -5,14 +5,26 @@ import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { api } from "../../service/api";
 import Modalconsulta from "../../components/modalconsulta";
+import { jwtDecode } from "jwt-decode";
+import {TOKEN_STORAGE} from "../../constants/TOKEN_STORAGE"
 
 const formatarData = (dataISO) => {
   const [date, time] = dataISO.split(" ");
   const [year, month, day] = date.split("-");
   const dataFormatada = `${day}/${month}/${year} ${time}`;
-  console.log("Data formatada:", dataFormatada); // Log da data formatada
+  console.log("Data formatada:", dataFormatada); 
   return dataFormatada;
 };
+
+const getUserIdFromToken = () => {
+  const token =  localStorage.getItem(TOKEN_STORAGE);
+  if(!token){
+    return "";
+  }
+
+  const {sub} = jwtDecode(token)
+  return sub;
+}
 
 export default function AgendamentoConsultas() {
   const navigation = useNavigate();
@@ -128,23 +140,25 @@ export default function AgendamentoConsultas() {
       "Dados antes de formatar:",
       dataSelecionada,
       horarioSelecionado
-    ); // Log dos dados recebidos
+    );
 
     const dataFormatada = formatarData(
       `${dataSelecionada} ${horarioSelecionado}`
     );
 
     try {
+      const pacienteId = getUserIdFromToken();
       const response = await api.post("/consulta/create", {
         dataConsulta: dataFormatada,
         medicoId: medicoSelecionado,
+        pacienteId: pacienteId ? pacienteId : null
       });
 
-      console.log("Resposta da API:", response.data); // Log da resposta da API
+      console.log("Resposta da API:", response.data); 
 
       alert("Consulta agendada com sucesso!");
     } catch (error) {
-      console.log("Erro ao agendar consulta:", error); // Log do erro
+      console.log("Erro ao agendar consulta:", error);
       alert("Ocorreu um erro ao agendar a consulta. Tente novamente.");
     }
   };
@@ -220,7 +234,7 @@ export default function AgendamentoConsultas() {
 
           <S.CardContainer>
             <S.Button onClick={agendarConsulta}>Agendar Consulta</S.Button>
-            <S.ButtonCancel onClick={() => console.log("Cancelar Consulta")}>
+            <S.ButtonCancel onClick={() => console.log(getUserIdFromToken())}>
               Cancelar Consulta
             </S.ButtonCancel>
             <Modalconsulta />
