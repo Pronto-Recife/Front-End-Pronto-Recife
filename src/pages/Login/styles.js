@@ -18,6 +18,7 @@ export const Container = styled.div`
     padding: 4rem 3rem 4rem 3rem;
     background-color: #f1f1f1;
     border-radius: 1.25rem 0 0 1.25rem;
+
   }
 
   .ContainerInfo .logo {
@@ -92,6 +93,15 @@ export const Container = styled.div`
 
   .letras {
     color: #2B318A;
+    font-weight: 700;
+    width: 16rem;
+    text-align: center;
+  }
+
+  .titulo {
+    color: #f1f1f1;
+    font-size: 1.5em;
+    padding-bottom: 15px;
     font-weight: 700;
     width: 16rem;
     text-align: center;
@@ -193,8 +203,6 @@ export const Container = styled.div`
     }
 
     .container-login {
-      width: 350px;
-      height: 400px;
 
       h1 {
         font-size: 1.2rem;

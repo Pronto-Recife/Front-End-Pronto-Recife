@@ -6,6 +6,14 @@ import React, { useState, useEffect } from "react";
 import { api } from "../../service/api";
 import Modalconsulta from "../../components/modalconsulta";
 
+const formatarData = (dataISO) => {
+  const [date, time] = dataISO.split(" ");
+  const [year, month, day] = date.split("-");
+  const dataFormatada = `${day}/${month}/${year} ${time}`;
+  console.log("Data formatada:", dataFormatada); // Log da data formatada
+  return dataFormatada;
+};
+
 export default function AgendamentoConsultas() {
   const navigation = useNavigate();
 
@@ -18,7 +26,6 @@ export default function AgendamentoConsultas() {
   const [medicoSelecionado, setMedicoSelecionado] = useState("");
   const [medicos, setMedicos] = useState([]);
   const [horarioSelecionado, setHorarioSelecionado] = useState(null);
-
 
   async function fetchMedicos() {
     try {
@@ -110,6 +117,38 @@ export default function AgendamentoConsultas() {
 
   const [openModal, setOpenModal] = useState(false);
 
+  const agendarConsulta = async () => {
+    if (!dataSelecionada || !medicoSelecionado || !horarioSelecionado) {
+      setErrorMessage("Preencha todos os dados antes de confirmar!");
+      console.log("Erro: Dados não preenchidos.");
+      return;
+    }
+
+    console.log(
+      "Dados antes de formatar:",
+      dataSelecionada,
+      horarioSelecionado
+    ); // Log dos dados recebidos
+
+    const dataFormatada = formatarData(
+      `${dataSelecionada} ${horarioSelecionado}`
+    );
+
+    try {
+      const response = await api.post("/consulta/create", {
+        dataConsulta: dataFormatada,
+        medicoId: medicoSelecionado,
+      });
+
+      console.log("Resposta da API:", response.data); // Log da resposta da API
+
+      alert("Consulta agendada com sucesso!");
+    } catch (error) {
+      console.log("Erro ao agendar consulta:", error); // Log do erro
+      alert("Ocorreu um erro ao agendar a consulta. Tente novamente.");
+    }
+  };
+
   return (
     <S.Container>
       <S.Sidebar>
@@ -162,18 +201,30 @@ export default function AgendamentoConsultas() {
               ))}
             </S.Horarios>
 
-
             <Modalconsulta
               isOpen={openModal}
               setModalClose={() => setOpenModal(false)}
               horariosDisponiveis={horariosDisponiveis}
               dataSelecionada={dataSelecionada}
+              setDataSelecionada={setDataSelecionada}
               medicoSelecionado={medicoSelecionado}
-              medicoNome={medicos.find(medico => medico.id === medicoSelecionado)?.nomeCompleto}
+              setMedicoSelecionado={setMedicoSelecionado}
+              medicoNome={
+                medicos.find((medico) => medico.id === medicoSelecionado)
+                  ?.nomeCompleto
+              }
               horarioSelecionado={horarioSelecionado}
+              setHorarioSelecionado={setHorarioSelecionado}
             />
           </S.DivMain>
 
+          <S.CardContainer>
+            <S.Button onClick={agendarConsulta}>Agendar Consulta</S.Button>
+            <S.ButtonCancel onClick={() => console.log("Cancelar Consulta")}>
+              Cancelar Consulta
+            </S.ButtonCancel>
+            <Modalconsulta />
+          </S.CardContainer>
         </S.DivContainer>
       </S.Main>
     </S.Container>

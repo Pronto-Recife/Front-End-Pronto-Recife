@@ -3,16 +3,17 @@ import * as S from "./styles";
 
 const Spinner = () => <div className="spinner"></div>;
 
-export default function Modalcancel({ isOpen, setModalClose }) {
+export default function Modalcancel({ isOpen, setModalClose, onCancel }) {
   const [loading, setLoading] = useState(false);
 
   const CancelConsulta = () => {
     setLoading(true);
     setTimeout(() => {
-      alert("Consulta cancelada com sucesso!"); 
+      alert("Consulta cancelada com sucesso!");
       setLoading(false);
       setModalClose(false);
-    }, 2000); 
+      onCancel(); // Chama a função passada pelo pai para remover a consulta
+    }, 2000);
   };
 
   if (!isOpen) return null;
