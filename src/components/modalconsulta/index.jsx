@@ -64,15 +64,15 @@ export default function Modalconsulta({
         </header>
         <main>
           <div>
-            <label>Data da consulta:</label>
+            <label>Data da consulta: </label>
             <span>{dataSelecionada}</span>
           </div>
           <div>
-            <label>Nome do médico:</label>
+            <label>Nome do médico: </label>
             <span>{medicoNome}</span>
           </div>
           <div>
-            <label>Horário agendado:</label>
+            <label>Horário agendado: </label>
             <span>{horarioSelecionado}</span>
           </div>
           {errorMessage && <p className="error-message">{errorMessage}</p>}
