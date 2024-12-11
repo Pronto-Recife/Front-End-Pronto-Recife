@@ -9,17 +9,19 @@ const formatarData = (dataISO) => {
   const [year, month, day] = date.split("-");
   const dataFormatada = `${day}/${month}/${year} ${time}`;
   console.log("Data formatada:", dataFormatada); // Log da data formatada
-  return dataFormatada; 
-    
+  return dataFormatada;
 };
 
 export default function Modalconsulta({
   isOpen,
   setModalClose,
   dataSelecionada,
+  setDataSelecionada,
   medicoSelecionado,
+  setMedicoSelecionado,
   medicoNome,
   horarioSelecionado,
+  setHorarioSelecionado,
 }) {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -31,9 +33,15 @@ export default function Modalconsulta({
       return;
     }
 
-    console.log("Dados antes de formatar:", dataSelecionada, horarioSelecionado); // Log dos dados recebidos
+    console.log(
+      "Dados antes de formatar:",
+      dataSelecionada,
+      horarioSelecionado
+    ); // Log dos dados recebidos
 
-    const dataFormatada = formatarData(`${dataSelecionada} ${horarioSelecionado}`);
+    const dataFormatada = formatarData(
+      `${dataSelecionada} ${horarioSelecionado}`
+    );
 
     setLoading(true);
     try {
@@ -48,7 +56,9 @@ export default function Modalconsulta({
       setModalClose(false);
     } catch (error) {
       console.log("Erro ao agendar consulta:", error); // Log do erro
-      setErrorMessage("Ocorreu um erro ao agendar a consulta. Tente novamente.");
+      setErrorMessage(
+        "Ocorreu um erro ao agendar a consulta. Tente novamente."
+      );
     } finally {
       setLoading(false);
     }
@@ -64,28 +74,39 @@ export default function Modalconsulta({
         </header>
         <main>
           <div>
-            <label>Data da consulta:</label>
+            <label>Data da consulta: </label>
             <span>{dataSelecionada}</span>
           </div>
           <div>
-            <label>Nome do médico:</label>
+            <label>Nome do médico: </label>
             <span>{medicoNome}</span>
           </div>
           <div>
-            <label>Horário agendado:</label>
+            <label>Horário agendado: </label>
             <span>{horarioSelecionado}</span>
+            <label>Horário agendado:</label>
+            <span> {horarioSelecionado} </span>
           </div>
           {errorMessage && <p className="error-message">{errorMessage}</p>}
         </main>
-        <footer>
+        <footer className="grup">
           <button
             className="confirmar"
-            onClick={agendarConsulta}
+            onClick={() => setModalClose(false)}
             disabled={loading}
           >
             {loading ? <Spinner /> : "Confirmar"}
           </button>
-          <button className="cancelar" onClick={() => setModalClose(false)}>
+
+          <button
+            className="cancelar"
+            onClick={() => {
+              setDataSelecionada([]);
+              setHorarioSelecionado([]);
+              setMedicoSelecionado([]);
+              setModalClose(false);
+            }}
+          >
             Cancelar
           </button>
         </footer>

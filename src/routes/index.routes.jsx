@@ -15,7 +15,7 @@ import OPS from "../pages/Ops";
 
 // Fluxo de Paciente
 import Inicio from "../pages/Pacientes/Inicio";
-import Consultas from "../pages/Pacientes/Consultas";
+import { Consultas } from "../pages/Pacientes/Consultas";
 import Exames from "../pages/Pacientes/Exames";
 import Perfil from "../pages/Pacientes/Perfil";
 import DadosCadastrais from "../pages/Pacientes/DadosCadastrais";
@@ -24,6 +24,7 @@ import Ajuda from "../pages/Pacientes/Ajuda";
 import Sair from "../pages/Pacientes/Sair";
 import Relatorios from "../pages/Pacientes/Relatorios";
 import Prescricoes from "../pages/Pacientes/Prescricoes";
+import { HistoricoConsultas } from "../pages/Pacientes/historicoConsultas";
 
 // Fluxo de Profissional de Saúde
 import Psinicio from "../pages/Profissionais/psinicio";
@@ -47,9 +48,6 @@ import Usuarios from "../pages/Usuarios";
 //Serviços públicos
 import Medicamentos from "../pages/APIservicos/medicamentos";
 import Laboratoriais from "../pages/APIservicos/laboratoriais";
-
-
-
 
 export const paginas = createBrowserRouter([
   {
@@ -110,6 +108,10 @@ export const paginas = createBrowserRouter([
   {
     path: "/consultas",
     element: <Consultas />,
+  },
+  {
+    path: "/historicoconsultas",
+    element: <HistoricoConsultas />,
   },
 
   {
@@ -219,14 +221,11 @@ export const paginas = createBrowserRouter([
   },
 
   {
-    path: "/medicamento",
-    element: <Medicamentos />
+    path: "/medicamentos",
+    element: <Medicamentos />,
   },
   {
     path: "/laboratoriais",
-    element: <Laboratoriais />
+    element: <Laboratoriais />,
   },
-  
-  
-  
 ]);
