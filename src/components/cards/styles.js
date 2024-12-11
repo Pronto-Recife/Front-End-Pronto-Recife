@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const CardsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px;
+  justify-content: space-between;
+  gap: 11px;
   padding: 0.5rem;
 `;
 
