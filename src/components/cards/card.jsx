@@ -11,33 +11,21 @@ import Link from "../../assets/link.svg";
 import { useEffect, useState } from "react";
 
 export function Card() {
-  const [slidePerView, setSlidePerView] = useState(4);
+  const [slidesPerView, setSlidesPerView] = useState(getSlidesPerView());
+
+  function getSlidesPerView() {
+    const width = window.innerWidth;
+    if (width < 490) return 1;
+    if (width < 676) return 2;
+    if (width < 906) return 3;
+    if (width < 1135) return 4;
+    return Math.floor(width / 300); // Ajuste aqui conforme necessário
+  }
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth < 490) {
-        setSlidePerView(1);
-      } else {
-        if (window.innerWidth < 676) {
-          setSlidePerView(2);
-        } else {
-          if (window.innerWidth < 906) {
-            setSlidePerView(3);
-          } else {
-            if (window.innerWidth < 1135) {
-              setSlidePerView(4);
-            } else {
-              if (window.innerWidth <= 1920) {
-                setSlidePerView(4);
-              } else {
-                setSlidePerView(4);
-              }
-            }
-          }
-        }
-      }
+      setSlidesPerView(getSlidesPerView());
     }
-    handleResize();
 
     window.addEventListener("resize", handleResize);
 
@@ -48,7 +36,7 @@ export function Card() {
 
   return (
     <>
-      <Swiper modules={[Navigation]} slidesPerView={slidePerView} navigation>
+      <Swiper modules={[Navigation]} slidesPerView={slidesPerView} navigation>
         {teams.map((item) => (
           <SwiperSlide key={item.id}>
             <S.Container>

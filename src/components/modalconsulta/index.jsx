@@ -75,7 +75,7 @@ export default function Modalconsulta({
         <main>
           <div>
             <label>Data da consulta:</label>
-            <span>{dataSelecionada}</span>
+            <span> {dataSelecionada} </span>
           </div>
           <div>
             <label>Nome do médico:</label>
@@ -83,11 +83,11 @@ export default function Modalconsulta({
           </div>
           <div>
             <label>Horário agendado:</label>
-            <span>{horarioSelecionado}</span>
+            <span> {horarioSelecionado} </span>
           </div>
           {errorMessage && <p className="error-message">{errorMessage}</p>}
         </main>
-        <footer>
+        <footer className="grup">
           <button
             className="confirmar"
             onClick={() => setModalClose(false)}

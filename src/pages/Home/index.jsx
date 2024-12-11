@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Icon1 from "../../assets/icon1.svg";
 import Icon2 from "../../assets/icon2.svg";
 import Icon3 from "../../assets/icon3.svg";
@@ -25,13 +25,22 @@ import * as S from "./style";
 import { Card } from "../../components/cards/card";
 import Button from "../../components/button/button";
 import { Navbar } from "../../components/navbar/navbar";
+import VLibras from "../../components/Vlibras";
+
 
 export function Home() {
   const [navbarIsvisible, setNavbarIsVisible] = useState(true);
 
   return (
     <S.Container>
+
+
       <div className="landing-page">
+       
+        <div>
+           <VLibras />
+        </div>
+
         <Navbar 
         navbarIsvisible={navbarIsvisible}
         setNavbarIsVisible={setNavbarIsVisible}
@@ -51,8 +60,9 @@ export function Home() {
             <Button size='home' title='Cadastre-se'/>
             <Button size='home' title='Saiba Mais'/>
             </div>
-
           </div>
+
+          
         </section>
 
         <section className="services">
@@ -113,13 +123,13 @@ export function Home() {
             className="clinics-video"
             width="80%"
             height="420"
-            src="https://www.youtube.com/embed/9lfY_nQriJ4?si=zcpsCtFsuZFcZVZp"
-            title="YouTube video player"
-            frameborder="0 "
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+            src="https://www.youtube.com/embed/P2mJhh4a1V0?si=89VljW1URYmAghlL" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; 
+            autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+            </iframe>
         </section>
 
         <section className="map">
@@ -136,7 +146,7 @@ export function Home() {
             </div>
 
            <div className="maps">
-            <iframe 
+            <iframe className="googlemaps"
                 src="https://www.google.com/maps?q=hospitais+perto+de+Av.+Alfredo+Lisboa,+268,+Recife,+PE,+50030-150&output=embed"
                 frameborder="0"
                 allowfullscreen="" 

@@ -12,7 +12,6 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { api } from "../../service/api";
 import { TOKEN_STORAGE } from "../../constants/TOKEN_STORAGE";
-import axios from "axios";
 import { apiauth } from "../../service/apiauth";
 
 export default function Login() {
@@ -78,13 +77,13 @@ export default function Login() {
         </div>
       </div>
 
-      <form className="container-login">
-        <h2>Acesse a sua conta</h2>
+      <div className="container-login">
 
-        <img className="logoM" src={Logo} alt="Logo Pronto Recife" />
-        <p className="letras">Acesse a sua conta</p>
+      <img className="logoM" src={Logo} alt="Logo Pronto Recife" />
+        <p className="titulo">Acesse a sua conta</p>
 
         <div className="password-container">
+          
           <label>Tipo de documento</label>
           <select
             onChange={(e) => setFlow(e.target.value)}
@@ -123,21 +122,15 @@ export default function Login() {
           Esqueceu sua senha?
         </a>
 
-        <div className="error">
-          {" "}
-          {error && <p className="error-message">{error}</p>}{" "}
-        </div>
+        <div className="error"> {error && <p className="error-message">{error}</p>} </div>
 
         <Button onClick={() => handleLogin()} size="entrar" title="Entrar" />
         <div className="contentLetras">
-          <p className="letras">Ainda não tem uma conta?</p>
-          <Button
-            onClick={() => handleLogin()}
-            size="entrar"
-            title="Cadastre-se"
-          />
+        <p className="letras">Ainda não tem uma conta?</p>
+        <Button onClick={() => handleLogin()} size="entrar" title="Cadastre-se" />
         </div>
-      </form>
-    </S.Container>
+
+      </div>
+   </S.Container>
   );
 }
